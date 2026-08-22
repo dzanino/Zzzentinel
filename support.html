@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel — Podpora / Support</title>
+<meta name="description" content="Podpora a časté otázky k aplikácii Zzzentinel: nahrávanie na pozadí, batéria, vlastné zvuky, Apple Watch, PIN a mazanie dát.">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="icon" href="favicon.png">
+<style>
+  :root {
+    --bg: #f6f7fb; --bg2: #edeff7; --card: #ffffff; --text: #14172a; --muted: #5b6172;
+    --accent: #3b4ba8; --gold: #b8860b; --border: #e3e6ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #080b18; --bg2: #0e1226; --card: #151a30; --text: #eef0f8; --muted: #a3a9bf;
+            --accent: #9fb0ff; --gold: #f2c94c; --border: #262c48; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--accent); }
+  .nav { padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg2); }
+  .nav a { text-decoration: none; font-weight: 600; font-size: 15px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
+  header { text-align: center; margin-bottom: 34px; }
+  header img { width: 84px; height: 84px; border-radius: 22%;
+               box-shadow: 0 10px 28px rgba(0,0,0,.3); }
+  h1 { margin: 16px 0 4px; font-size: 30px; }
+  .sub { color: var(--muted); font-size: 15px; }
+  .card { background: var(--card); border: 1px solid var(--border);
+          border-radius: 16px; padding: 24px 28px; margin: 20px 0; }
+  h2 { font-size: 21px; margin-top: 0; color: var(--accent); }
+  details { border-top: 1px solid var(--border); padding: 12px 0; }
+  details:first-of-type { border-top: none; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p, details ul { color: var(--muted); font-size: 15.5px; }
+  .contact { text-align: center; border-left: 4px solid var(--gold); }
+  .btn { display: inline-block; background: var(--accent); color: #fff;
+         padding: 13px 30px; border-radius: 999px; text-decoration: none;
+         font-weight: 600; margin-top: 10px; }
+  .lang-divider { text-align: center; color: var(--muted); margin: 44px 0 8px;
+                  text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
+</style>
+</head>
+<body>
+
+<div class="nav"><a href="index.html">← Zzzentinel</a></div>
+
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="Zzzentinel">
+    <h1>Podpora</h1>
+    <div class="sub">Support · Zzzentinel</div>
+  </header>
+
+  <div class="card contact">
+    <h2>Kontakt / Contact</h2>
+    <p>Napíš mi — odpovedám zvyčajne do 48 hodín.<br>
+       Drop me a line — I usually reply within 48 hours.</p>
+    <a class="btn" href="mailto:jansikuta@me.com?subject=Zzzentinel%20support">jansikuta@me.com</a>
+  </div>
+
+  <!-- ===================== SK FAQ ===================== -->
+  <div class="card">
+    <h2>Časté otázky (SK)</h2>
+
+    <details>
+      <summary>Nahráva aplikácia aj so zamknutou obrazovkou?</summary>
+      <p>Áno. Po spustení nočnej stráže beží nahrávanie aj na pozadí a so
+      zamknutým telefónom. Ak chceš mať displej zhasnutý, ale appku po ruke,
+      použi tlačidlo <em>Stmaviť displej</em> — obrazovka takmer zhasne a ostanú
+      len tlmené hodiny. Telefón odporúčame na noc zapojiť do nabíjačky.</p>
+    </details>
+
+    <details>
+      <summary>Koľko batérie a miesta to spotrebuje?</summary>
+      <p>Analýza beží úsporne a ukladajú sa len krátke klipy udalostí, nie celá
+      noc — bežná noc zaberie jednotky MB. Kým je appka na pozadí alebo je displej
+      stmavený, prestane prekresľovať ukazovatele, čo ďalej šetrí energiu.
+      So zapojenou nabíjačkou je spotreba batérie irelevantná.</p>
+    </details>
+
+    <details>
+      <summary>Prečo mám v zázname „nedefinovaný zvuk“?</summary>
+      <p>Telefón zachytil hlasný zvuk, ktorý klasifikátor nevedel pomenovať.
+      Prehraj si klip, klepni na <em>Nadefinovať zvuk</em> a pomenuj ho. Po
+      zhruba piatich vzorkách si v <em>Nastavenia → Tréning mojich zvukov</em>
+      natrénuješ vlastný model <code>my_night.mlmodel</code> priamo v telefóne
+      a nabudúce appka zvuk rozpozná menom.</p>
+    </details>
+
+    <details>
+      <summary>Tréning modelu mi nefunguje.</summary>
+      <p>Tréning vyžaduje skutočný iPhone — v simulátore nie je framework
+      Create&nbsp;ML dostupný a appka zobrazí upozornenie. Potrebuješ tiež aspoň
+      dve triedy zvukov; ak máš zatiaľ len jednu, appka si druhú („ostatné“)
+      zostaví automaticky z klipov iných udalostí, takže najprv nahraj aspoň
+      jednu noc.</p>
+    </details>
+
+    <details>
+      <summary>Sú „pauzy v dýchaní“ diagnóza spánkového apnoe?</summary>
+      <p>Nie. Ide o orientačnú heuristiku — dlhšie ticho medzi chrápaním.
+      Zzzentinel nie je zdravotnícka pomôcka. Ak sa pauzy opakujú, spomeň ich
+      svojmu lekárovi.</p>
+    </details>
+
+    <details>
+      <summary>Ako ovládam strážcu z Apple Watch?</summary>
+      <p>Aplikácia pre hodinky sa nainštaluje automaticky spolu s tou v telefóne.
+      Na hodinkách klepneš na <em>Aktivovať</em> — strážca sa zapne inkognito,
+      displej telefónu zostane zhasnutý. Vypnutie prebieha cez PIN klávesnicu
+      priamo na hodinkách. Ak je telefón mimo dosahu, príkaz na aktiváciu sa
+      zaradí do fronty a vykoná sa, keď sa zariadenia spoja. Rovnako funguje Siri
+      („Arm Zzzentinel“), widget Skratky aj zadné poklepanie na telefón
+      (Nastavenia → Prístupnosť → Dotyk → Klepnutie na zadnú stranu).</p>
+    </details>
+
+    <details>
+      <summary>Zabudol som PIN strážcu. Čo teraz?</summary>
+      <p>Ak je strážca vypnutý, PIN zmeníš v záložke <em>Strážca → Zmeniť PIN</em>.
+      Ak je aktívny a PIN si zabudol úplne, jedinou cestou je preinštalovanie
+      aplikácie — nočné záznamy sa pritom zo zariadenia odstránia, preto si ich
+      exportuj vopred.</p>
+    </details>
+
+    <details>
+      <summary>Alarm nie je počuť dosť nahlas.</summary>
+      <p>Pred aktiváciou strážcu vytoč hlasitosť médií na maximum a vypni režim
+      Nerušiť. Alarm hrá cez reproduktor aj pri stlmenom prepínači zvonenia.</p>
+    </details>
+
+    <details>
+      <summary>Kde sú moje dáta a ako ich vymažem?</summary>
+      <p>Všetko je uložené len v telefóne. Jednotlivé noci vymažeš potiahnutím
+      doľava v zozname <em>Moje noci</em>, natrénované zvuky v <em>Tréningu
+      mojich zvukov</em>. Odinštalovaním aplikácie sa odstráni všetko.</p>
+    </details>
+  </div>
+
+  <div class="lang-divider">— English —</div>
+
+  <!-- ===================== EN FAQ ===================== -->
+  <div class="card">
+    <h2>FAQ (EN)</h2>
+
+    <details>
+      <summary>Does it record with the screen locked?</summary>
+      <p>Yes. Once the night watch is running, recording continues in the
+      background and with the phone locked. Use <em>Dim screen</em> to keep the
+      app open with an almost-black display showing only a dim clock. We
+      recommend charging the phone overnight.</p>
+    </details>
+
+    <details>
+      <summary>How much battery and storage does it use?</summary>
+      <p>Analysis is lightweight and only short event clips are stored, not the
+      whole night — a typical night takes a few MB. While the app is in the
+      background or dimmed, it stops redrawing meters to save more power.</p>
+    </details>
+
+    <details>
+      <summary>What is an "undefined sound"?</summary>
+      <p>A loud sound the classifier couldn't name. Play the clip, tap
+      <em>Define sound</em> and name it. After about five samples you can train
+      your personal <code>my_night.mlmodel</code> in Settings, right on the
+      phone.</p>
+    </details>
+
+    <details>
+      <summary>Training doesn't work for me.</summary>
+      <p>Training requires a real iPhone — Create&nbsp;ML is unavailable in the
+      Simulator. You also need at least two sound classes; with only one, the app
+      builds an "other" class automatically from other recorded clips, so record
+      at least one night first.</p>
+    </details>
+
+    <details>
+      <summary>Are "breathing pauses" a sleep-apnea diagnosis?</summary>
+      <p>No. It's a rough heuristic — longer silence between snoring episodes.
+      Zzzentinel is not a medical device. If pauses recur, mention them to your
+      doctor.</p>
+    </details>
+
+    <details>
+      <summary>How do I control the guard from Apple Watch?</summary>
+      <p>The watch app installs automatically alongside the iPhone app. Tap
+      <em>Arm</em> on the watch and the guard arms incognito — the phone's screen
+      stays dark. Disarm with the PIN pad on the watch. If the phone is out of
+      range, the arm command is queued and runs once the devices reconnect. Siri
+      ("Arm Zzzentinel"), a Shortcuts widget and Back Tap work the same way.</p>
+    </details>
+
+    <details>
+      <summary>I forgot my guard PIN.</summary>
+      <p>If the guard is off, change it in <em>Guard → Change PIN</em>. If it's
+      armed and the PIN is lost, reinstalling the app is the only way — night data
+      on the device is removed, so export first.</p>
+    </details>
+
+    <details>
+      <summary>Where is my data and how do I delete it?</summary>
+      <p>Everything is stored on the phone only. Swipe left to delete a night in
+      <em>My nights</em>, or a sound in <em>My sound training</em>. Uninstalling
+      the app removes everything.</p>
+    </details>
+  </div>
+
+  <footer>
+    <p><a href="index.html">Zzzentinel</a> · <a href="privacy.html">Ochrana súkromia / Privacy</a></p>
+    <p>© 2026 Ján Šikuta</p>
+  </footer>
+</div>
+</body>
+</html>

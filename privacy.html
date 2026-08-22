@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel — Ochrana súkromia / Privacy Policy</title>
+<meta name="description" content="Zásady ochrany súkromia aplikácie Zzzentinel. Žiadny server, žiadne účty, žiadna analytika — všetko zostáva vo vašom zariadení.">
+<link rel="apple-touch-icon" href="favicon.png">
+<link rel="icon" href="favicon.png">
+<style>
+  :root {
+    --bg: #f6f7fb; --bg2: #edeff7; --card: #ffffff; --text: #14172a; --muted: #5b6172;
+    --accent: #3b4ba8; --gold: #b8860b; --border: #e3e6ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #080b18; --bg2: #0e1226; --card: #151a30; --text: #eef0f8; --muted: #a3a9bf;
+            --accent: #9fb0ff; --gold: #f2c94c; --border: #262c48; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+  a { color: var(--accent); }
+  .nav { padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg2); }
+  .nav a { text-decoration: none; font-weight: 600; font-size: 15px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
+  header { text-align: center; margin-bottom: 34px; }
+  header img { width: 84px; height: 84px; border-radius: 22%;
+               box-shadow: 0 10px 28px rgba(0,0,0,.3); }
+  h1 { margin: 16px 0 4px; font-size: 30px; }
+  .sub { color: var(--muted); font-size: 15px; }
+  .card { background: var(--card); border: 1px solid var(--border);
+          border-radius: 16px; padding: 24px 28px; margin: 20px 0; }
+  h2 { font-size: 21px; margin-top: 0; color: var(--accent); }
+  h3 { font-size: 17px; margin-bottom: 4px; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  .tldr { border-left: 4px solid var(--gold); }
+  .lang-divider { text-align: center; color: var(--muted); margin: 44px 0 8px;
+                  text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
+  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
+</style>
+</head>
+<body>
+
+<div class="nav"><a href="index.html">← Zzzentinel</a></div>
+
+<div class="wrap">
+  <header>
+    <img src="icon.png" alt="Zzzentinel">
+    <h1>Ochrana súkromia</h1>
+    <div class="sub">Privacy Policy · Zzzentinel</div>
+    <div class="sub">Platné od / Effective: 22.&nbsp;8.&nbsp;2026</div>
+  </header>
+
+  <!-- ===================== SLOVENČINA ===================== -->
+  <div class="card tldr">
+    <h2>Zásady ochrany súkromia (SK)</h2>
+    <p><strong>Krátka verzia: všetko zostáva vo vašom zariadení.</strong>
+    Zzzentinel nemá server, používateľské účty, reklamy ani analytiku. Vývojár
+    nezbiera, neprenáša ani nespracúva žiadne údaje o používateľoch.</p>
+
+    <h3>Čo aplikácia spracúva</h3>
+    <ul>
+      <li><strong>Zvukové nahrávky a analýzy</strong> — vznikajú len počas nočnej
+        stráže, ktorú manuálne spustíte, a ukladajú sa výhradne lokálne do
+        úložiska aplikácie vo vašom zariadení.</li>
+      <li><strong>Rozpoznávanie zvukov a tréning vlastného modelu</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) prebieha celý priamo v zariadení. Váš model
+        <code>my_night.mlmodel</code> nikam neodchádza.</li>
+      <li><strong>Pohybové senzory</strong> (CoreMotion) sa používajú len počas
+        aktívneho režimu strážcu na detekciu pohybu telefónu; namerané hodnoty sa
+        nikde neukladajú.</li>
+      <li><strong>PIN strážcu</strong> sa ukladá iba ako kryptografický odtlačok
+        (SHA-256 so soľou) lokálne v zariadení. Je nezávislý od kódu na
+        odomknutie telefónu.</li>
+      <li><strong>Upozornenia na pauzy v dýchaní</strong> sa počítajú lokálne
+        z časov už zaznamenaných udalostí. Nejde o zdravotné dáta a nikam sa
+        neodosielajú.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri a Skratky</h3>
+    <p>Ak používate sprievodnú aplikáciu pre Apple&nbsp;Watch, medzi hodinkami a
+    vaším iPhonom sa vymieňa výhradne stav strážcu (zapnutý/vypnutý) a PIN, ktorý
+    na hodinkách zadáte pri vypínaní. Prenos zabezpečuje šifrované lokálne
+    spojenie Apple (WatchConnectivity) medzi vašimi vlastnými zariadeniami —
+    nejde cez žiadny náš server a PIN sa na hodinkách neukladá. Rovnako povely
+    cez Siri a aplikáciu Skratky sa vykonávajú len lokálne v zariadení.</p>
+
+    <h3>Prepis reči</h3>
+    <p>Prepis rozprávania zo sna používa rámec Apple Speech a spúšťa sa výlučne
+    na vaše vyžiadanie. Ak je dostupné rozpoznávanie priamo v zariadení,
+    spracovanie prebehne lokálne; v opačnom prípade môže byť daný zvukový klip
+    spracovaný servermi spoločnosti Apple podľa jej podmienok.</p>
+
+    <h3>Zdieľanie údajov</h3>
+    <p>Žiadne údaje neopúšťajú zariadenie, pokiaľ ich sami neexportujete
+    (napríklad zdieľanie prepisu, zvukového klipu alebo natrénovaného modelu cez
+    systémové zdieľanie). Vtedy o cieli rozhodujete vy. Odinštalovaním aplikácie
+    sa všetky jej dáta zo zariadenia odstránia.</p>
+
+    <h3>Deti a citlivý obsah</h3>
+    <p>Aplikácia nezbiera žiadne údaje, a teda nespracúva ani údaje detí.
+    Upozorňujeme, že nočné nahrávky môžu zachytiť citlivý obsah vrátane hlasov
+    ďalších osôb v miestnosti — s exportmi preto nakladajte uvážlivo a rešpektujte
+    súkromie ostatných.</p>
+
+    <h3>Zdravotné informácie</h3>
+    <p>Zzzentinel <strong>nie je zdravotnícka pomôcka</strong>. Upozornenia na
+    „pauzy v dýchaní“ sú orientačná heuristika, nie diagnóza, a nenahrádzajú
+    lekárske vyšetrenie.</p>
+
+    <h3>Zmeny týchto zásad</h3>
+    <p>Prípadné zmeny zverejníme na tejto stránke spolu s novým dátumom
+    platnosti.</p>
+  </div>
+
+  <div class="lang-divider">— English —</div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div class="card tldr">
+    <h2>Privacy Policy (EN)</h2>
+    <p><strong>Short version: everything stays on your device.</strong>
+    Zzzentinel has no server, no user accounts, no ads and no analytics. The
+    developer collects, transmits and processes no user data whatsoever.</p>
+
+    <h3>What the app processes</h3>
+    <ul>
+      <li><strong>Audio recordings and analyses</strong> — created only during a
+        night watch you start manually, stored exclusively in the app's local
+        storage on your device.</li>
+      <li><strong>Sound recognition and personal model training</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) run entirely on device. Your
+        <code>my_night.mlmodel</code> never leaves the phone.</li>
+      <li><strong>Motion sensors</strong> (CoreMotion) are read only while the
+        guard is armed, to detect phone movement; readings are never stored.</li>
+      <li><strong>The guard PIN</strong> is stored only as a salted SHA-256 hash,
+        locally on the device. It is independent from your phone's unlock
+        passcode.</li>
+      <li><strong>Breathing-pause notes</strong> are computed locally from the
+        timing of already-recorded events. They are not health records and are
+        never transmitted.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri and Shortcuts</h3>
+    <p>If you use the Apple&nbsp;Watch companion app, the only data exchanged
+    between your watch and your iPhone is the guard status (armed/disarmed) and
+    the PIN you type on the watch when disarming. This travels over Apple's
+    encrypted local link (WatchConnectivity) between your own devices — never
+    through any server of ours — and the PIN is not stored on the watch. Siri and
+    Shortcuts commands likewise execute locally on device.</p>
+
+    <h3>Speech transcription</h3>
+    <p>Sleep-talk transcription uses Apple's Speech framework and runs only when
+    you explicitly request it. When on-device recognition is available,
+    processing is local; otherwise the selected audio clip may be processed by
+    Apple's servers under Apple's terms.</p>
+
+    <h3>Data sharing</h3>
+    <p>No data leaves the device unless you export it yourself (e.g. sharing a
+    transcript, an audio clip or your trained model via the system share sheet),
+    in which case you choose the destination. Uninstalling the app removes all of
+    its data from the device.</p>
+
+    <h3>Children and sensitive content</h3>
+    <p>The app collects no data and therefore processes no children's data. Note
+    that night recordings may capture sensitive content, including the voices of
+    other people in the room — handle exports thoughtfully and respect others'
+    privacy.</p>
+
+    <h3>Health information</h3>
+    <p>Zzzentinel is <strong>not a medical device</strong>. "Breathing pause"
+    notes are a rough heuristic, not a diagnosis, and do not replace a medical
+    examination.</p>
+
+    <h3>Changes to this policy</h3>
+    <p>Any changes will be published on this page together with a new effective
+    date.</p>
+  </div>
+
+  <footer>
+    <p><a href="index.html">Zzzentinel</a> · <a href="support.html">Podpora / Support</a></p>
+    <p>Ján Šikuta · <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+    <p>© 2026 Ján Šikuta</p>
+  </footer>
+</div>
+</body>
+</html>
