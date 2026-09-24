@@ -1,70 +1,40 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zzzentinel — Podpora / Support</title>
-<meta name="description" content="Podpora a časté otázky k aplikácii Zzzentinel: nahrávanie na pozadí, batéria, vlastné zvuky, Apple Watch, PIN a mazanie dát.">
+<title>Zzzentinel — Support / Podpora</title>
+<meta name="description" content="Zzzentinel support and FAQ: background recording, battery, your own sounds, breathing pauses, clinician summary, Apple Watch, PIN and data. Podpora a časté otázky.">
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="icon" href="favicon.png">
-<style>
-  :root {
-    --bg: #f6f7fb; --bg2: #edeff7; --card: #ffffff; --text: #14172a; --muted: #5b6172;
-    --accent: #3b4ba8; --gold: #b8860b; --border: #e3e6ef;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #080b18; --bg2: #0e1226; --card: #151a30; --text: #eef0f8; --muted: #a3a9bf;
-            --accent: #9fb0ff; --gold: #f2c94c; --border: #262c48; }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
-         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  a { color: var(--accent); }
-  .nav { padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg2); }
-  .nav a { text-decoration: none; font-weight: 600; font-size: 15px; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
-  header { text-align: center; margin-bottom: 34px; }
-  header img { width: 84px; height: 84px; border-radius: 22%;
-               box-shadow: 0 10px 28px rgba(0,0,0,.3); }
-  h1 { margin: 16px 0 4px; font-size: 30px; }
-  .sub { color: var(--muted); font-size: 15px; }
-  .card { background: var(--card); border: 1px solid var(--border);
-          border-radius: 16px; padding: 24px 28px; margin: 20px 0; }
-  h2 { font-size: 21px; margin-top: 0; color: var(--accent); }
-  details { border-top: 1px solid var(--border); padding: 12px 0; }
-  details:first-of-type { border-top: none; }
-  summary { cursor: pointer; font-weight: 600; }
-  details p, details ul { color: var(--muted); font-size: 15.5px; }
-  .contact { text-align: center; border-left: 4px solid var(--gold); }
-  .btn { display: inline-block; background: var(--accent); color: #fff;
-         padding: 13px 30px; border-radius: 999px; text-decoration: none;
-         font-weight: 600; margin-top: 10px; }
-  .lang-divider { text-align: center; color: var(--muted); margin: 44px 0 8px;
-                  text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="nav"><a href="index.html">← Zzzentinel</a></div>
+<div class="topbar">
+  <a href="index.html">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language / Jazyk">
+    <button data-set="sk" aria-pressed="false">SK</button>
+    <button data-set="en" aria-pressed="false">EN</button>
+  </div>
+</div>
 
-<div class="wrap">
-  <header>
+<div class="wrap narrow">
+  <div class="page-head">
     <img src="icon.png" alt="Zzzentinel">
-    <h1>Podpora</h1>
-    <div class="sub">Support · Zzzentinel</div>
-  </header>
+    <h1><span class="sk">Podpora</span><span class="en">Support</span></h1>
+    <div class="sub">Zzzentinel · iPhone &amp; Apple Watch</div>
+  </div>
 
   <div class="card contact">
-    <h2>Kontakt / Contact</h2>
-    <p>Napíš mi — odpovedám zvyčajne do 48 hodín.<br>
-       Drop me a line — I usually reply within 48 hours.</p>
+    <h2><span class="sk">Kontakt</span><span class="en">Contact</span></h2>
+    <p class="sk">Napíš mi — odpovedám zvyčajne do 48 hodín.</p>
+    <p class="en">Drop me a line — I usually reply within 48 hours.</p>
     <a class="btn" href="mailto:forensika.eu@icloud.com?subject=Zzzentinel%20support">forensika.eu@icloud.com</a>
   </div>
 
-  <!-- ===================== SK FAQ ===================== -->
-  <div class="card">
-    <h2>Časté otázky (SK)</h2>
+  <div class="card sk" lang="sk">
+    <h2>Časté otázky</h2>
 
     <details>
       <summary>Nahráva aplikácia aj so zamknutou obrazovkou?</summary>
@@ -102,27 +72,30 @@
 
     <details>
       <summary>Sú „pauzy v dýchaní“ diagnóza spánkového apnoe?</summary>
-      <p>Nie. Ide o orientačnú heuristiku — dlhšie ticho medzi chrápaním.
-      Zzzentinel nie je zdravotnícka pomôcka. Ak sa pauzy opakujú, spomeň ich
-      svojmu lekárovi.</p>
+      <p>Nie. Appka hľadá dlhšie ticho medzi úsekmi počuteľného dýchania — mikrofón
+      nemeria prietok vzduchu ani okysličenie, takže nerozlíši tiché dýchanie od
+      zástavy dychu. Je to orientačná heuristika a Zzzentinel nie je zdravotnícka
+      pomôcka. Ak sa pauzy opakujú, spomeň ich svojmu lekárovi — pomôže ti v tom
+      Súhrn pre lekára.</p>
     </details>
 
     <details>
       <summary>Čo je „Súhrn pre lekára“?</summary>
       <p>V detaile ukončenej noci → Zdieľať → Súhrn pre lekára vznikne PDF
-      s odborne formulovaným prehľadom (chrápanie, rytmus dýchania, zoznam páuz,
+      s odborne formulovaným prehľadom (chrápanie, počuteľné dýchanie, zoznam páuz,
       sekcia „Metóda a obmedzenia“) a nahrávky okolia troch najdlhších páuz.
       Nič sa neodosiela — súbory zdieľaš sám. Nie je to diagnóza; je to podklad
       na rozhovor s lekárom.</p>
     </details>
 
     <details>
-      <summary>Čo je sekcia „Na potvrdenie“ a prečo mi appka navrhuje flatulenciu?</summary>
-      <p>Zvuky, ktoré appka počula prvýkrát alebo si nimi nie je istá, ti ponúkne
-      na vypočutie. Potvrdením sa naučí, že sa trafila; opravou dostane správny
-      názov a novú tréningovú vzorku. Flatulenciu vstavaný rozpoznávač Apple
-      nepozná — appka ju len navrhne podľa akustického podpisu a návrh sa nikdy
-      sám nezmení na fakt. Vypnúť: Nastavenia → Navrhovať flatulenciu.</p>
+      <summary>Čo je sekcia „Na potvrdenie“?</summary>
+      <p>Zvuky, ktoré appka počula prvýkrát, alebo si nimi nie je istá, ti v rannom
+      reporte ponúkne na vypočutie. <em>Sedí</em> ju naučí, že sa trafila;
+      <em>Opraviť</em> jej dá správny názov a novú tréningovú vzorku. Na každý zvuk
+      sa pýta najviac dvakrát za noc a po troch potvrdeniach mu už verí. Návrh sa
+      nikdy sám nezmení na fakt. Automatické návrhy zvukov, ktoré vstavaný
+      rozpoznávač nepozná, vypneš v Nastavenia → Návrhy zvukov.</p>
     </details>
 
     <details>
@@ -198,11 +171,8 @@
     </details>
   </div>
 
-  <div class="lang-divider">— English —</div>
-
-  <!-- ===================== EN FAQ ===================== -->
-  <div class="card">
-    <h2>FAQ (EN)</h2>
+  <div class="card en" lang="en">
+    <h2>Frequently asked questions</h2>
 
     <details>
       <summary>Does it record with the screen locked?</summary>
@@ -236,29 +206,32 @@
     </details>
 
     <details>
-      <summary>Are "breathing pauses" a sleep-apnea diagnosis?</summary>
-      <p>No. It's a rough heuristic — longer silence between snoring episodes.
-      Zzzentinel is not a medical device. If pauses recur, mention them to your
-      doctor.</p>
+      <summary>Are "breathing pauses" a sleep-apnoea diagnosis?</summary>
+      <p>No. The app looks for longer silences between stretches of audible
+      breathing — a microphone measures neither airflow nor oxygen, so it cannot
+      tell quiet breathing from a stop in breathing. It's an indicative heuristic
+      and Zzzentinel is not a medical device. If pauses recur, mention them to your
+      doctor — the Clinician summary helps with that.</p>
     </details>
 
     <details>
       <summary>What is the “Clinician summary”?</summary>
       <p>In a finished night → Share → Clinician summary the app writes a PDF with
-      a professionally-worded overview (snoring, breathing rhythm, list of pauses,
+      a professionally-worded overview (snoring, audible breathing, list of pauses,
       a “Method and limitations” section) plus recordings surrounding the three
       longest pauses. Nothing is uploaded — you share the files yourself. It is
       not a diagnosis; it is material for a conversation with your doctor.</p>
     </details>
 
     <details>
-      <summary>What is “To confirm”, and why does the app suggest flatulence?</summary>
+      <summary>What is “To confirm”?</summary>
       <p>Sounds the app heard for the first time, or isn't sure about, are offered
-      for a listen. Confirming teaches it that it was right; correcting gives it
-      the proper name and a new training sample. Apple's built-in recognizer has
-      no class for flatulence — the app only suggests it from the acoustic
-      signature, and a suggestion never turns into a fact on its own. Turn it
-      off under Settings → Suggest flatulence.</p>
+      for a listen in the morning report. <em>That's right</em> teaches it that it
+      was right; <em>Fix</em> gives it the proper name and a new training sample.
+      It asks about each sound at most twice a night and trusts it after three
+      confirmations. A suggestion never turns into a fact on its own. Automatic
+      suggestions for sounds the built-in recognizer has no name for can be turned
+      off under Settings → Sound suggestions.</p>
     </details>
 
     <details>
@@ -281,6 +254,22 @@
     </details>
 
     <details>
+      <summary>I'm moving data from an older version with a different name.</summary>
+      <p>iOS treats a renamed app as a separate one, so data doesn't carry over
+      automatically. In the old app use its export buttons (the model, or single
+      recordings via Share), save them to Files and import them in Zzzentinel.
+      Uninstall the old app only after checking the import worked — uninstalling
+      removes its data for good.</p>
+    </details>
+
+    <details>
+      <summary>I forgot my guard PIN.</summary>
+      <p>If the guard is off, change it in <em>Guard → Change PIN</em>. If it's
+      armed and the PIN is lost, reinstalling the app is the only way — night data
+      on the device is removed, so export first.</p>
+    </details>
+
+    <details>
       <summary>Why does the guard need the microphone, and what does it hear?</summary>
       <p>An armed guard watches for movement <em>and</em> follows the loudness of
       sound around the phone — people often lean over a phone or talk to it
@@ -298,10 +287,10 @@
     </details>
 
     <details>
-      <summary>I forgot my guard PIN.</summary>
-      <p>If the guard is off, change it in <em>Guard → Change PIN</em>. If it's
-      armed and the PIN is lost, reinstalling the app is the only way — night data
-      on the device is removed, so export first.</p>
+      <summary>The alarm isn't loud enough.</summary>
+      <p>Before arming the guard, turn media volume all the way up and switch off
+      Do Not Disturb. The alarm plays through the speaker even with the ring/silent
+      switch muted.</p>
     </details>
 
     <details>
@@ -311,11 +300,13 @@
       the app removes everything.</p>
     </details>
   </div>
-
-  <footer>
-    <p><a href="index.html">Zzzentinel</a> · <a href="privacy.html">Ochrana súkromia / Privacy</a></p>
-    <p>© 2026 Ján Šikuta</p>
-  </footer>
 </div>
+
+<footer>
+  <p><a href="index.html">Zzzentinel</a> · <a href="privacy.html"><span class="sk">Ochrana súkromia</span><span class="en">Privacy policy</span></a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="lang.js"></script>
 </body>
 </html>

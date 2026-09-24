@@ -1,60 +1,33 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zzzentinel — Ochrana súkromia / Privacy Policy</title>
-<meta name="description" content="Zásady ochrany súkromia aplikácie Zzzentinel. Žiadny server, žiadne účty, žiadna analytika — všetko zostáva vo vašom zariadení.">
+<title>Zzzentinel — Privacy Policy / Ochrana súkromia</title>
+<meta name="description" content="Zzzentinel privacy policy: no server, no accounts, no analytics — everything stays on your device. Zásady ochrany súkromia aplikácie Zzzentinel.">
 <link rel="apple-touch-icon" href="favicon.png">
 <link rel="icon" href="favicon.png">
-<style>
-  :root {
-    --bg: #f6f7fb; --bg2: #edeff7; --card: #ffffff; --text: #14172a; --muted: #5b6172;
-    --accent: #3b4ba8; --gold: #b8860b; --border: #e3e6ef;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #080b18; --bg2: #0e1226; --card: #151a30; --text: #eef0f8; --muted: #a3a9bf;
-            --accent: #9fb0ff; --gold: #f2c94c; --border: #262c48; }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--text);
-         font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-  a { color: var(--accent); }
-  .nav { padding: 16px 20px; border-bottom: 1px solid var(--border); background: var(--bg2); }
-  .nav a { text-decoration: none; font-weight: 600; font-size: 15px; }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 36px 20px 64px; }
-  header { text-align: center; margin-bottom: 34px; }
-  header img { width: 84px; height: 84px; border-radius: 22%;
-               box-shadow: 0 10px 28px rgba(0,0,0,.3); }
-  h1 { margin: 16px 0 4px; font-size: 30px; }
-  .sub { color: var(--muted); font-size: 15px; }
-  .card { background: var(--card); border: 1px solid var(--border);
-          border-radius: 16px; padding: 24px 28px; margin: 20px 0; }
-  h2 { font-size: 21px; margin-top: 0; color: var(--accent); }
-  h3 { font-size: 17px; margin-bottom: 4px; }
-  ul { padding-left: 22px; }
-  li { margin: 6px 0; }
-  .tldr { border-left: 4px solid var(--gold); }
-  .lang-divider { text-align: center; color: var(--muted); margin: 44px 0 8px;
-                  text-transform: uppercase; letter-spacing: 2px; font-size: 13px; }
-  footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 44px; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="nav"><a href="index.html">← Zzzentinel</a></div>
+<div class="topbar">
+  <a href="index.html">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language / Jazyk">
+    <button data-set="sk" aria-pressed="false">SK</button>
+    <button data-set="en" aria-pressed="false">EN</button>
+  </div>
+</div>
 
-<div class="wrap">
-  <header>
+<div class="wrap narrow">
+  <div class="page-head">
     <img src="icon.png" alt="Zzzentinel">
-    <h1>Ochrana súkromia</h1>
-    <div class="sub">Privacy Policy · Zzzentinel</div>
-    <div class="sub">Platné od / Effective: 23.&nbsp;9.&nbsp;2026</div>
-  </header>
+    <h1><span class="sk">Ochrana súkromia</span><span class="en">Privacy Policy</span></h1>
+    <div class="sub"><span class="sk">Platné od 23.&nbsp;9.&nbsp;2026</span><span class="en">Effective 23&nbsp;September&nbsp;2026</span></div>
+  </div>
 
-  <!-- ===================== SLOVENČINA ===================== -->
-  <div class="card tldr">
-    <h2>Zásady ochrany súkromia (SK)</h2>
+  <div class="card tldr sk" lang="sk">
+    <h2>Zásady ochrany súkromia</h2>
     <p><strong>Krátka verzia: všetko zostáva vo vašom zariadení.</strong>
     Zzzentinel nemá server, používateľské účty, reklamy ani analytiku. Vývojár
     nezbiera, neprenáša ani nespracúva žiadne údaje o používateľoch.</p>
@@ -123,11 +96,9 @@
     platnosti.</p>
   </div>
 
-  <div class="lang-divider">— English —</div>
 
-  <!-- ===================== ENGLISH ===================== -->
-  <div class="card tldr">
-    <h2>Privacy Policy (EN)</h2>
+  <div class="card tldr en" lang="en">
+    <h2>Privacy Policy</h2>
     <p><strong>Short version: everything stays on your device.</strong>
     Zzzentinel has no server, no user accounts, no ads and no analytics. The
     developer collects, transmits and processes no user data whatsoever.</p>
@@ -195,11 +166,15 @@
     date.</p>
   </div>
 
-  <footer>
-    <p><a href="index.html">Zzzentinel</a> · <a href="support.html">Podpora / Support</a></p>
-    <p>Ján Šikuta · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a></p>
-    <p>© 2026 Ján Šikuta</p>
-  </footer>
+
 </div>
+
+<footer>
+  <p><a href="index.html">Zzzentinel</a> · <a href="support.html"><span class="sk">Podpora</span><span class="en">Support</span></a></p>
+  <p>Ján Šikuta · <a href="mailto:forensika.eu@icloud.com">forensika.eu@icloud.com</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="lang.js"></script>
 </body>
 </html>
