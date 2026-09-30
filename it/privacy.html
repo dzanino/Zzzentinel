@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="it" data-fixed-lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel – Informativa sulla privacy</title>
+<meta name="description" content="Informativa sulla privacy di Zzzentinel: nessun server, nessun account, nessun analytics. Tutto resta sul tuo dispositivo.">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/privacy.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/privacy.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<!--HREFLANG:end-->
+<meta property="og:title" content="Zzzentinel – Informativa sulla privacy">
+<meta property="og:description" content="Nessun server, nessun account, nessun analytics: tutto resta sul tuo dispositivo.">
+<meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
+<meta property="og:url" content="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <a href="../privacy.html?lang=sk" data-lang-link="sk">SK</a>
+    <a href="../privacy.html?lang=en" data-lang-link="en">EN</a>
+    <a href="../cs/privacy.html" data-lang-link="cs" hreflang="cs">CS</a>
+    <a href="../de/privacy.html" data-lang-link="de" hreflang="de">DE</a>
+    <a href="../fr/privacy.html" data-lang-link="fr" hreflang="fr">FR</a>
+    <a href="../it/privacy.html" data-lang-link="it" hreflang="it" aria-current="page">IT</a>
+    <a href="../pl/privacy.html" data-lang-link="pl" hreflang="pl">PL</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png" alt="Zzzentinel">
+    <h1>Informativa sulla privacy</h1>
+    <div class="sub">In vigore dal 1°&nbsp;ottobre&nbsp;2026</div>
+  </div>
+
+  <div class="card tldr">
+    <h2>Informativa sulla privacy</h2>
+    <p><strong>In breve: tutto resta sul tuo dispositivo.</strong>
+    Zzzentinel non ha server, account utente, pubblicità né analytics. Lo sviluppatore
+    non raccoglie, non trasmette e non tratta alcun dato degli utenti.</p>
+
+    <h3>Che cosa tratta l'app</h3>
+    <ul>
+      <li><strong>Registrazioni audio e analisi</strong>: nascono solo durante una
+        sorveglianza notturna che avvii tu manualmente e vengono salvate esclusivamente
+        in locale, nella memoria dell'app sul tuo dispositivo.</li>
+      <li><strong>Il riconoscimento dei suoni e l'addestramento del modello personale</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) avvengono interamente sul dispositivo. Il tuo modello
+        <code>my_night.mlmodel</code> non esce da lì.</li>
+      <li><strong>I sensori di movimento</strong> (CoreMotion) vengono usati solo mentre la
+        guardia è attiva, per rilevare il movimento del telefono; i valori misurati non
+        vengono salvati da nessuna parte.</li>
+      <li><strong>Il microfono in modalità guardia</strong>: finché la guardia è attiva, il
+        telefono segue il volume dei suoni intorno a sé, per accorgersi anche di qualcuno
+        che si china sul telefono o gli parla. <strong>Non viene registrato nulla</strong>:
+        si misura solo il livello sonoro istantaneo, che non viene salvato né inviato da
+        nessuna parte. L'attivazione dell'allarme tramite i suoni si può disattivare in
+        Impostazioni.</li>
+      <li><strong>Il PIN della guardia</strong> è salvato solo come impronta crittografica
+        (SHA-256 con salt), in locale sul dispositivo. È indipendente dal codice di
+        sblocco del telefono.</li>
+      <li><strong>Le note sulle pause del respiro</strong> sono calcolate in locale dalla
+        tempistica dei suoni del respiro negli eventi già registrati. Non sono dati sanitari
+        e non vengono inviate da nessuna parte.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri e Comandi Rapidi</h3>
+    <p>Se usi l'app companion per Apple&nbsp;Watch, tra l'orologio e il tuo iPhone vengono
+    scambiati soltanto lo stato della guardia (attiva/disattivata) e il PIN che inserisci
+    sull'orologio per disattivarla. Il trasferimento avviene tramite il collegamento locale
+    cifrato di Apple (WatchConnectivity) tra i tuoi dispositivi, senza passare da alcun
+    nostro server, e il PIN non viene salvato sull'orologio. Allo stesso modo, i comandi
+    tramite Siri e l'app Comandi Rapidi vengono eseguiti solo in locale, sul dispositivo.</p>
+
+    <h3>Collegamento con l'app Breathune</h3>
+    <p>Se sullo stesso iPhone è installata anche l'app Breathune (dello stesso autore), le
+    due app si scambiano brevi riepiloghi delle notti tramite una cartella condivisa sul
+    dispositivo (App Group): ora di inizio e di fine, tratti di russamento (ora, durata,
+    intensità) e numero degli altri eventi. Da Breathune, Zzzentinel legge gli esercizi di
+    respirazione completati (nome, ora, durata), il suo punteggio della notte e la frequenza
+    cardiaca media, se hai attivato quella misurazione. Ciascuna app segnala anche quando
+    sta sorvegliando una notte, per non contendersi il microfono. Registrazioni,
+    trascrizioni del parlato e qualsiasi altra cosa non vengono condivise, e nulla di tutto
+    ciò lascia il dispositivo.</p>
+
+    <h3>Trascrizione del parlato</h3>
+    <p>La trascrizione del parlare nel sonno usa il framework Apple Speech e si avvia solo
+    su tua richiesta. Se è disponibile il riconoscimento direttamente sul dispositivo,
+    l'elaborazione avviene in locale; altrimenti la clip audio selezionata può essere
+    elaborata dai server di Apple, secondo le condizioni di Apple.</p>
+
+    <h3>Condivisione dei dati</h3>
+    <p>Nessun dato lascia il dispositivo, a meno che tu non lo esporti da solo tramite la
+    condivisione di sistema, per esempio la trascrizione di una notte, una registrazione
+    singola o unita, l'archivio dell'intera notte (uno .zip con registrazioni, trascrizione
+    e la tabella degli eventi <code>events.csv</code>, comprese le tue conferme), il
+    «Riepilogo per il medico» (un PDF con le registrazioni intorno alle pause più lunghe del
+    respiro) o il modello addestrato. In quel caso la destinazione la scegli tu.
+    Disinstallando l'app, tutti i suoi dati vengono eliminati dal dispositivo.</p>
+
+    <h3>Minori e contenuti sensibili</h3>
+    <p>L'app non raccoglie alcun dato e quindi non tratta nemmeno dati di minori. Ti
+    ricordiamo che le registrazioni notturne possono catturare contenuti sensibili, comprese
+    le voci di altre persone presenti nella stanza: gestisci quindi le esportazioni con
+    giudizio e rispetta la privacy degli altri.</p>
+
+    <h3>Informazioni sulla salute</h3>
+    <p>Zzzentinel <strong>non è un dispositivo medico</strong>. Le segnalazioni delle
+    «pause del respiro» sono un'euristica indicativa, non una diagnosi, e non sostituiscono
+    una visita medica.</p>
+
+    <h3>Modifiche a questa informativa</h3>
+    <p>Eventuali modifiche saranno pubblicate su questa pagina insieme alla nuova data di
+    entrata in vigore.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="./">Zzzentinel</a> · <a href="support.html">Assistenza</a></p>
+  <p>Ján Šikuta · <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+</body>
+</html>

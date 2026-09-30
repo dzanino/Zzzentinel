@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl" data-fixed-lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel — Polityka prywatności</title>
+<meta name="description" content="Polityka prywatności Zzzentinel: bez serwera, bez kont, bez analityki — wszystko zostaje na twoim urządzeniu.">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/privacy.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/privacy.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<!--HREFLANG:end-->
+</head>
+<body>
+
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <a href="../privacy.html?lang=sk" data-lang-link="sk">SK</a>
+    <a href="../privacy.html?lang=en" data-lang-link="en">EN</a>
+    <a href="../cs/privacy.html" data-lang-link="cs" hreflang="cs">CS</a>
+    <a href="../de/privacy.html" data-lang-link="de" hreflang="de">DE</a>
+    <a href="../fr/privacy.html" data-lang-link="fr" hreflang="fr">FR</a>
+    <a href="../it/privacy.html" data-lang-link="it" hreflang="it">IT</a>
+    <a href="../pl/privacy.html" data-lang-link="pl" hreflang="pl" aria-current="page">PL</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png" alt="Zzzentinel">
+    <h1>Polityka prywatności</h1>
+    <div class="sub">Obowiązuje od 1&nbsp;października&nbsp;2026</div>
+  </div>
+
+  <div class="card tldr" lang="pl">
+    <h2>Polityka prywatności</h2>
+    <p><strong>W skrócie: wszystko zostaje na twoim urządzeniu.</strong>
+    Zzzentinel nie ma serwera, kont użytkowników, reklam ani analityki. Twórca nie zbiera, nie przesyła
+    ani nie przetwarza żadnych danych użytkowników.</p>
+
+    <h3>Co aplikacja przetwarza</h3>
+    <ul>
+      <li><strong>Nagrania audio i analizy</strong> — powstają wyłącznie podczas nocnego czuwania, które
+        włączasz ręcznie, i są przechowywane tylko lokalnie, w pamięci aplikacji na twoim urządzeniu.</li>
+      <li><strong>Rozpoznawanie dźwięków i trening własnego modelu</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) odbywają się w całości na urządzeniu. Twój model
+        <code>my_night.mlmodel</code> nigdy nie opuszcza telefonu.</li>
+      <li><strong>Czujniki ruchu</strong> (CoreMotion) są odczytywane tylko wtedy, gdy strażnik jest
+        włączony, aby wykryć poruszenie telefonu; odczyty nie są nigdzie zapisywane.</li>
+      <li><strong>Mikrofon w trybie strażnika</strong> — gdy strażnik jest włączony, telefon śledzi głośność
+        dźwięków wokół siebie, aby wychwycić także kogoś, kto pochyla się nad telefonem albo coś do niego
+        mówi. <strong>Nic nie jest nagrywane</strong>: mierzony jest tylko chwilowy poziom dźwięku, który
+        nigdy nie jest zapisywany ani przesyłany. Uruchamianie alarmu dźwiękiem można wyłączyć
+        w Ustawieniach.</li>
+      <li><strong>PIN strażnika</strong> jest przechowywany wyłącznie jako skrót kryptograficzny
+        (SHA-256 z solą), lokalnie na urządzeniu. Jest niezależny od kodu odblokowania telefonu.</li>
+      <li><strong>Uwagi o przerwach w oddychaniu</strong> są obliczane lokalnie na podstawie czasu
+        dźwięków oddechu w już zarejestrowanych zdarzeniach. Nie są danymi zdrowotnymi i nigdy nie są
+        przesyłane.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri i Skróty</h3>
+    <p>Jeśli używasz aplikacji towarzyszącej na Apple&nbsp;Watch, jedyne dane wymieniane między zegarkiem
+    a iPhone’em to stan strażnika (włączony/wyłączony) oraz PIN wpisywany na zegarku przy wyłączaniu.
+    Przechodzą one szyfrowanym lokalnym łączem Apple (WatchConnectivity) między twoimi własnymi
+    urządzeniami — nigdy przez żaden nasz serwer — a PIN nie jest zapisywany na zegarku. Polecenia
+    przez Siri i aplikację Skróty są podobnie wykonywane lokalnie na urządzeniu.</p>
+
+    <h3>Powiązanie z aplikacją Breathune</h3>
+    <p>Jeśli na tym samym iPhonie zainstalowany jest także Breathune (od tego samego autora), obie
+    aplikacje wymieniają krótkie podsumowania nocy przez wspólny folder na urządzeniu (App Group):
+    czas rozpoczęcia i zakończenia, odcinki chrapania (czas, długość, głośność) oraz liczby pozostałych
+    zdarzeń. Z Breathune Zzzentinel odczytuje ukończone ćwiczenia oddechowe (nazwa, czas, długość),
+    wynik nocy oraz średnie tętno, jeśli włączysz jego pomiar. Każda z aplikacji sygnalizuje też, że
+    właśnie monitoruje noc, aby nie rywalizowały o mikrofon. Udostępniane są tylko te podsumowania —
+    nie nagrania, nie transkrypcje mowy, nic więcej — i nic z tego nie opuszcza urządzenia.</p>
+
+    <h3>Transkrypcja mowy</h3>
+    <p>Transkrypcja mówienia przez sen korzysta z frameworku Apple Speech i działa wyłącznie na twoje
+    wyraźne żądanie. Gdy dostępne jest rozpoznawanie na urządzeniu, przetwarzanie odbywa się lokalnie;
+    w przeciwnym razie wybrany klip audio może zostać przetworzony na serwerach Apple zgodnie z jej
+    warunkami.</p>
+
+    <h3>Udostępnianie danych</h3>
+    <p>Żadne dane nie opuszczają urządzenia, dopóki ich nie wyeksportujesz przez systemowe menu
+    udostępniania — na przykład transkrypcji nocy, pojedynczego lub połączonego nagrania, archiwum całej
+    nocy (.zip z nagraniami, transkrypcją i tabelą zdarzeń <code>events.csv</code>, wraz z twoimi
+    potwierdzeniami), „Podsumowania dla lekarza” (PDF z nagraniami wokół najdłuższych przerw
+    w oddychaniu) albo wytrenowanego modelu — wtedy to ty wybierasz miejsce docelowe. Odinstalowanie
+    aplikacji usuwa z urządzenia wszystkie jej dane.</p>
+
+    <h3>Dzieci i treści wrażliwe</h3>
+    <p>Aplikacja nie zbiera żadnych danych, a zatem nie przetwarza też danych dzieci. Pamiętaj, że nocne
+    nagrania mogą uchwycić treści wrażliwe, w tym głosy innych osób w pomieszczeniu — z eksportami
+    postępuj rozważnie i szanuj prywatność innych.</p>
+
+    <h3>Informacje zdrowotne</h3>
+    <p>Zzzentinel <strong>nie jest wyrobem medycznym</strong>. Uwagi o „przerwach w oddychaniu” to
+    orientacyjna heurystyka, a nie diagnoza, i nie zastępują badania lekarskiego.</p>
+
+    <h3>Zmiany tej polityki</h3>
+    <p>Ewentualne zmiany opublikujemy na tej stronie razem z nową datą obowiązywania.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="index.html">Zzzentinel</a> · <a href="support.html">Wsparcie</a></p>
+  <p>Ján Šikuta · <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+</body>
+</html>
