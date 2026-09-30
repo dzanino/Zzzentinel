@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" data-fixed-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel — Assistance</title>
+<meta name="description" content="Assistance et FAQ de Zzzentinel&nbsp;: enregistrement en arrière-plan, batterie, tes propres sons, pauses respiratoires, synthèse pour le médecin, Apple Watch, PIN et données.">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/fr/support.html">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/support.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/support.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/support.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/support.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/support.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/support.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
+<!--HREFLANG:end-->
+<meta property="og:title" content="Zzzentinel — Assistance">
+<meta property="og:description" content="Assistance et FAQ de Zzzentinel&nbsp;: enregistrement en arrière-plan, batterie, tes propres sons, pauses respiratoires, synthèse pour le médecin, Apple Watch, PIN et données.">
+<meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
+<meta property="og:url" content="https://dzanino.github.io/Zzzentinel/fr/support.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+</head>
+<body>
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <a href="../support.html?lang=sk" data-lang-link="sk">SK</a>
+    <a href="../support.html?lang=en" data-lang-link="en">EN</a>
+    <a href="../cs/support.html" data-lang-link="cs" hreflang="cs">CS</a>
+    <a href="../de/support.html" data-lang-link="de" hreflang="de">DE</a>
+    <a href="../fr/support.html" data-lang-link="fr" hreflang="fr" aria-current="page">FR</a>
+    <a href="../it/support.html" data-lang-link="it" hreflang="it">IT</a>
+    <a href="../pl/support.html" data-lang-link="pl" hreflang="pl">PL</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png" alt="Zzzentinel">
+    <h1>Assistance</h1>
+    <div class="sub">Zzzentinel · iPhone &amp; Apple Watch</div>
+  </div>
+
+  <div class="card contact">
+    <h2>Contact</h2>
+    <p>Écris-moi — je réponds en général sous 48 heures.</p>
+    <a class="btn" href="mailto:jansikuta@me.com?subject=Zzzentinel%20support">jansikuta@me.com</a>
+  </div>
+
+  <div class="card" lang="fr">
+    <h2>Questions fréquentes</h2>
+
+    <details>
+      <summary>L’app enregistre-t-elle aussi quand l’écran est verrouillé&nbsp;?</summary>
+      <p>Oui. Une fois la veille de nuit lancée, l’enregistrement continue en arrière-plan et téléphone verrouillé. Utilise <em>Assombrir l’écran</em> pour garder l’app ouverte avec un affichage presque noir qui ne montre qu’une horloge discrète. Nous te conseillons de brancher le téléphone sur le chargeur pour la nuit.</p>
+    </details>
+
+    <details>
+      <summary>Quelle quantité de batterie et d’espace cela consomme-t-il&nbsp;?</summary>
+      <p>L’analyse est légère et seuls de courts extraits d’événements sont conservés, pas la nuit entière — une nuit ordinaire occupe quelques Mo. Quand l’app est en arrière-plan ou assombrie, elle cesse de redessiner les indicateurs, ce qui économise encore de l’énergie. Avec le chargeur branché, la consommation de batterie n’a aucune importance.</p>
+    </details>
+
+    <details>
+      <summary>Qu’est-ce qu’un «&nbsp;son indéfini&nbsp;»&nbsp;?</summary>
+      <p>Un son fort que le classificateur n’a pas su nommer. Écoute l’extrait, touche <em>Définir le son</em> et donne-lui un nom. Après environ cinq échantillons, tu peux entraîner ton modèle personnel <code>my_night.mlmodel</code> dans Réglages, directement sur le téléphone.</p>
+    </details>
+
+    <details>
+      <summary>L’entraînement ne fonctionne pas chez moi.</summary>
+      <p>L’entraînement exige un vrai iPhone — Create&nbsp;ML n’est pas disponible dans le simulateur. Il te faut aussi au moins deux classes de sons&nbsp;; si tu n’en as qu’une, l’app construit automatiquement une classe «&nbsp;autres&nbsp;» à partir d’extraits d’autres événements, donc enregistre d’abord au moins une nuit.</p>
+    </details>
+
+    <details>
+      <summary>Les «&nbsp;pauses respiratoires&nbsp;» sont-elles un diagnostic d’apnée du sommeil&nbsp;?</summary>
+      <p>Non. L’app cherche des silences plus longs entre des séquences de respiration audible — un micro ne mesure ni le débit d’air ni l’oxygène, il ne peut donc pas distinguer une respiration silencieuse d’un arrêt respiratoire. C’est une heuristique indicative et Zzzentinel n’est pas un dispositif médical. Si les pauses se répètent, parles-en à ton médecin — la Synthèse pour le médecin t’y aide.</p>
+    </details>
+
+    <details>
+      <summary>Qu’est-ce que la «&nbsp;Synthèse pour le médecin&nbsp;»&nbsp;?</summary>
+      <p>Dans le détail d’une nuit terminée → Partager → Synthèse pour le médecin, l’app produit un PDF avec un aperçu rédigé avec rigueur (ronflement, respiration audible, liste des pauses, section «&nbsp;Méthode et limites&nbsp;») ainsi que les enregistrements autour des trois pauses les plus longues. Rien n’est envoyé — tu partages les fichiers toi-même. Ce n’est pas un diagnostic&nbsp;; c’est un support pour discuter avec ton médecin.</p>
+    </details>
+
+    <details>
+      <summary>Qu’est-ce que «&nbsp;À confirmer&nbsp;»&nbsp;?</summary>
+      <p>Les sons que l’app a entendus pour la première fois, ou dont elle n’est pas sûre, te sont proposés à l’écoute dans le rapport du matin. <em>C’est bien ça</em> lui apprend qu’elle avait raison&nbsp;; <em>Corriger</em> lui donne le bon nom et un nouvel échantillon d’entraînement. Elle ne te pose la question qu’au plus deux fois par nuit pour un même son et lui fait confiance après trois confirmations. Une suggestion ne devient jamais un fait toute seule. Les suggestions automatiques pour les sons que le reconnaisseur intégré ne sait pas nommer se désactivent dans Réglages → Suggestions de sons.</p>
+    </details>
+
+    <details>
+      <summary>Comment commander la garde depuis l’Apple Watch&nbsp;?</summary>
+      <p>L’app pour la montre s’installe automatiquement avec celle de l’iPhone. Touche <em>Activer</em> sur la montre et la garde s’active incognito — l’écran du téléphone reste éteint. La désactivation se fait avec le clavier PIN de la montre. Si le téléphone est hors de portée, la commande d’activation est mise en file d’attente et s’exécute dès que les appareils se reconnectent. Siri («&nbsp;Active Zzzentinel&nbsp;»), un widget Raccourcis et Toucher le dos fonctionnent de la même manière (Réglages → Accessibilité → Toucher → Toucher le dos).</p>
+    </details>
+
+    <details>
+      <summary>Comment transférer mes sons vers un autre téléphone ou depuis une autre app&nbsp;?</summary>
+      <p>Dans <em>Réglages → Entraînement de mes sons → Transfert des échantillons</em>, touche <em>Exporter tous les échantillons (.zip)</em> et enregistre l’archive (Fichiers, AirDrop, iCloud). Sur l’autre appareil, décompresse-la et utilise <em>Importer des échantillons depuis Fichiers</em>, un son à la fois, en donnant son nom à chacun. Un modèle entraîné se transfère avec <em>Exporter my_night.mlmodel</em> et <em>Importer un modèle (.mlmodel)</em>. Toutes les données de l’app sont aussi accessibles dans Fichiers → <em>Sur mon iPhone → Zzzentinel</em>.</p>
+    </details>
+
+    <details>
+      <summary>Je transfère des données d’une ancienne version portant un autre nom.</summary>
+      <p>iOS considère une app renommée comme une app distincte&nbsp;: les données ne passent donc pas automatiquement. Dans l’ancienne app, utilise ses boutons d’export (le modèle, ou des enregistrements isolés via Partager), enregistre-les dans Fichiers et importe-les dans Zzzentinel. Ne désinstalle l’ancienne app qu’après avoir vérifié que l’import a fonctionné — la désinstallation supprime définitivement ses données.</p>
+    </details>
+
+    <details>
+      <summary>J’ai oublié le PIN de la garde.</summary>
+      <p>Si la garde est désactivée, modifie-le dans <em>Garde → Modifier le PIN</em>. Si elle est activée et que le PIN est perdu, la seule solution est de réinstaller l’app — les données de nuit présentes sur l’appareil sont alors supprimées, alors exporte-les d’abord.</p>
+    </details>
+
+    <details>
+      <summary>Pourquoi la garde a-t-elle besoin du micro, et qu’entend-elle&nbsp;?</summary>
+      <p>Une garde activée surveille les mouvements <em>et</em> suit le volume sonore autour du téléphone — on se penche souvent sur un téléphone ou on lui parle avant de le déplacer. Rien n’est enregistré&nbsp;; seul le niveau sonore instantané est mesuré. Dans une chambre partagée, désactive <em>Le son peut déclencher l’alarme</em> dans Réglages et seul un mouvement la déclenchera.</p>
+    </details>
+
+    <details>
+      <summary>L’alarme clignote et je suis sensible aux lumières clignotantes.</summary>
+      <p>L’écran clignote deux fois par seconde et la lampe torche 2,5 fois — dans les deux cas sous le seuil que les recommandations jugent à risque. Le clignotement est ignoré automatiquement quand Réduire les animations est activé, et peut être désactivé dans Réglages → Guard Extra Plus → <em>Clignotement pendant l’alarme</em>. La sirène continue de fonctionner.</p>
+    </details>
+
+    <details>
+      <summary>L’alarme n’est pas assez forte.</summary>
+      <p>Avant d’activer la garde, mets le volume des médias au maximum et désactive Ne pas déranger. L’alarme sort par le haut-parleur même lorsque le commutateur sonnerie/silence est coupé.</p>
+    </details>
+
+    <details>
+      <summary>Où sont mes données et comment les supprimer&nbsp;?</summary>
+      <p>Tout est stocké uniquement sur le téléphone. Balaie vers la gauche pour supprimer une nuit dans <em>Mes nuits</em>, ou un son dans <em>Entraînement de mes sons</em>. Désinstaller l’app supprime tout.</p>
+    </details>
+  </div>
+</div>
+
+<footer>
+  <p><a href="./">Zzzentinel</a> · <a href="privacy.html">Politique de confidentialité</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+</body>
+</html>

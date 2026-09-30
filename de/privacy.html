@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de" data-fixed-lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datenschutzerklärung – Zzzentinel</title>
+<meta name="description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät – kein Server, kein Konto, keine Werbung, keine Analyse.">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/privacy.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/privacy.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<!--HREFLANG:end-->
+<meta property="og:title" content="Datenschutzerklärung – Zzzentinel">
+<meta property="og:description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät – kein Server, kein Konto, keine Werbung, keine Analyse.">
+<meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Sprache">
+    <a href="../privacy.html?lang=sk" data-lang-link="sk">SK</a>
+    <a href="../privacy.html?lang=en" data-lang-link="en">EN</a>
+    <a href="../cs/privacy.html" data-lang-link="cs" hreflang="cs">CS</a>
+    <a href="../de/privacy.html" data-lang-link="de" hreflang="de" aria-current="page">DE</a>
+    <a href="../fr/privacy.html" data-lang-link="fr" hreflang="fr">FR</a>
+    <a href="../it/privacy.html" data-lang-link="it" hreflang="it">IT</a>
+    <a href="../pl/privacy.html" data-lang-link="pl" hreflang="pl">PL</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png" alt="Zzzentinel">
+    <h1>Datenschutzerklärung</h1>
+    <div class="sub">Gültig ab 1.&nbsp;Oktober&nbsp;2026</div>
+  </div>
+
+  <div class="card tldr" lang="de">
+    <h2>Datenschutzerklärung</h2>
+    <p><strong>Kurzfassung: Alles bleibt auf deinem Gerät.</strong>
+    Zzzentinel hat keinen Server, keine Benutzerkonten, keine Werbung und keine Analyse. Der Entwickler
+    erhebt, überträgt und verarbeitet keinerlei Nutzerdaten.</p>
+
+    <h3>Was die App verarbeitet</h3>
+    <ul>
+      <li><strong>Audioaufnahmen und Analysen</strong> – entstehen nur während einer Nachtwache, die du manuell
+        startest, und werden ausschließlich lokal im Speicher der App auf deinem Gerät abgelegt.</li>
+      <li><strong>Geräuscherkennung und das Training deines persönlichen Modells</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) laufen vollständig auf dem Gerät. Dein Modell
+        <code>my_night.mlmodel</code> verlässt das Telefon nie.</li>
+      <li><strong>Bewegungssensoren</strong> (CoreMotion) werden nur ausgelesen, solange der Wächter aktiv ist,
+        um Bewegungen des Telefons zu erkennen; die Messwerte werden nirgends gespeichert.</li>
+      <li><strong>Das Mikrofon im Wächtermodus</strong> – solange der Wächter aktiv ist, verfolgt das Telefon die
+        Lautstärke der Geräusche in seiner Umgebung, damit auch erkannt wird, wenn sich jemand über das Telefon
+        beugt oder es anspricht. <strong>Dabei wird nichts aufgenommen</strong>: Gemessen wird nur der
+        momentane Geräuschpegel, der weder gespeichert noch übertragen wird. Das Auslösen durch Geräusche lässt
+        sich in den Einstellungen ausschalten.</li>
+      <li><strong>Die PIN des Wächters</strong> wird nur als kryptografischer Hash (SHA-256 mit Salt) lokal auf
+        dem Gerät gespeichert. Sie ist unabhängig vom Code zum Entsperren deines Telefons.</li>
+      <li><strong>Hinweise auf Atempausen</strong> werden lokal aus dem Zeitverlauf der Atemgeräusche in bereits
+        aufgezeichneten Ereignissen berechnet. Es sind keine Gesundheitsdaten, und sie werden nirgends
+        übertragen.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri und Kurzbefehle</h3>
+    <p>Wenn du die begleitende Apple&nbsp;Watch-App nutzt, werden zwischen Uhr und iPhone ausschließlich der Status
+    des Wächters (aktiv/inaktiv) und die PIN ausgetauscht, die du beim Deaktivieren auf der Uhr eingibst. Die
+    Übertragung läuft über die verschlüsselte lokale Verbindung von Apple (WatchConnectivity) zwischen deinen
+    eigenen Geräten – nie über einen Server von uns – und die PIN wird nicht auf der Uhr gespeichert. Auch
+    Befehle über Siri und die Kurzbefehle-App werden nur lokal auf dem Gerät ausgeführt.</p>
+
+    <h3>Verbindung mit der App Breathune</h3>
+    <p>Ist auf demselben iPhone auch Breathune (vom selben Autor) installiert, tauschen die beiden Apps über einen
+    gemeinsamen Ordner auf dem Gerät (eine App Group) kurze Zusammenfassungen der Nächte aus: Beginn und Ende,
+    Schnarchabschnitte (Zeitpunkt, Dauer, Lautstärke) und die Anzahl weiterer Ereignisse. Von Breathune liest
+    Zzzentinel abgeschlossene Atemübungen (Name, Zeitpunkt, Länge), dessen Nacht-Score und die
+    durchschnittliche Herzfrequenz, wenn du diese Messung eingeschaltet hast. Beide Apps melden sich außerdem
+    gegenseitig, wenn sie gerade eine Nacht überwachen, damit sie nicht um das Mikrofon konkurrieren.
+    Aufnahmen, Sprachtranskripte oder sonstige Inhalte werden nicht geteilt, und nichts davon verlässt das
+    Gerät.</p>
+
+    <h3>Sprachtranskription</h3>
+    <p>Die Transkription des Sprechens im Schlaf nutzt das Speech-Framework von Apple und wird nur auf deine
+    ausdrückliche Anforderung hin ausgeführt. Ist die Erkennung auf dem Gerät verfügbar, erfolgt die
+    Verarbeitung lokal; andernfalls kann der ausgewählte Audioclip nach den Bedingungen von Apple auf Apples
+    Servern verarbeitet werden.</p>
+
+    <h3>Weitergabe von Daten</h3>
+    <p>Keine Daten verlassen das Gerät, es sei denn, du exportierst sie selbst über das Teilen-Menü des Systems –
+    zum Beispiel das Transkript einer Nacht, eine einzelne oder zusammengefügte Aufnahme, das Archiv einer
+    ganzen Nacht (.zip mit Aufnahmen, Transkript und der Ereignistabelle <code>events.csv</code>
+    einschließlich deiner Bestätigungen), die „Zusammenfassung für Ärzte“ (PDF mit Aufnahmen rund um die
+    längsten Atempausen) oder dein trainiertes Modell. In diesem Fall entscheidest du über das Ziel. Beim
+    Löschen der App werden alle ihre Daten vom Gerät entfernt.</p>
+
+    <h3>Kinder und sensible Inhalte</h3>
+    <p>Die App erhebt keine Daten und verarbeitet daher auch keine Daten von Kindern. Bitte beachte, dass
+    nächtliche Aufnahmen sensible Inhalte erfassen können, darunter die Stimmen anderer Personen im Raum –
+    geh mit Exporten deshalb überlegt um und respektiere die Privatsphäre anderer.</p>
+
+    <h3>Gesundheitsinformationen</h3>
+    <p>Zzzentinel ist <strong>kein Medizinprodukt</strong>. Hinweise auf „Atempausen“ sind eine orientierende
+    Heuristik, keine Diagnose, und ersetzen keine ärztliche Untersuchung.</p>
+
+    <h3>Änderungen dieser Erklärung</h3>
+    <p>Etwaige Änderungen veröffentlichen wir auf dieser Seite zusammen mit einem neuen Datum des
+    Inkrafttretens.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="./">Zzzentinel</a> · <a href="support.html">Support</a></p>
+  <p>Ján Šikuta · <a href="mailto:jansikuta@me.com">jansikuta@me.com</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+</body>
+</html>

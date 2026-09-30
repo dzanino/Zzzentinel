@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs" data-fixed-lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel — Podpora</title>
+<meta name="description" content="Podpora a časté otázky k Zzzentinelu: nahrávání na pozadí, baterie, vlastní zvuky, pauzy v dýchání, souhrn pro lékaře, Apple Watch, PIN a data.">
+<link rel="apple-touch-icon" href="../favicon.png">
+<link rel="icon" href="../favicon.png">
+<link rel="stylesheet" href="../style.css">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/cs/support.html">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/support.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/support.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/support.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/support.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/support.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/support.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/support.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
+<!--HREFLANG:end-->
+<meta property="og:title" content="Zzzentinel — Podpora">
+<meta property="og:description" content="Kontakt a časté otázky k aplikaci Zzzentinel.">
+<meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
+<meta property="og:url" content="https://dzanino.github.io/Zzzentinel/cs/support.html">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:type" content="website">
+</head>
+<body>
+
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <a href="../support.html?lang=sk" data-lang-link="sk" hreflang="sk">SK</a>
+    <a href="../support.html?lang=en" data-lang-link="en" hreflang="en">EN</a>
+    <a href="../cs/support.html" data-lang-link="cs" hreflang="cs" aria-current="page">CS</a>
+    <a href="../de/support.html" data-lang-link="de" hreflang="de">DE</a>
+    <a href="../fr/support.html" data-lang-link="fr" hreflang="fr">FR</a>
+    <a href="../it/support.html" data-lang-link="it" hreflang="it">IT</a>
+    <a href="../pl/support.html" data-lang-link="pl" hreflang="pl">PL</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png" alt="Zzzentinel">
+    <h1>Podpora</h1>
+    <div class="sub">Zzzentinel · iPhone &amp; Apple Watch</div>
+  </div>
+
+  <div class="card contact">
+    <h2>Kontakt</h2>
+    <p>Napiš mi — odpovídám obvykle do 48 hodin.</p>
+    <a class="btn" href="mailto:jansikuta@me.com?subject=Zzzentinel%20support">jansikuta@me.com</a>
+  </div>
+
+  <div class="card" lang="cs">
+    <h2>Časté otázky</h2>
+
+    <details>
+      <summary>Nahrává aplikace i se zamčenou obrazovkou?</summary>
+      <p>Ano. Po spuštění nočního hlídání běží nahrávání i na pozadí a se zamčeným telefonem. Chceš-li mít displej zhasnutý, ale aplikaci po ruce, použij tlačítko <em>Ztlumit displej</em> — obrazovka téměř zhasne a zůstanou jen tlumené hodiny. Telefon na noc doporučujeme připojit k nabíječce.</p>
+    </details>
+
+    <details>
+      <summary>Kolik baterie a místa to spotřebuje?</summary>
+      <p>Analýza běží úsporně a ukládají se jen krátké klipy událostí, ne celá noc — běžná noc zabere jednotky MB. Dokud je aplikace na pozadí nebo je displej ztlumený, přestane překreslovat ukazatele, což dál šetří energii. S připojenou nabíječkou je spotřeba baterie nepodstatná.</p>
+    </details>
+
+    <details>
+      <summary>Proč mám v záznamu „neurčený zvuk“?</summary>
+      <p>Telefon zachytil hlasitý zvuk, který klasifikátor nedokázal pojmenovat. Přehraj si klip, klepni na <em>Pojmenovat zvuk</em> a zadej název. Zhruba po pěti vzorcích si v <em>Nastavení → Trénink mých zvuků</em> natrénuješ vlastní model <code>my_night.mlmodel</code> přímo v telefonu a příště aplikace zvuk pozná jménem.</p>
+    </details>
+
+    <details>
+      <summary>Trénink modelu mi nefunguje.</summary>
+      <p>Trénink vyžaduje skutečný iPhone — v simulátoru není framework Create&nbsp;ML dostupný a aplikace zobrazí upozornění. Potřebuješ také aspoň dvě třídy zvuků; pokud máš zatím jen jednu, aplikace si druhou („ostatní“) sestaví automaticky z klipů jiných událostí, takže nejdřív nahraj aspoň jednu noc.</p>
+    </details>
+
+    <details>
+      <summary>Jsou „pauzy v dýchání“ diagnóza spánkové apnoe?</summary>
+      <p>Ne. Aplikace hledá delší ticho mezi úseky slyšitelného dýchání — mikrofon neměří proudění vzduchu ani okysličení, takže nerozliší tiché dýchání od zástavy dechu. Je to orientační heuristika a Zzzentinel není zdravotnický prostředek. Pokud se pauzy opakují, zmiň je svému lékaři — pomůže ti v tom Souhrn pro lékaře.</p>
+    </details>
+
+    <details>
+      <summary>Co je „Souhrn pro lékaře“?</summary>
+      <p>V detailu ukončené noci → Sdílet → Souhrn pro lékaře vznikne PDF s odborně formulovaným přehledem (chrápání, slyšitelné dýchání, seznam pauz, sekce „Metoda a omezení“) a nahrávky okolí tří nejdelších pauz. Nic se neodesílá — soubory sdílíš sám. Není to diagnóza; je to podklad pro rozhovor s lékařem.</p>
+    </details>
+
+    <details>
+      <summary>Co je sekce „K potvrzení“?</summary>
+      <p>Zvuky, které aplikace slyšela poprvé nebo si jimi není jistá, ti v ranním reportu nabídne k poslechu. <em>Sedí</em> ji naučí, že se trefila; <em>Opravit</em> jí dá správný název a nový tréninkový vzorek. Na každý zvuk se ptá nejvýše dvakrát za noc a po třech potvrzeních mu už věří. Návrh se nikdy sám nezmění ve fakt. Automatické návrhy zvuků, které vestavěný rozpoznávač nezná, vypneš v Nastavení → Návrhy zvuků.</p>
+    </details>
+
+    <details>
+      <summary>Jak ovládám strážce z Apple Watch?</summary>
+      <p>Aplikace pro hodinky se nainstaluje automaticky spolu s tou v telefonu. Na hodinkách klepneš na <em>Aktivovat</em> — strážce se zapne inkognito, displej telefonu zůstane zhasnutý. Vypnutí probíhá přes PIN klávesnici přímo na hodinkách. Pokud je telefon mimo dosah, příkaz k aktivaci se zařadí do fronty a provede se, jakmile se zařízení spojí. Stejně funguje Siri („Arm Zzzentinel“), widget Zkratek i klepnutí na zadní stranu telefonu (Nastavení → Zpřístupnění → Dotyk → Klepnutí na zadní stranu).</p>
+    </details>
+
+    <details>
+      <summary>Jak přenesu své zvuky do jiného telefonu nebo z jiné aplikace?</summary>
+      <p>V <em>Nastavení → Trénink mých zvuků → Přenos vzorků</em> klepni na <em>Exportovat všechny vzorky (.zip)</em> a ulož je (Soubory, AirDrop, iCloud). V druhém zařízení zip rozbal a přes <em>Importovat vzorky ze Souborů</em> vyber nahrávky vždy jednoho zvuku a zadej jeho název. Natrénovaný model přeneseš tlačítkem <em>Exportovat my_night.mlmodel</em> a v cílové aplikaci přes <em>Importovat model (.mlmodel)</em>. Všechna data aplikace najdeš i přímo v aplikaci Soubory → <em>Na mém iPhonu → Zzzentinel</em>, odkud si je můžeš zkopírovat či zálohovat.</p>
+    </details>
+
+    <details>
+      <summary>Přenáším data ze starší verze s jiným názvem.</summary>
+      <p>iOS považuje přejmenovanou aplikaci za samostatnou, takže data automaticky nepřevezme. Ve staré aplikaci použij její exportní tlačítka (model, případně jednotlivé nahrávky přes sdílení), ulož je do Souborů a v Zzzentinelu je naimportuj. Starou aplikaci odinstaluj až poté, co si ověříš, že import proběhl — odinstalováním se její data nenávratně odstraní.</p>
+    </details>
+
+    <details>
+      <summary>Zapomněl jsem PIN strážce. Co teď?</summary>
+      <p>Pokud je strážce vypnutý, PIN změníš v záložce <em>Strážce → Změnit PIN</em>. Pokud je aktivní a PIN jsi zapomněl úplně, jedinou cestou je přeinstalování aplikace — noční záznamy se přitom ze zařízení odstraní, proto si je předem exportuj.</p>
+    </details>
+
+    <details>
+      <summary>Proč strážce potřebuje mikrofon a co slyší?</summary>
+      <p>Aktivovaný strážce sleduje pohyb telefonu <em>i</em> hlasitost zvuku kolem něj — někdo se k telefonu často nakloní nebo na něj promluví dřív, než s ním pohne. Nic se přitom nenahrává, měří se jen okamžitá hladina zvuku. Jsi-li ve sdíleném pokoji nebo na koleji, v Nastavení vypni <em>Spustit alarm i při zvuku</em> — alarm pak spustí jen pohyb.</p>
+    </details>
+
+    <details>
+      <summary>Alarm bliká. Jsem citlivý na blikající světlo.</summary>
+      <p>Obrazovka bliká 2× za sekundu a svítilna 2,5× — obojí pod hranicí, kterou odborná doporučení označují za rizikovou. Pokud máš v systému zapnuté <em>Omezit pohyb</em>, blikání se vynechá automaticky. Vypnout ho lze i ručně v Nastavení → Guard Extra Plus → <em>Blikání při alarmu</em>; siréna zůstane funkční.</p>
+    </details>
+
+    <details>
+      <summary>Alarm není slyšet dost nahlas.</summary>
+      <p>Před aktivací strážce vytoč hlasitost médií na maximum a vypni režim Nerušit. Alarm hraje přes reproduktor i při ztlumeném přepínači zvonění.</p>
+    </details>
+
+    <details>
+      <summary>Kde jsou moje data a jak je smažu?</summary>
+      <p>Všechno je uloženo jen v telefonu. Jednotlivé noci smažeš potažením doleva v seznamu <em>Moje noci</em>, natrénované zvuky v <em>Tréninku mých zvuků</em>. Odinstalováním aplikace se odstraní všechno.</p>
+    </details>
+  </div>
+</div>
+
+<footer>
+  <p><a href="./">Zzzentinel</a> · <a href="privacy.html">Ochrana soukromí</a></p>
+  <p>© 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+</body>
+</html>
