@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zzzentinel — Ochrana soukromí</title>
-<meta name="description" content="Zásady ochrany soukromí aplikace Zzzentinel: žádný server, žádné účty, žádná analytika — všechno zůstává v tvém zařízení.">
+<title>Zzzentinel - Ochrana soukromí</title>
+<meta name="description" content="Zásady ochrany soukromí aplikace Zzzentinel: žádný server, žádné účty, žádná analytika - všechno zůstává v tvém zařízení.">
 <link rel="apple-touch-icon" href="../favicon.png">
 <link rel="icon" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
@@ -19,8 +19,8 @@
 <link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
 <!--HREFLANG:end-->
-<meta property="og:title" content="Zzzentinel — Ochrana soukromí">
-<meta property="og:description" content="Žádný server, žádné účty, žádná analytika — všechno zůstává v tvém zařízení.">
+<meta property="og:title" content="Zzzentinel - Ochrana soukromí">
+<meta property="og:description" content="Žádný server, žádné účty, žádná analytika - všechno zůstává v tvém zařízení.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
 <meta property="og:url" content="https://dzanino.github.io/Zzzentinel/cs/privacy.html">
 <meta property="og:locale" content="cs_CZ">
@@ -45,7 +45,7 @@
   <div class="page-head">
     <img src="../icon.png" alt="Zzzentinel">
     <h1>Ochrana soukromí</h1>
-    <div class="sub">Platné od 1.&nbsp;října&nbsp;2026</div>
+    <div class="sub">Platné od 5.&nbsp;října&nbsp;2026</div>
   </div>
 
   <div class="card tldr" lang="cs">
@@ -56,7 +56,7 @@
 
     <h3>Co aplikace zpracovává</h3>
     <ul>
-      <li><strong>Zvukové nahrávky a analýzy</strong> — vznikají jen během nočního
+      <li><strong>Zvukové nahrávky a analýzy</strong> - vznikají jen během nočního
         hlídání, které ručně spustíš, a ukládají se výhradně lokálně do
         úložiště aplikace ve tvém zařízení.</li>
       <li><strong>Rozpoznávání zvuků a trénink vlastního modelu</strong>
@@ -65,7 +65,7 @@
       <li><strong>Pohybové senzory</strong> (CoreMotion) se používají jen během
         aktivního režimu strážce k detekci pohybu telefonu; naměřené hodnoty se
         nikam neukládají.</li>
-      <li><strong>Mikrofon v režimu strážce</strong> — dokud je strážce aktivní,
+      <li><strong>Mikrofon v režimu strážce</strong> - dokud je strážce aktivní,
         telefon sleduje hlasitost zvuku ve svém okolí, aby zachytil i to, když
         se někdo k telefonu nakloní nebo na něj promluví. <strong>Nic se přitom
         nenahrává</strong>: měří se jen okamžitá hladina zvuku, která se nikam
@@ -83,7 +83,7 @@
     <p>Pokud používáš doprovodnou aplikaci pro Apple&nbsp;Watch, mezi hodinkami a
     tvým iPhonem se vyměňuje výhradně stav strážce (zapnutý/vypnutý) a PIN, který
     na hodinkách zadáš při vypínání. Přenos zajišťuje šifrované lokální
-    spojení Apple (WatchConnectivity) mezi tvými vlastními zařízeními —
+    spojení Apple (WatchConnectivity) mezi tvými vlastními zařízeními -
     nevede přes žádný náš server a PIN se na hodinkách neukládá. Stejně tak příkazy
     přes Siri a aplikaci Zkratky se provádějí jen lokálně v zařízení.</p>
 
@@ -91,11 +91,21 @@
     <p>Pokud máš ve stejném iPhonu nainstalovanou také aplikaci Breathune (od
     stejného autora), obě aplikace si přes společnou složku v zařízení (App
     Group) vyměňují krátké souhrny nocí: čas začátku a konce, úseky chrápání
-    (čas, trvání, hlasitost) a počty ostatních událostí. Z Breathune
+    (čas, trvání, hlasitost), počty ostatních událostí, dechovou frekvenci a
+    celkový čas spánku. Z Breathune
     Zzzentinel čte dokončená dechová cvičení (název, čas, délka), jeho skóre
     noci a průměrný tep, pokud jsi jeho měření zapnul. Obě si oznamují také to, že
     právě sledují noc, aby si nebraly mikrofon. Nahrávky, přepisy řeči ani nic
     jiného se nesdílí a nic z toho neopouští zařízení.</p>
+
+    <h3>Dechová frekvence a Apple Zdraví</h3>
+    <p>Během nočního hlídání Zzzentinel odhaduje dechovou frekvenci přímo
+    v zařízení z hlasitosti mikrofonu; ukládají se jen čísla a časy, nikdy zvuk.
+    Pokud v Nastavení zapneš „Spánek a dech ze Zdraví“, Zzzentinel načte fáze
+    spánku a dechovou frekvenci, které tvoje hodinky zaznamenaly v aplikaci Zdraví,
+    pro noci, které hlídal. Pouze je čte, ukládá je k dané noci ve tvém zařízení
+    a nikam je neodesílá; do Zdraví nic nezapisuje. Čtení můžeš kdykoli vypnout
+    v Nastavení aplikace nebo v nastavení Zdraví.</p>
 
     <h3>Přepis řeči</h3>
     <p>Přepis mluvení ze spaní používá framework Apple Speech a spouští se výlučně
@@ -105,7 +115,7 @@
 
     <h3>Sdílení údajů</h3>
     <p>Žádné údaje neopouštějí zařízení, pokud je sám neexportuješ přes
-    systémové sdílení — například přepis noci, jednotlivou či slepenou nahrávku,
+    systémové sdílení - například přepis noci, jednotlivou či slepenou nahrávku,
     archiv celé noci (.zip s nahrávkami, přepisem a tabulkou událostí
     <code>events.csv</code> včetně tvých potvrzení), „Souhrn pro lékaře“ (PDF
     s nahrávkami okolí nejdelších pauz v dýchání) nebo natrénovaný model.
@@ -115,7 +125,7 @@
     <h3>Děti a citlivý obsah</h3>
     <p>Aplikace neshromažďuje žádné údaje, a tudíž nezpracovává ani údaje dětí.
     Upozorňujeme, že noční nahrávky mohou zachytit citlivý obsah včetně hlasů
-    dalších osob v místnosti — s exporty proto nakládej uvážlivě a respektuj
+    dalších osob v místnosti - s exporty proto nakládej uvážlivě a respektuj
     soukromí ostatních.</p>
 
     <h3>Zdravotní informace</h3>
