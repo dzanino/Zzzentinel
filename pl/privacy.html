@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zzzentinel — Polityka prywatności</title>
-<meta name="description" content="Polityka prywatności Zzzentinel: bez serwera, bez kont, bez analityki — wszystko zostaje na twoim urządzeniu.">
+<title>Zzzentinel - Polityka prywatności</title>
+<meta name="description" content="Polityka prywatności Zzzentinel: bez serwera, bez kont, bez analityki - wszystko zostaje na twoim urządzeniu.">
 <link rel="canonical" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
 <link rel="apple-touch-icon" href="../favicon.png">
 <link rel="icon" href="../favicon.png">
@@ -39,7 +39,7 @@
   <div class="page-head">
     <img src="../icon.png" alt="Zzzentinel">
     <h1>Polityka prywatności</h1>
-    <div class="sub">Obowiązuje od 1&nbsp;października&nbsp;2026</div>
+    <div class="sub">Obowiązuje od 5&nbsp;października&nbsp;2026</div>
   </div>
 
   <div class="card tldr" lang="pl">
@@ -50,14 +50,14 @@
 
     <h3>Co aplikacja przetwarza</h3>
     <ul>
-      <li><strong>Nagrania audio i analizy</strong> — powstają wyłącznie podczas nocnego czuwania, które
+      <li><strong>Nagrania audio i analizy</strong> - powstają wyłącznie podczas nocnego czuwania, które
         włączasz ręcznie, i są przechowywane tylko lokalnie, w pamięci aplikacji na twoim urządzeniu.</li>
       <li><strong>Rozpoznawanie dźwięków i trening własnego modelu</strong>
         (Core&nbsp;ML / Create&nbsp;ML) odbywają się w całości na urządzeniu. Twój model
         <code>my_night.mlmodel</code> nigdy nie opuszcza telefonu.</li>
       <li><strong>Czujniki ruchu</strong> (CoreMotion) są odczytywane tylko wtedy, gdy strażnik jest
         włączony, aby wykryć poruszenie telefonu; odczyty nie są nigdzie zapisywane.</li>
-      <li><strong>Mikrofon w trybie strażnika</strong> — gdy strażnik jest włączony, telefon śledzi głośność
+      <li><strong>Mikrofon w trybie strażnika</strong> - gdy strażnik jest włączony, telefon śledzi głośność
         dźwięków wokół siebie, aby wychwycić także kogoś, kto pochyla się nad telefonem albo coś do niego
         mówi. <strong>Nic nie jest nagrywane</strong>: mierzony jest tylko chwilowy poziom dźwięku, który
         nigdy nie jest zapisywany ani przesyłany. Uruchamianie alarmu dźwiękiem można wyłączyć
@@ -73,17 +73,25 @@
     <p>Jeśli używasz aplikacji towarzyszącej na Apple&nbsp;Watch, jedyne dane wymieniane między zegarkiem
     a iPhone’em to stan strażnika (włączony/wyłączony) oraz PIN wpisywany na zegarku przy wyłączaniu.
     Przechodzą one szyfrowanym lokalnym łączem Apple (WatchConnectivity) między twoimi własnymi
-    urządzeniami — nigdy przez żaden nasz serwer — a PIN nie jest zapisywany na zegarku. Polecenia
+    urządzeniami - nigdy przez żaden nasz serwer - a PIN nie jest zapisywany na zegarku. Polecenia
     przez Siri i aplikację Skróty są podobnie wykonywane lokalnie na urządzeniu.</p>
 
     <h3>Powiązanie z aplikacją Breathune</h3>
     <p>Jeśli na tym samym iPhonie zainstalowany jest także Breathune (od tego samego autora), obie
     aplikacje wymieniają krótkie podsumowania nocy przez wspólny folder na urządzeniu (App Group):
-    czas rozpoczęcia i zakończenia, odcinki chrapania (czas, długość, głośność) oraz liczby pozostałych
-    zdarzeń. Z Breathune Zzzentinel odczytuje ukończone ćwiczenia oddechowe (nazwa, czas, długość),
+    czas rozpoczęcia i zakończenia, odcinki chrapania (czas, długość, głośność), liczby pozostałych
+    zdarzeń, częstość oddechu oraz całkowity czas snu. Z Breathune Zzzentinel odczytuje ukończone ćwiczenia oddechowe (nazwa, czas, długość),
     wynik nocy oraz średnie tętno, jeśli włączysz jego pomiar. Każda z aplikacji sygnalizuje też, że
-    właśnie monitoruje noc, aby nie rywalizowały o mikrofon. Udostępniane są tylko te podsumowania —
-    nie nagrania, nie transkrypcje mowy, nic więcej — i nic z tego nie opuszcza urządzenia.</p>
+    właśnie monitoruje noc, aby nie rywalizowały o mikrofon. Udostępniane są tylko te podsumowania -
+    nie nagrania, nie transkrypcje mowy, nic więcej - i nic z tego nie opuszcza urządzenia.</p>
+
+    <h3>Częstość oddechu i Apple Zdrowie</h3>
+    <p>Podczas nocnego czuwania Zzzentinel szacuje częstość oddechu na urządzeniu na podstawie
+    głośności z mikrofonu; zapisywane są tylko liczby i godziny, nigdy dźwięk. Jeśli w Ustawieniach
+    włączysz „Sen i oddech ze Zdrowia“, Zzzentinel odczyta fazy snu i częstość oddechu, które twój
+    zegarek zapisał w aplikacji Zdrowie, dla nocy, które monitorował. Tylko je odczytuje, zapisuje
+    przy danej nocy na twoim urządzeniu i nigdzie ich nie wysyła; niczego nie zapisuje w Zdrowiu.
+    Odczyt możesz w każdej chwili wyłączyć w Ustawieniach aplikacji lub w ustawieniach Zdrowia.</p>
 
     <h3>Transkrypcja mowy</h3>
     <p>Transkrypcja mówienia przez sen korzysta z frameworku Apple Speech i działa wyłącznie na twoje
@@ -93,15 +101,15 @@
 
     <h3>Udostępnianie danych</h3>
     <p>Żadne dane nie opuszczają urządzenia, dopóki ich nie wyeksportujesz przez systemowe menu
-    udostępniania — na przykład transkrypcji nocy, pojedynczego lub połączonego nagrania, archiwum całej
+    udostępniania - na przykład transkrypcji nocy, pojedynczego lub połączonego nagrania, archiwum całej
     nocy (.zip z nagraniami, transkrypcją i tabelą zdarzeń <code>events.csv</code>, wraz z twoimi
     potwierdzeniami), „Podsumowania dla lekarza” (PDF z nagraniami wokół najdłuższych przerw
-    w oddychaniu) albo wytrenowanego modelu — wtedy to ty wybierasz miejsce docelowe. Odinstalowanie
+    w oddychaniu) albo wytrenowanego modelu - wtedy to ty wybierasz miejsce docelowe. Odinstalowanie
     aplikacji usuwa z urządzenia wszystkie jej dane.</p>
 
     <h3>Dzieci i treści wrażliwe</h3>
     <p>Aplikacja nie zbiera żadnych danych, a zatem nie przetwarza też danych dzieci. Pamiętaj, że nocne
-    nagrania mogą uchwycić treści wrażliwe, w tym głosy innych osób w pomieszczeniu — z eksportami
+    nagrania mogą uchwycić treści wrażliwe, w tym głosy innych osób w pomieszczeniu - z eksportami
     postępuj rozważnie i szanuj prywatność innych.</p>
 
     <h3>Informacje zdrowotne</h3>

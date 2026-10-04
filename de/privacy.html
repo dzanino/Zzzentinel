@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Datenschutzerklärung – Zzzentinel</title>
-<meta name="description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät – kein Server, kein Konto, keine Werbung, keine Analyse.">
+<title>Datenschutzerklärung - Zzzentinel</title>
+<meta name="description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät - kein Server, kein Konto, keine Werbung, keine Analyse.">
 <link rel="apple-touch-icon" href="../favicon.png">
 <link rel="icon" href="../favicon.png">
 <link rel="stylesheet" href="../style.css">
@@ -18,8 +18,8 @@
 <link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
 <!--HREFLANG:end-->
-<meta property="og:title" content="Datenschutzerklärung – Zzzentinel">
-<meta property="og:description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät – kein Server, kein Konto, keine Werbung, keine Analyse.">
+<meta property="og:title" content="Datenschutzerklärung - Zzzentinel">
+<meta property="og:description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät - kein Server, kein Konto, keine Werbung, keine Analyse.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://dzanino.github.io/Zzzentinel/de/privacy.html">
@@ -44,7 +44,7 @@
   <div class="page-head">
     <img src="../icon.png" alt="Zzzentinel">
     <h1>Datenschutzerklärung</h1>
-    <div class="sub">Gültig ab 1.&nbsp;Oktober&nbsp;2026</div>
+    <div class="sub">Gültig ab 5.&nbsp;Oktober&nbsp;2026</div>
   </div>
 
   <div class="card tldr" lang="de">
@@ -55,14 +55,14 @@
 
     <h3>Was die App verarbeitet</h3>
     <ul>
-      <li><strong>Audioaufnahmen und Analysen</strong> – entstehen nur während einer Nachtwache, die du manuell
+      <li><strong>Audioaufnahmen und Analysen</strong> - entstehen nur während einer Nachtwache, die du manuell
         startest, und werden ausschließlich lokal im Speicher der App auf deinem Gerät abgelegt.</li>
       <li><strong>Geräuscherkennung und das Training deines persönlichen Modells</strong>
         (Core&nbsp;ML / Create&nbsp;ML) laufen vollständig auf dem Gerät. Dein Modell
         <code>my_night.mlmodel</code> verlässt das Telefon nie.</li>
       <li><strong>Bewegungssensoren</strong> (CoreMotion) werden nur ausgelesen, solange der Wächter aktiv ist,
         um Bewegungen des Telefons zu erkennen; die Messwerte werden nirgends gespeichert.</li>
-      <li><strong>Das Mikrofon im Wächtermodus</strong> – solange der Wächter aktiv ist, verfolgt das Telefon die
+      <li><strong>Das Mikrofon im Wächtermodus</strong> - solange der Wächter aktiv ist, verfolgt das Telefon die
         Lautstärke der Geräusche in seiner Umgebung, damit auch erkannt wird, wenn sich jemand über das Telefon
         beugt oder es anspricht. <strong>Dabei wird nichts aufgenommen</strong>: Gemessen wird nur der
         momentane Geräuschpegel, der weder gespeichert noch übertragen wird. Das Auslösen durch Geräusche lässt
@@ -78,18 +78,27 @@
     <p>Wenn du die begleitende Apple&nbsp;Watch-App nutzt, werden zwischen Uhr und iPhone ausschließlich der Status
     des Wächters (aktiv/inaktiv) und die PIN ausgetauscht, die du beim Deaktivieren auf der Uhr eingibst. Die
     Übertragung läuft über die verschlüsselte lokale Verbindung von Apple (WatchConnectivity) zwischen deinen
-    eigenen Geräten – nie über einen Server von uns – und die PIN wird nicht auf der Uhr gespeichert. Auch
+    eigenen Geräten - nie über einen Server von uns - und die PIN wird nicht auf der Uhr gespeichert. Auch
     Befehle über Siri und die Kurzbefehle-App werden nur lokal auf dem Gerät ausgeführt.</p>
 
     <h3>Verbindung mit der App Breathune</h3>
     <p>Ist auf demselben iPhone auch Breathune (vom selben Autor) installiert, tauschen die beiden Apps über einen
     gemeinsamen Ordner auf dem Gerät (eine App Group) kurze Zusammenfassungen der Nächte aus: Beginn und Ende,
-    Schnarchabschnitte (Zeitpunkt, Dauer, Lautstärke) und die Anzahl weiterer Ereignisse. Von Breathune liest
+    Schnarchabschnitte (Zeitpunkt, Dauer, Lautstärke), die Anzahl weiterer Ereignisse, die Atemfrequenz und die
+    Gesamtschlafzeit. Von Breathune liest
     Zzzentinel abgeschlossene Atemübungen (Name, Zeitpunkt, Länge), dessen Nacht-Score und die
     durchschnittliche Herzfrequenz, wenn du diese Messung eingeschaltet hast. Beide Apps melden sich außerdem
     gegenseitig, wenn sie gerade eine Nacht überwachen, damit sie nicht um das Mikrofon konkurrieren.
     Aufnahmen, Sprachtranskripte oder sonstige Inhalte werden nicht geteilt, und nichts davon verlässt das
     Gerät.</p>
+
+    <h3>Atemfrequenz und Apple Health</h3>
+    <p>Während einer Nachtwache schätzt Zzzentinel die Atemfrequenz auf dem Gerät aus der Lautstärke am
+    Mikrofon; gespeichert werden nur Zahlen und Zeitpunkte, nie Ton. Wenn du in den Einstellungen „Schlaf und
+    Atmung aus Health“ einschaltest, liest Zzzentinel die Schlafphasen und die Atemfrequenz, die deine Uhr in
+    der Health-App aufgezeichnet hat, für die Nächte, die es überwacht hat. Es liest sie nur, speichert sie zur
+    jeweiligen Nacht auf deinem Gerät und sendet sie nirgendwohin; in Health schreibt es nichts. Du kannst das
+    Lesen jederzeit in den Einstellungen der App oder in den Health-Einstellungen ausschalten.</p>
 
     <h3>Sprachtranskription</h3>
     <p>Die Transkription des Sprechens im Schlaf nutzt das Speech-Framework von Apple und wird nur auf deine
@@ -98,7 +107,7 @@
     Servern verarbeitet werden.</p>
 
     <h3>Weitergabe von Daten</h3>
-    <p>Keine Daten verlassen das Gerät, es sei denn, du exportierst sie selbst über das Teilen-Menü des Systems –
+    <p>Keine Daten verlassen das Gerät, es sei denn, du exportierst sie selbst über das Teilen-Menü des Systems -
     zum Beispiel das Transkript einer Nacht, eine einzelne oder zusammengefügte Aufnahme, das Archiv einer
     ganzen Nacht (.zip mit Aufnahmen, Transkript und der Ereignistabelle <code>events.csv</code>
     einschließlich deiner Bestätigungen), die „Zusammenfassung für Ärzte“ (PDF mit Aufnahmen rund um die
@@ -107,7 +116,7 @@
 
     <h3>Kinder und sensible Inhalte</h3>
     <p>Die App erhebt keine Daten und verarbeitet daher auch keine Daten von Kindern. Bitte beachte, dass
-    nächtliche Aufnahmen sensible Inhalte erfassen können, darunter die Stimmen anderer Personen im Raum –
+    nächtliche Aufnahmen sensible Inhalte erfassen können, darunter die Stimmen anderer Personen im Raum -
     geh mit Exporten deshalb überlegt um und respektiere die Privatsphäre anderer.</p>
 
     <h3>Gesundheitsinformationen</h3>
