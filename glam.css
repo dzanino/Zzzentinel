@@ -1,0 +1,146 @@
+/* Zzzentinel - glam.css
+   „Polnočná hliadka“: hviezdna obloha, žiara mesiaca, zlatý akcent a sklenené karty.
+   Načítava sa po style.css na všetkých stránkach a prepisuje jeho farby. Písma sú systémové
+   (bez Google Fonts), pätkové nadpisy na zariadeniach Apple použijú New York / Iowan Old Style. */
+
+:root{
+  --bg:#05070f; --bg2:#0a0f22; --card:rgba(255,255,255,.045); --text:#eef0fa; --muted:#a8afc8; --soft:#8990ad;
+  --accent:#b7c3ff; --gold:#f2c94c; --gold-2:#ffdf8a; --border:rgba(255,255,255,.10); --border-2:rgba(255,255,255,.18);
+  --teal:#6fd6e2; --on-accent:#141006;
+  --grad:linear-gradient(100deg,#ffe39a 0%,#f2c94c 35%,#c9b8ff 75%,#8fb4ff 100%);
+  --serif:"New York","Iowan Old Style",ui-serif,"Palatino Linotype",Palatino,Georgia,serif;
+  color-scheme:dark;
+}
+
+html{background:var(--bg);}
+body{
+  color:var(--text)!important;
+  background:
+    radial-gradient(900px 600px at 85% -5%, rgba(255,223,138,.10), transparent 60%),
+    radial-gradient(1100px 700px at 10% 0%, rgba(59,75,168,.35), transparent 62%),
+    radial-gradient(1200px 900px at 50% 120%, rgba(111,214,226,.07), transparent 60%),
+    var(--bg)!important;
+  background-attachment:fixed!important;
+}
+/* hviezdy */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.55;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 42%, #dfe6ff 50%, transparent 51%),
+    radial-gradient(1.4px 1.4px at 46% 12%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 63% 33%, #fff 50%, transparent 51%),
+    radial-gradient(1.2px 1.2px at 78% 62%, #ffeec2 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 24%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 8% 72%, #dfe6ff 50%, transparent 51%),
+    radial-gradient(1.3px 1.3px at 36% 84%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 55% 66%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 94% 88%, #dfe6ff 50%, transparent 51%);
+  background-size:520px 520px;
+  animation:twinkle 7s ease-in-out infinite alternate;
+}
+@keyframes twinkle{from{opacity:.35;}to{opacity:.7;}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none;}}
+.topbar,.hero,.wrap,footer{position:relative;z-index:1;}
+::selection{background:rgba(242,201,76,.35);color:#fff;}
+
+/* ---------- Horná lišta a jazyky ---------- */
+.topbar{background:rgba(5,7,15,.6)!important;border-bottom:1px solid var(--border)!important;
+  -webkit-backdrop-filter:saturate(160%) blur(16px);backdrop-filter:saturate(160%) blur(16px);position:sticky;top:0;z-index:10;}
+.topbar a{color:#e6e9f7!important;}
+.langbar button,.langbar a{
+  color:#e3e7f7!important;background:rgba(255,255,255,.06)!important;border:1px solid var(--border-2)!important;
+  font-size:12.5px!important;letter-spacing:.06em;
+}
+.langbar button:hover,.langbar a:hover{background:rgba(255,255,255,.14)!important;opacity:1!important;}
+.langbar button[aria-pressed="true"],.langbar a[aria-current="page"]{background:var(--grad)!important;color:#1a1406!important;border-color:transparent!important;}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(520px 320px at 50% 30%, rgba(255,223,138,.16), transparent 70%),
+    radial-gradient(700px 400px at 20% 90%, rgba(59,75,168,.30), transparent 70%),
+    radial-gradient(700px 400px at 85% 85%, rgba(140,110,220,.20), transparent 70%)!important;
+  border-bottom:1px solid var(--border)!important;padding:84px 20px 78px!important;overflow:hidden;
+}
+/* mesiac: jemná zlatá žiara za ikonou */
+.hero::before{
+  content:"";position:absolute;left:50%;top:40px;width:340px;height:340px;transform:translateX(-50%);
+  border-radius:50%;pointer-events:none;z-index:-1;
+  background:radial-gradient(circle, rgba(255,223,138,.30) 0%, rgba(255,223,138,.10) 38%, transparent 70%);
+  filter:blur(10px);animation:moon 10s ease-in-out infinite alternate;
+}
+@keyframes moon{from{opacity:.65;transform:translateX(-50%) scale(.96);}to{opacity:1;transform:translateX(-50%) scale(1.06);}}
+@media (prefers-reduced-motion:reduce){.hero::before{animation:none;}}
+.hero img{box-shadow:0 0 0 1px rgba(255,255,255,.16),0 30px 70px rgba(0,0,0,.6),0 0 90px rgba(255,223,138,.22)!important;}
+.hero h1{
+  font-family:var(--serif)!important;font-weight:600!important;letter-spacing:-.01em!important;
+  font-size:clamp(46px,9vw,92px)!important;line-height:1!important;margin:26px 0 10px!important;
+  background:linear-gradient(180deg,#ffffff 35%,#e9dcb8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 10px 60px rgba(255,223,138,.12);
+}
+.tag{color:var(--gold)!important;font-family:var(--serif);font-style:italic;font-weight:500!important;font-size:clamp(20px,2.6vw,25px)!important;letter-spacing:.01em;}
+.lede{color:#ccd2ea!important;font-weight:300;font-size:18px;}
+
+/* ---------- Tlačidlá ---------- */
+.btn{
+  background:linear-gradient(135deg,#ffe7a6,#f2c94c 50%,#e0ac2f)!important;color:#1a1406!important;font-weight:700!important;
+  box-shadow:0 14px 36px rgba(242,201,76,.28),inset 0 1px 0 rgba(255,255,255,.6)!important;transition:transform .2s ease,box-shadow .2s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 20px 44px rgba(242,201,76,.38),inset 0 1px 0 rgba(255,255,255,.6)!important;}
+.btn.ghost{background:rgba(255,255,255,.05)!important;color:#eef0fa!important;border:1px solid var(--border-2)!important;box-shadow:none!important;backdrop-filter:blur(8px);}
+.btn.ghost:hover{background:rgba(255,255,255,.12)!important;}
+
+/* ---------- Typografia ---------- */
+h1,h2,h3{font-family:var(--serif)!important;font-weight:600!important;color:#fff;}
+h2{font-size:clamp(30px,4.4vw,42px)!important;letter-spacing:-.005em;line-height:1.12;margin-bottom:24px!important;}
+.card h2{color:var(--gold)!important;font-size:clamp(22px,3vw,26px)!important;}
+p,li,details p{color:var(--muted);}
+strong,b{color:#fff;}
+a{color:var(--accent);}
+a:hover{color:var(--gold-2);}
+.sub{color:var(--soft)!important;}
+
+/* ---------- Karty, sklo ---------- */
+.feat,.card,.note,.sibling{
+  background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.025))!important;
+  border:1px solid var(--border)!important;border-radius:22px!important;
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 20px 50px rgba(0,0,0,.32)!important;
+}
+.feat{transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;}
+.feat:hover{transform:translateY(-3px);border-color:rgba(242,201,76,.38)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 26px 60px rgba(0,0,0,.40),0 0 50px rgba(242,201,76,.10)!important;}
+.feat .ico{
+  width:48px;height:48px;display:grid;place-items:center;border-radius:14px;font-size:24px!important;
+  background:linear-gradient(150deg,rgba(242,201,76,.18),rgba(140,110,220,.18));border:1px solid var(--border-2);
+}
+.feat h3{color:#fff!important;font-size:19px!important;}
+.feat p{color:var(--muted)!important;}
+.tldr,.contact,.note{border-left:3px solid var(--gold)!important;}
+.sibling{border-left:3px solid var(--teal)!important;}
+.sibling .badge,.page-head img{box-shadow:0 0 0 1px rgba(255,255,255,.14),0 14px 34px rgba(0,0,0,.5)!important;}
+.page-head h1{font-size:clamp(32px,5vw,44px)!important;}
+details{border-top-color:var(--border)!important;}
+summary{color:#fff;}
+summary::marker{color:var(--gold);}
+code{background:rgba(255,255,255,.08);color:#f3ead2;padding:1px 6px;border-radius:5px;}
+
+/* Pätička */
+footer{border-top:1px solid var(--border)!important;color:var(--soft)!important;background:rgba(255,255,255,.02);}
+footer a{color:#d9ddf0!important;}
+footer a:hover{color:var(--gold)!important;}
+
+/* Jemné objavovanie pri rolovaní */
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .feat,.card,.sibling{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%;}
+  }
+}
+@keyframes rise{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:none;}}
+
+@media (max-width:640px){
+  body{background-attachment:scroll!important;}
+  .hero{padding:60px 18px 56px!important;}
+  .hero::before{width:260px;height:260px;}
+}
