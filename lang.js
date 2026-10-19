@@ -1,11 +1,11 @@
 /* Language of the site.
    - Slovak and English live together on the main pages and switch with the SK / EN buttons.
-   - Czech, German, French, Italian and Polish have their own pages in /cs/, /de/, /fr/, /it/, /pl/.
+   - Czech, German, French, Italian, Polish, Spanish and Portuguese (Brazil) have their own pages in /cs/, /de/, /fr/, /it/, /pl/, /es/, /pt/.
    The choice is remembered. Priority: ?lang= in the URL, then the saved choice, then the browser
    language (Slovak → Slovak, one of the own languages → its pages, anything else → English). */
 (function () {
   var root = document.documentElement;
-  var OWN = ['cs', 'de', 'fr', 'it', 'pl'];
+  var OWN = ['cs', 'de', 'fr', 'it', 'pl', 'es', 'pt'];
   var KEY = 'zzzentinel-lang';
   var script = document.currentScript;
   // Site base (dzanino.github.io/Zzzentinel/) derived from the address of this script.
