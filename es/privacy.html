@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es" data-fixed-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zzzentinel - Política de privacidad</title>
+<meta name="description" content="Política de privacidad de Zzzentinel: sin servidor, sin cuenta, sin analítica. Todo se queda en tu dispositivo.">
+<link rel="apple-touch-icon" href="../favicon.png?v=20261016">
+<link rel="icon" href="../favicon.png?v=20261016">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../glam.css?v=20261017">
+<link rel="canonical" href="https://dzanino.github.io/Zzzentinel/es/privacy.html">
+<meta name="apple-itunes-app" content="app-id=6804132664">
+<meta property="og:site_name" content="Zzzentinel">
+<meta property="og:title" content="Zzzentinel - Política de privacidad">
+<meta property="og:description" content="Política de privacidad de Zzzentinel: sin servidor, sin cuenta, sin analítica. Todo se queda en tu dispositivo.">
+<meta property="og:image" content="https://dzanino.github.io/Zzzentinel/icon.png?v=20261016">
+<meta property="og:url" content="https://dzanino.github.io/Zzzentinel/es/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary">
+<!--HREFLANG:start-->
+<link rel="alternate" hreflang="sk" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="en" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<link rel="alternate" hreflang="cs" href="https://dzanino.github.io/Zzzentinel/cs/privacy.html">
+<link rel="alternate" hreflang="de" href="https://dzanino.github.io/Zzzentinel/de/privacy.html">
+<link rel="alternate" hreflang="fr" href="https://dzanino.github.io/Zzzentinel/fr/privacy.html">
+<link rel="alternate" hreflang="it" href="https://dzanino.github.io/Zzzentinel/it/privacy.html">
+<link rel="alternate" hreflang="pl" href="https://dzanino.github.io/Zzzentinel/pl/privacy.html">
+<link rel="alternate" hreflang="es" href="https://dzanino.github.io/Zzzentinel/es/privacy.html">
+<link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/privacy.html">
+<!--HREFLANG:end-->
+</head>
+<body>
+<div class="topbar">
+  <a href="./">← Zzzentinel</a>
+  <div class="langbar" role="group" aria-label="Language">
+    <a href="../privacy.html?lang=sk" data-lang-link="sk">SK</a>
+    <a href="../privacy.html?lang=en" data-lang-link="en">EN</a>
+    <a href="../cs/privacy.html" data-lang-link="cs" hreflang="cs">CS</a>
+    <a href="../de/privacy.html" data-lang-link="de" hreflang="de">DE</a>
+    <a href="../fr/privacy.html" data-lang-link="fr" hreflang="fr">FR</a>
+    <a href="../it/privacy.html" data-lang-link="it" hreflang="it">IT</a>
+    <a href="../pl/privacy.html" data-lang-link="pl" hreflang="pl">PL</a>
+    <a href="../es/privacy.html" data-lang-link="es" hreflang="es" aria-current="page">ES</a>
+    <a href="../pt/privacy.html" data-lang-link="pt" hreflang="pt-BR">PT</a>
+  </div>
+</div>
+
+<div class="wrap narrow">
+  <div class="page-head">
+    <img src="../icon.png?v=20261016" alt="Zzzentinel">
+    <h1>Política de privacidad</h1>
+    <div class="sub">En vigor desde el 16&nbsp;de&nbsp;octubre&nbsp;de&nbsp;2026</div>
+  </div>
+
+  <div class="card tldr" lang="es">
+    <h2>Política de privacidad</h2>
+    <p><strong>En resumen: todo se queda en tu dispositivo.</strong>
+    Zzzentinel no tiene servidor, cuentas de usuario, anuncios ni analítica. El
+    desarrollador no recopila, no transmite y no trata ningún dato de los usuarios.</p>
+
+    <h3>Qué trata la app</h3>
+    <ul>
+      <li><strong>Grabaciones de audio y análisis</strong>: se crean solo durante una
+        vigilancia nocturna que inicias tú manualmente y se guardan exclusivamente en el
+        almacenamiento local de la app en tu dispositivo.</li>
+      <li><strong>El reconocimiento de sonidos y el entrenamiento del modelo personal</strong>
+        (Core&nbsp;ML / Create&nbsp;ML) se realizan por completo en el dispositivo. Tu modelo
+        <code>my_night.mlmodel</code> nunca sale del móvil.</li>
+      <li><strong>Los sensores de movimiento</strong> (CoreMotion) solo se leen mientras el
+        guardián está activado, para detectar el movimiento del móvil; los valores medidos no se guardan en ningún sitio.</li>
+      <li><strong>El micrófono en modo guardián</strong>: mientras el guardián está activado, el móvil
+        sigue el volumen del sonido a su alrededor para detectar también a alguien que se inclina
+        sobre el móvil o le habla. <strong>No se graba nada</strong>: solo se mide el nivel
+        sonoro instantáneo, que nunca se guarda ni se envía. El
+        disparo de la alarma por sonido se puede desactivar en Ajustes.</li>
+      <li><strong>El PIN del guardián</strong> se guarda solo como huella criptográfica (SHA-256 con sal),
+        localmente en el dispositivo. Es independiente del código de desbloqueo de tu móvil.</li>
+      <li><strong>Los avisos de pausas en la respiración</strong> se calculan localmente a partir
+        del ritmo de los sonidos respiratorios dentro de eventos ya grabados. No son datos de salud y
+        nunca se envían.</li>
+    </ul>
+
+    <h3>Apple Watch, Siri y Atajos</h3>
+    <p>Si usas la app complementaria para Apple&nbsp;Watch, entre el reloj y tu iPhone solo
+    se intercambian el estado del guardián (activado/desactivado) y el
+    PIN que introduces en el reloj para desactivarlo. Viajan por la conexión local cifrada
+    de Apple (WatchConnectivity) entre tus propios dispositivos, nunca a través de ningún servidor
+    nuestro, y el PIN no se guarda en el reloj. Los comandos de Siri y de
+    Atajos también se ejecutan solo localmente en el dispositivo.</p>
+
+    <h3>Conexión con la app Breathune</h3>
+    <p>Si Breathune (del mismo autor) está instalada en el mismo iPhone, las dos
+    apps intercambian breves resúmenes de las noches a través de una carpeta compartida en el dispositivo
+    (un App Group): hora de inicio y de fin, tramos de ronquidos (hora, duración,
+    volumen), número de otros eventos, frecuencia respiratoria y tiempo total de sueño. De Breathune, Zzzentinel lee los
+    ejercicios de respiración completados (nombre, hora, duración), su puntuación de la noche y la
+    frecuencia cardiaca media si has activado esa medición. Cada app indica también
+    cuándo está vigilando una noche, para que no se disputen el micrófono.
+    Las grabaciones, las transcripciones del habla y todo lo demás no se comparten, y nada de ello
+    sale del dispositivo.</p>
+
+    <h3>Frecuencia respiratoria y Apple Salud</h3>
+    <p>Durante una vigilancia nocturna, Zzzentinel estima la frecuencia respiratoria en el dispositivo
+    a partir del volumen del micrófono; solo se guardan cifras y horas,
+    nunca sonido. Si activas «Sueño y respiración desde Salud» en Ajustes,
+    Zzzentinel lee de la app Salud las fases del sueño y la frecuencia respiratoria que registró tu reloj
+    para las noches que vigiló. Solo las lee, las guarda
+    con esa noche en tu dispositivo y no las envía a ningún sitio; no escribe nada
+    en Salud. Puedes desactivar la lectura en cualquier momento en los Ajustes de la app o en los
+    ajustes de Salud.</p>
+
+    <h3>Transcripción del habla</h3>
+    <p>La transcripción de lo que dices en sueños usa el framework Speech de Apple y solo se ejecuta
+    cuando tú lo pides expresamente. Si el reconocimiento en el dispositivo está disponible,
+    el procesamiento es local; si no, el clip de audio seleccionado puede ser procesado por los servidores
+    de Apple según las condiciones de Apple.</p>
+
+    <h3>Compartir datos</h3>
+    <p>Ningún dato sale del dispositivo, salvo que tú mismo lo exportes con la hoja de
+    compartir del sistema, por ejemplo la transcripción de una noche, una grabación suelta o unida, un
+    archivo de la noche completa (.zip con las grabaciones, la transcripción y una tabla
+    de eventos <code>events.csv</code> que incluye tus confirmaciones), el
+    «Resumen para el médico» (PDF con las grabaciones en torno a las pausas en la respiración
+    más largas) o tu modelo entrenado. En ese caso, el destino lo eliges tú.
+    Al desinstalar la app se eliminan todos sus datos del dispositivo.</p>
+
+    <h3>Menores y contenido sensible</h3>
+    <p>La app no recopila ningún dato y, por tanto, tampoco trata datos de menores. Ten en cuenta
+    que las grabaciones nocturnas pueden captar contenido sensible, incluidas las voces
+    de otras personas presentes en la habitación; trata por eso las exportaciones con sensatez y respeta la
+    privacidad de los demás.</p>
+
+    <h3>Información de salud</h3>
+    <p>Zzzentinel <strong>no es un producto sanitario</strong>. Los avisos de «pausas
+    en la respiración» son una heurística orientativa, no un diagnóstico, y no sustituyen
+    un examen médico.</p>
+
+    <h3>Cambios en esta política</h3>
+    <p>Cualquier cambio se publicará en esta página junto con una nueva fecha
+    de entrada en vigor.</p>
+  </div>
+
+</div>
+
+<footer>
+  <p><a href="./">Zzzentinel</a> · <a href="support.html">Soporte</a></p>
+  <p>Ján Šikuta · <a href="mailto:admin@breathune.eu">admin@breathune.eu</a></p>
+  <p><span data-fz>©</span> 2026 Ján Šikuta</p>
+</footer>
+
+<script src="../lang.js"></script>
+<script src="../site.js" defer></script>
+</body>
+</html>
