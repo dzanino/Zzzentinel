@@ -1,0 +1,18 @@
+# ai.txt - Zzzentinel (dzanino.github.io/Zzzentinel)
+# Usage policy for AI crawlers, assistants and training.
+Site: https://dzanino.github.io/Zzzentinel/
+Owner: Ján Šikuta (admin@breathune.eu)
+Language: sk, cs, en, de, fr, it, pl, es, pt-BR
+
+# Crawling, indexing, summarising and answering questions about this site: allowed.
+# Quoting short excerpts with attribution and a link: allowed.
+# Use for model training: allowed for public pages.
+User-agent: *
+Allow: /
+
+LLMs: https://dzanino.github.io/Zzzentinel/llms.txt
+LLMs-full: https://dzanino.github.io/Zzzentinel/llms-full.txt
+LLMs-sk: https://dzanino.github.io/Zzzentinel/llms-sk.txt
+Sitemap: https://dzanino.github.io/Zzzentinel/sitemap.xml
+
+# Zzzentinel is a wellness app, not a medical device; it does not diagnose or treat any condition.
