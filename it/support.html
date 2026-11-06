@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zzzentinel: Assistenza</title>
-<meta name="description" content="Assistenza e domande frequenti su Zzzentinel: registrazione in background, batteria, suoni personalizzati, pause del respiro, riepilogo per il medico, Apple Watch, PIN e dati.">
+<meta name="description" content="Assistenza e domande frequenti su Zzzentinel: registrazione a schermo bloccato, telefonate, spazio, suoni personali, silenzi nel respiro, riepilogo per il medico, Apple Watch, PIN e dati.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Zzzentinel: Assistenza">
-<meta property="og:description" content="Assistenza e domande frequenti su Zzzentinel.">
+<meta property="og:description" content="Assistenza e domande frequenti su Zzzentinel: registrazione a schermo bloccato, telefonate, spazio, suoni personali, silenzi nel respiro, riepilogo per il medico, Apple Watch, PIN e dati.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,6 +35,167 @@
 <link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/support.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
 <!--HREFLANG:end-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "it",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Registra anche con lo schermo bloccato?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sì. Dopo che hai toccato Avvia la notte, la registrazione prosegue in background e a telefono bloccato. Lo schermo si oscura da solo un minuto dopo l’ultimo tocco (puoi disattivarlo in Impostazioni) e Attenua schermo lo fa subito: il display si oscura quasi del tutto e resta solo un orologio appena visibile. Ti consigliamo di lasciare il telefono in carica durante la notte, e l’app ti avvisa se non lo è. La notte viene salvata ogni minuto. Una notte dimenticata finisce da sola dopo 16 ore, e al 3 per cento di batteria senza caricatore si conclude regolarmente."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Cosa succede se una telefonata interrompe la notte?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una telefonata interrompe la registrazione. L’app salva ciò che ha, prova a riprendere dopo la chiamata e ti avvisa se ha smesso di ascoltare. Il report del mattino dice per quanto tempo il microfono è stato interrotto o quando la registrazione si è fermata inaspettatamente. L’audio di altre app, come un podcast o un rumore bianco, non interrompe più la notte, ma il microfono sente anche quello."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Quanta batteria e spazio consuma?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "L’analisi è leggera e vengono salvate solo le clip dei suoni rilevati, non l’intera notte. Le clip occupano circa 30 MB per ogni ora di suono registrato, quindi una notte tipica prende da pochi MB fino a circa 100 MB, e di più con un rumore costante come un ventilatore. Il limite facoltativo Conserva le notti in Impostazioni (7, 30 o 90 giorni, oppure per sempre) elimina le notti più vecchie e chiede prima conferma. Finché l’app è in background o lo schermo è attenuato, smette di ridisegnare gli indicatori per risparmiare energia. In carica, il consumo di batteria conta poco."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "C’è un abbonamento?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Zzzentinel è un acquisto unico su App Store: nessun abbonamento, nessun acquisto in-app, nessuna pubblicità e nessun account."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché nel report compare un “suono non definito”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Il telefono ha captato un suono forte che il classificatore non ha saputo nominare. Riproduci la clip, tocca Definisci suono e dagli un nome. Dopo circa cinque campioni, in Impostazioni → Addestramento dei miei suoni puoi addestrare il tuo modello my_night.mlmodel direttamente sul telefono, e la volta dopo l’app riconoscerà quel suono per nome."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "L’addestramento non mi funziona.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Un modello ha bisogno di almeno due classi di suoni. Se hai un solo suono tuo, l’app crea automaticamente la classe “altri” dalle clip di altri eventi, quindi registra prima almeno una notte con qualche suono rilevato. Per un risultato affidabile raccogli circa cinque campioni per ogni suono."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I “silenzi nel respiro” sono una diagnosi di apnea del sonno?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Il rilevamento è disattivato per impostazione predefinita ed è sperimentale: lo attivi in Impostazioni → Silenzi nel respiro (sperimentale). Conta i silenzi da 10 a 60 secondi nei suoni del respiro e puoi abbassare la soglia fino a 6 secondi. Il report dice quando il rilevamento era disattivato e non afferma mai che il respiro andava bene. L’app sente solo suoni: un microfono non misura né il flusso d’aria né l’ossigeno, un silenzio può essere un respiro leggero non captato dal telefono, e nessun risultato esclude nulla. Non è un dispositivo medico, non è una diagnosi e non è uno screening dell’apnea. Se qualcosa ti preoccupa, parlane con un medico, qualunque cosa dica il report. La frequenza respiratoria stimata dal volume è sempre attiva, solo come numeri."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Che cos’è il “Riepilogo per il medico”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "In una notte conclusa apri Esporta → Riepilogo per il medico. L’app crea un PDF (russamento, respiro udibile, elenco dei silenzi se il rilevamento era attivo e una sezione “Metodo e limiti”) e aggiunge le registrazioni intorno ai tre silenzi più lunghi. L’app non invia nulla di tutto questo da sola: i file li condividi tu. È un documento da mostrare a un medico, non un prodotto clinico né una diagnosi. Lo stesso menu esporta l’intera notte come ZIP o una trascrizione in testo semplice, e in Impostazioni puoi esportare tutte le notti."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Zzzentinel è stato valutato in uno studio?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Nessuno studio indipendente lo ha ancora valutato, quindi non dichiariamo alcuna accuratezza. Gli specialisti che desiderano confrontarlo possono scrivere a admin@breathune.eu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Che cos’è la sezione “Da confermare”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "I suoni che l’app ha sentito per la prima volta, o di cui non è sicura, ti vengono proposti da ascoltare nel report del mattino. È giusto le insegna che ha indovinato; Correggi le dà il nome esatto e un nuovo campione di addestramento. Per ogni suono chiede al massimo due volte a notte e, dopo tre conferme, si fida. Un suggerimento non diventa mai un fatto da solo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Come controllo la guardia da Apple Watch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "L’app per l’orologio si installa automaticamente insieme a quella per iPhone. Sull’orologio tocca Attiva e la guardia si attiva in incognito: lo schermo del telefono resta spento. Per disattivarla si usa il tastierino del PIN sull’orologio. Il PIN serve sempre, e dopo 5 tentativi errati devi attendere 30 secondi. L’attivazione a distanza funziona solo se iOS lascia usare il microfono a Zzzentinel; altrimenti l’orologio o Siri ti dicono di aprire l’app. Se il telefono è fuori portata, il comando resta in attesa e la guardia si attiva se i dispositivi si ricollegano entro una decina di minuti. Allo stesso modo funzionano Siri (“Attiva Zzzentinel”), un widget di Comandi e Tocco posteriore. L’orologio controlla solo la guardia, non la notte."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Come trasferisco i miei suoni su un altro telefono?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "In Impostazioni → Addestramento dei miei suoni → Trasferisci campioni tocca Esporta tutti i campioni (.zip) e salvalo (File, AirDrop, iCloud). Sull’altro dispositivo decomprimi lo zip e con Importa campioni da File scegli ogni volta le registrazioni di un solo suono, indicandone il nome. Il modello addestrato lo sposti con Esporta my_night.mlmodel e Importa modello (.mlmodel). Registrazioni e modelli addestrati si trovano anche nell’app File → Sul mio iPhone → Zzzentinel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Le mie notti passano su un nuovo iPhone?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Le registrazioni notturne, i campioni di addestramento, i modelli addestrati e i riepiloghi condivisi con Breathune sono esclusi dai backup iCloud e su computer; le impostazioni normali possono esserci. Per conservare le notti, esportale come ZIP prima del passaggio: Impostazioni → Esporta tutte le notti (.zip) oppure una sola notte dal suo menu Esporta. Lo ZIP è il tuo archivio, perché l’app non sa importare notti da uno ZIP."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ho dimenticato il PIN della guardia.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Non reinstallare mai l’app: cancelleresti tutte le tue notti, perché non sono in nessun backup. Chiudi del tutto Zzzentinel dal selettore delle app (scorrila verso l’alto), riaprila e vai su Guardia → Cambia PIN. Non si perde nulla."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Perché la guardia ha bisogno del microfono e cosa sente?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Una guardia attiva sorveglia il movimento e ascolta il livello del suono intorno al telefono, quindi ha bisogno del microfono per tutto il tempo in cui è attiva. Viene misurato solo il livello del suono e non viene registrato nulla. In una stanza condivisa o in uno studentato, attiva Solo suoni molto forti fanno scattare l’allarme in Impostazioni."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "La guardia protegge il telefono dal furto?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Serve da deterrente, ma non è una protezione antifurto. Un movimento o un suono intorno al telefono, senza il tuo PIN, fa partire una sirena forte e luci lampeggianti, ma i tasti del volume o lo spegnimento del telefono la zittiscono."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "L’allarme lampeggia e sono sensibile alle luci intermittenti.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Lo schermo e la torcia lampeggiano meno di tre volte al secondo, sotto la soglia che le raccomandazioni degli esperti indicano come a rischio. Se nel sistema hai attivato Riduci movimento, il lampeggio viene omesso automaticamente. Si può anche disattivare a mano in Impostazioni → Guard Extra Plus → Lampeggio durante l’allarme; la sirena continua a funzionare."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "L’allarme non si sente abbastanza.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Prima di attivare la guardia alza il volume: l’app ti avvisa quando è basso. La sirena suona sempre dall’altoparlante, non dalle cuffie, anche con l’interruttore suoneria su silenzioso. Si ferma da sola dopo 5 minuti e i tasti del volume la zittiscono."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dove sono i miei dati e come li elimino?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Sul tuo iPhone, e lo sviluppatore non riceve nulla. Scorri verso sinistra per eliminare una notte in Le mie notti o un suono in Addestramento dei miei suoni; l’app chiede conferma e una notte eliminata non si può ripristinare. Il limite Conserva le notti elimina le notti più vecchie dopo una conferma. Disinstallando Zzzentinel si eliminano i suoi dati, tranne la cartella condivisa dei riepiloghi, che resta sul telefono finché non rimuovi anche Breathune. Le registrazioni si possono aprire anche nell’app File, da chiunque possa sbloccare il tuo iPhone: il PIN della guardia non le protegge."
+   }
+  }
+ ]
+}
+</script>
 <link rel="me" href="https://orcid.org/0000-0002-4690-0317">
 </head>
 <body>
@@ -67,82 +228,102 @@
     <a class="btn" href="mailto:admin@breathune.eu?subject=Zzzentinel%20support">admin@breathune.eu</a>
   </div>
 
-  <div class="card">
+  <div class="card" lang="it">
     <h2>Domande frequenti</h2>
 
     <details>
       <summary>Registra anche con lo schermo bloccato?</summary>
-      <p>Sì. Una volta avviata la sorveglianza notturna, la registrazione prosegue in background e a telefono bloccato. Se vuoi lo schermo spento ma l'app a portata di mano, usa il pulsante <em>Attenua schermo</em>: il display si oscura quasi del tutto e resta solo un orologio appena visibile. Ti consigliamo di lasciare il telefono in carica durante la notte.</p>
+      <p>Sì. Dopo che hai toccato <em>Avvia la notte</em>, la registrazione prosegue in background e a telefono bloccato. Lo schermo si oscura da solo un minuto dopo l’ultimo tocco (puoi disattivarlo in Impostazioni) e <em>Attenua schermo</em> lo fa subito: il display si oscura quasi del tutto e resta solo un orologio appena visibile. Ti consigliamo di lasciare il telefono in carica durante la notte, e l’app ti avvisa se non lo è. La notte viene salvata ogni minuto. Una notte dimenticata finisce da sola dopo 16 ore, e al 3 per cento di batteria senza caricatore si conclude regolarmente.</p>
     </details>
 
     <details>
-      <summary>Quanta batteria e quanto spazio consuma?</summary>
-      <p>L'analisi è leggera e vengono salvate solo brevi clip degli eventi, non l'intera notte: una notte tipica occupa pochi MB. Finché l'app è in background o lo schermo è attenuato, smette di ridisegnare gli indicatori, risparmiando ancora più energia. Con il caricabatterie collegato il consumo di batteria è irrilevante.</p>
+      <summary>Cosa succede se una telefonata interrompe la notte?</summary>
+      <p>Una telefonata interrompe la registrazione. L’app salva ciò che ha, prova a riprendere dopo la chiamata e ti avvisa se ha smesso di ascoltare. Il report del mattino dice per quanto tempo il microfono è stato interrotto o quando la registrazione si è fermata inaspettatamente. L’audio di altre app, come un podcast o un rumore bianco, non interrompe più la notte, ma il microfono sente anche quello.</p>
     </details>
 
     <details>
-      <summary>Perché nel report compare un «suono non definito»?</summary>
-      <p>Il telefono ha captato un suono forte che il classificatore non ha saputo nominare. Riproduci la clip, tocca <em>Definisci suono</em> e dagli un nome. Dopo circa cinque campioni, in <em>Impostazioni → Addestramento dei miei suoni</em> puoi addestrare il tuo modello <code>my_night.mlmodel</code> direttamente sul telefono, e la volta dopo l'app riconoscerà quel suono per nome.</p>
+      <summary>Quanta batteria e spazio consuma?</summary>
+      <p>L’analisi è leggera e vengono salvate solo le clip dei suoni rilevati, non l’intera notte. Le clip occupano circa 30 MB per ogni ora di suono registrato, quindi una notte tipica prende da pochi MB fino a circa 100 MB, e di più con un rumore costante come un ventilatore. Il limite facoltativo <em>Conserva le notti</em> in Impostazioni (7, 30 o 90 giorni, oppure per sempre) elimina le notti più vecchie e chiede prima conferma. Finché l’app è in background o lo schermo è attenuato, smette di ridisegnare gli indicatori per risparmiare energia. In carica, il consumo di batteria conta poco.</p>
     </details>
 
     <details>
-      <summary>L'addestramento del modello non funziona.</summary>
-      <p>L'addestramento richiede un vero iPhone: nel Simulatore il framework Create&nbsp;ML non è disponibile e l'app mostra un avviso. Servono inoltre almeno due classi di suoni; se per ora ne hai una sola, l'app crea da sola la seconda («altro») con le clip di altri eventi, quindi registra prima almeno una notte.</p>
+      <summary>C’è un abbonamento?</summary>
+      <p>No. Zzzentinel è un acquisto unico su App Store: nessun abbonamento, nessun acquisto in-app, nessuna pubblicità e nessun account.</p>
     </details>
 
     <details>
-      <summary>Le «pause del respiro» sono una diagnosi di apnea del sonno?</summary>
-      <p>No. L'app cerca i silenzi più lunghi tra tratti di respiro udibile: il microfono non misura né il flusso d'aria né l'ossigenazione, quindi non distingue un respiro leggero da un arresto del respiro. È un'euristica indicativa e Zzzentinel non è un dispositivo medico. Se le pause si ripetono, parlane con il tuo medico: il Riepilogo per il medico ti aiuta a farlo.</p>
+      <summary>Perché nel report compare un “suono non definito”?</summary>
+      <p>Il telefono ha captato un suono forte che il classificatore non ha saputo nominare. Riproduci la clip, tocca <em>Definisci suono</em> e dagli un nome. Dopo circa cinque campioni, in <em>Impostazioni → Addestramento dei miei suoni</em> puoi addestrare il tuo modello <code>my_night.mlmodel</code> direttamente sul telefono, e la volta dopo l’app riconoscerà quel suono per nome.</p>
     </details>
 
     <details>
-      <summary>Che cos'è il «Riepilogo per il medico»?</summary>
-      <p>Nel dettaglio di una notte conclusa → Condividi → Riepilogo per il medico viene creato un PDF con un quadro dalle formulazioni professionali (russamento, respiro udibile, elenco delle pause, sezione «Metodo e limiti») e le registrazioni intorno alle tre pause più lunghe. Non viene inviato nulla: i file li condividi tu. Non è una diagnosi, ma uno spunto per il colloquio con il medico.</p>
+      <summary>L’addestramento non mi funziona.</summary>
+      <p>Un modello ha bisogno di almeno due classi di suoni. Se hai un solo suono tuo, l’app crea automaticamente la classe “altri” dalle clip di altri eventi, quindi registra prima almeno una notte con qualche suono rilevato. Per un risultato affidabile raccogli circa cinque campioni per ogni suono.</p>
     </details>
 
     <details>
-      <summary>Che cos'è la sezione «Da confermare»?</summary>
-      <p>I suoni che l'app ha sentito per la prima volta, o di cui non è sicura, ti vengono proposti da ascoltare nel report del mattino. <em>È giusto</em> le insegna che ha indovinato; <em>Correggi</em> le dà il nome esatto e un nuovo campione di addestramento. Per ogni suono chiede al massimo due volte a notte e, dopo tre conferme, si fida. Un suggerimento non diventa mai un fatto da solo. I suggerimenti automatici per i suoni che il riconoscitore integrato non conosce si disattivano in Impostazioni → Suggerimenti di suoni.</p>
+      <summary>I “silenzi nel respiro” sono una diagnosi di apnea del sonno?</summary>
+      <p>No. Il rilevamento è disattivato per impostazione predefinita ed è sperimentale: lo attivi in <em>Impostazioni → Silenzi nel respiro (sperimentale)</em>. Conta i silenzi da 10 a 60 secondi nei suoni del respiro e puoi abbassare la soglia fino a 6 secondi. Il report dice quando il rilevamento era disattivato e non afferma mai che il respiro andava bene. L’app sente solo suoni: un microfono non misura né il flusso d’aria né l’ossigeno, un silenzio può essere un respiro leggero non captato dal telefono, e nessun risultato esclude nulla. Non è un dispositivo medico, non è una diagnosi e non è uno screening dell’apnea. Se qualcosa ti preoccupa, parlane con un medico, qualunque cosa dica il report. La frequenza respiratoria stimata dal volume è sempre attiva, solo come numeri.</p>
+    </details>
+
+    <details>
+      <summary>Che cos’è il “Riepilogo per il medico”?</summary>
+      <p>In una notte conclusa apri <em>Esporta → Riepilogo per il medico</em>. L’app crea un PDF (russamento, respiro udibile, elenco dei silenzi se il rilevamento era attivo e una sezione “Metodo e limiti”) e aggiunge le registrazioni intorno ai tre silenzi più lunghi. L’app non invia nulla di tutto questo da sola: i file li condividi tu. È un documento da mostrare a un medico, non un prodotto clinico né una diagnosi. Lo stesso menu esporta l’intera notte come ZIP o una trascrizione in testo semplice, e in Impostazioni puoi esportare tutte le notti.</p>
+    </details>
+
+    <details>
+      <summary>Zzzentinel è stato valutato in uno studio?</summary>
+      <p>No. Nessuno studio indipendente lo ha ancora valutato, quindi non dichiariamo alcuna accuratezza. Gli specialisti che desiderano confrontarlo possono scrivere a <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
+    </details>
+
+    <details>
+      <summary>Che cos’è la sezione “Da confermare”?</summary>
+      <p>I suoni che l’app ha sentito per la prima volta, o di cui non è sicura, ti vengono proposti da ascoltare nel report del mattino. <em>È giusto</em> le insegna che ha indovinato; <em>Correggi</em> le dà il nome esatto e un nuovo campione di addestramento. Per ogni suono chiede al massimo due volte a notte e, dopo tre conferme, si fida. Un suggerimento non diventa mai un fatto da solo.</p>
     </details>
 
     <details>
       <summary>Come controllo la guardia da Apple Watch?</summary>
-      <p>L'app per l'orologio si installa automaticamente insieme a quella per iPhone. Sull'orologio tocca <em>Attiva</em> e la guardia si attiva in incognito: lo schermo del telefono resta spento. Per disattivarla si usa il tastierino del PIN direttamente sull'orologio. Se il telefono è fuori portata, il comando di attivazione viene messo in coda e parte quando i dispositivi si ricollegano. Allo stesso modo funzionano Siri («Attiva Zzzentinel»), un widget di Comandi Rapidi e il Tocco sul retro del telefono (Impostazioni → Accessibilità → Tocco → Tocco sul retro).</p>
+      <p>L’app per l’orologio si installa automaticamente insieme a quella per iPhone. Sull’orologio tocca <em>Attiva</em> e la guardia si attiva in incognito: lo schermo del telefono resta spento. Per disattivarla si usa il tastierino del PIN sull’orologio. Il PIN serve sempre, e dopo 5 tentativi errati devi attendere 30 secondi. L’attivazione a distanza funziona solo se iOS lascia usare il microfono a Zzzentinel; altrimenti l’orologio o Siri ti dicono di aprire l’app. Se il telefono è fuori portata, il comando resta in attesa e la guardia si attiva se i dispositivi si ricollegano entro una decina di minuti. Allo stesso modo funzionano Siri (“Attiva Zzzentinel”), un widget di Comandi e Tocco posteriore. L’orologio controlla solo la guardia, non la notte.</p>
     </details>
 
     <details>
-      <summary>Come trasferisco i miei suoni su un altro telefono o da un'altra app?</summary>
-      <p>In <em>Impostazioni → Addestramento dei miei suoni → Trasferisci campioni</em> tocca <em>Esporta tutti i campioni (.zip)</em> e salvalo (File, AirDrop, iCloud). Sull'altro dispositivo decomprimi lo zip e con <em>Importa campioni da File</em> scegli ogni volta le registrazioni di un solo suono, indicandone il nome. Il modello addestrato lo sposti con il pulsante <em>Esporta my_night.mlmodel</em> e, nell'app di destinazione, con <em>Importa modello (.mlmodel)</em>. Tutti i dati dell'app li trovi anche nell'app File → <em>Sul mio iPhone → Zzzentinel</em>, da cui puoi copiarli o farne un backup.</p>
+      <summary>Come trasferisco i miei suoni su un altro telefono?</summary>
+      <p>In <em>Impostazioni → Addestramento dei miei suoni → Trasferisci campioni</em> tocca <em>Esporta tutti i campioni (.zip)</em> e salvalo (File, AirDrop, iCloud). Sull’altro dispositivo decomprimi lo zip e con <em>Importa campioni da File</em> scegli ogni volta le registrazioni di un solo suono, indicandone il nome. Il modello addestrato lo sposti con <em>Esporta my_night.mlmodel</em> e <em>Importa modello (.mlmodel)</em>. Registrazioni e modelli addestrati si trovano anche nell’app File → <em>Sul mio iPhone → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>Sto trasferendo dati da una versione precedente con un altro nome.</summary>
-      <p>iOS considera un'app rinominata come un'app separata, quindi i dati non passano automaticamente. Nella vecchia app usa i suoi pulsanti di esportazione (il modello, oppure le singole registrazioni tramite Condividi), salvali in File e importali in Zzzentinel. Disinstalla la vecchia app solo dopo aver verificato che l'importazione sia riuscita: con la disinstallazione i suoi dati vengono eliminati in modo definitivo.</p>
+      <summary>Le mie notti passano su un nuovo iPhone?</summary>
+      <p>No. Le registrazioni notturne, i campioni di addestramento, i modelli addestrati e i riepiloghi condivisi con Breathune sono esclusi dai backup iCloud e su computer; le impostazioni normali possono esserci. Per conservare le notti, esportale come ZIP prima del passaggio: <em>Impostazioni → Esporta tutte le notti (.zip)</em> oppure una sola notte dal suo menu <em>Esporta</em>. Lo ZIP è il tuo archivio, perché l’app non sa importare notti da uno ZIP.</p>
     </details>
 
     <details>
-      <summary>Ho dimenticato il PIN della guardia. E ora?</summary>
-      <p>Se la guardia è disattivata, il PIN si cambia nella scheda <em>Guardia → Cambia PIN</em>. Se è attiva e hai dimenticato del tutto il PIN, l'unica strada è reinstallare l'app: le registrazioni notturne vengono rimosse dal dispositivo, quindi esportale prima.</p>
+      <summary>Ho dimenticato il PIN della guardia.</summary>
+      <p>Non reinstallare mai l’app: cancelleresti tutte le tue notti, perché non sono in nessun backup. Chiudi del tutto Zzzentinel dal selettore delle app (scorrila verso l’alto), riaprila e vai su <em>Guardia → Cambia PIN</em>. Non si perde nulla.</p>
     </details>
 
     <details>
-      <summary>Perché la guardia ha bisogno del microfono e che cosa sente?</summary>
-      <p>Una guardia attiva sorveglia i movimenti del telefono <em>e</em> il volume dei suoni intorno a esso: spesso qualcuno si china sul telefono o gli parla prima di muoverlo. Non viene registrato nulla, si misura solo il livello sonoro istantaneo. Se sei in una stanza condivisa o in un dormitorio, in Impostazioni disattiva <em>Anche i suoni fanno scattare l'allarme</em>: allora l'allarme partirà solo con un movimento.</p>
+      <summary>Perché la guardia ha bisogno del microfono e cosa sente?</summary>
+      <p>Una guardia attiva sorveglia il movimento <em>e</em> ascolta il livello del suono intorno al telefono, quindi ha bisogno del microfono per tutto il tempo in cui è attiva. Viene misurato solo il livello del suono e non viene registrato nulla. In una stanza condivisa o in uno studentato, attiva <em>Solo suoni molto forti fanno scattare l’allarme</em> in Impostazioni.</p>
     </details>
 
     <details>
-      <summary>L'allarme lampeggia e sono sensibile alle luci intermittenti.</summary>
-      <p>Lo schermo lampeggia 2 volte al secondo e la torcia 2,5: entrambe le frequenze sono sotto la soglia che le raccomandazioni degli esperti indicano come a rischio. Se nel sistema hai attivato <em>Riduci movimento</em>, il lampeggio viene omesso automaticamente. Si può anche disattivare a mano in Impostazioni → Guard Extra Plus → <em>Lampeggio durante l'allarme</em>; la sirena continua a funzionare.</p>
+      <summary>La guardia protegge il telefono dal furto?</summary>
+      <p>No. Serve da deterrente, ma non è una protezione antifurto. Un movimento o un suono intorno al telefono, senza il tuo PIN, fa partire una sirena forte e luci lampeggianti, ma i tasti del volume o lo spegnimento del telefono la zittiscono.</p>
     </details>
 
     <details>
-      <summary>L'allarme non si sente abbastanza forte.</summary>
-      <p>Prima di attivare la guardia, porta il volume dei contenuti multimediali al massimo e disattiva la modalità Non disturbare. L'allarme suona dall'altoparlante anche con l'interruttore della suoneria silenziato.</p>
+      <summary>L’allarme lampeggia e sono sensibile alle luci intermittenti.</summary>
+      <p>Lo schermo e la torcia lampeggiano meno di tre volte al secondo, sotto la soglia che le raccomandazioni degli esperti indicano come a rischio. Se nel sistema hai attivato <em>Riduci movimento</em>, il lampeggio viene omesso automaticamente. Si può anche disattivare a mano in <em>Impostazioni → Guard Extra Plus → Lampeggio durante l’allarme</em>; la sirena continua a funzionare.</p>
     </details>
 
     <details>
-      <summary>Dove sono i miei dati e come li cancello?</summary>
-      <p>Tutto è salvato solo sul telefono. Le singole notti si eliminano scorrendo verso sinistra nell'elenco <em>Le mie notti</em>, i suoni addestrati in <em>Addestramento dei miei suoni</em>. Disinstallando l'app viene eliminato tutto.</p>
+      <summary>L’allarme non si sente abbastanza.</summary>
+      <p>Prima di attivare la guardia alza il volume: l’app ti avvisa quando è basso. La sirena suona sempre dall’altoparlante, non dalle cuffie, anche con l’interruttore suoneria su silenzioso. Si ferma da sola dopo 5 minuti e i tasti del volume la zittiscono.</p>
+    </details>
+
+    <details>
+      <summary>Dove sono i miei dati e come li elimino?</summary>
+      <p>Sul tuo iPhone, e lo sviluppatore non riceve nulla. Scorri verso sinistra per eliminare una notte in <em>Le mie notti</em> o un suono in <em>Addestramento dei miei suoni</em>; l’app chiede conferma e una notte eliminata non si può ripristinare. Il limite <em>Conserva le notti</em> elimina le notti più vecchie dopo una conferma. Disinstallando Zzzentinel si eliminano i suoi dati, tranne la cartella condivisa dei riepiloghi, che resta sul telefono finché non rimuovi anche Breathune. Le registrazioni si possono aprire anche nell’app File, da chiunque possa sbloccare il tuo iPhone: il PIN della guardia non le protegge.</p>
     </details>
   </div>
 </div>

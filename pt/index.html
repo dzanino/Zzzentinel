@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zzzentinel: a sentinela dos seus Zzz</title>
-<meta name="description" content="O Zzzentinel escuta enquanto você dorme (ronco, fala durante o sono e os sons que ele não sabe nomear) e entrega um relatório matinal honesto. Além disso, protege o seu celular. Tudo fica no seu iPhone. Em português.">
+<title>Zzzentinel: gravador privado de ronco e sons da noite para iPhone</title>
+<meta name="description" content="O Zzzentinel escuta no seu iPhone enquanto você dorme, reconhece os sons que classifica como ronco, a fala durante o sono e o que não sabe nomear, e entrega um relatório matinal honesto. Criado por um médico. Compra única, sem assinatura, sem conta. Não é um dispositivo médico.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -12,8 +12,8 @@
 <link rel="canonical" href="https://dzanino.github.io/Zzzentinel/pt/">
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
-<meta property="og:title" content="Zzzentinel: a sentinela dos seus Zzz">
-<meta property="og:description" content="Seu inspetor noturno e um guarda para o seu celular. No dispositivo, sem conta, sem anúncios.">
+<meta property="og:title" content="Zzzentinel: gravador privado de ronco e sons da noite para iPhone">
+<meta property="og:description" content="Ronco e sons da noite reconhecidos no seu iPhone, um relatório matinal honesto e um guarda para o seu celular. Compra única, sem assinatura, sem conta, sem anúncios.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -43,6 +43,7 @@
    "@type": "Person",
    "@id": "https://dzanino.github.io/Zzzentinel/#autor",
    "name": "Ján Šikuta",
+   "honorificPrefix": "MUDr.",
    "jobTitle": "Physician and app developer",
    "nationality": "Slovak",
    "url": "https://breathune.eu/",
@@ -77,7 +78,7 @@
    "@id": "https://dzanino.github.io/Zzzentinel/pt/#stranka",
    "url": "https://dzanino.github.io/Zzzentinel/pt/",
    "name": "Zzzentinel",
-   "description": "O Zzzentinel escuta enquanto você dorme (ronco, fala durante o sono e os sons que ele não sabe nomear) e entrega um relatório matinal honesto. Além disso, protege o seu celular. Tudo fica no seu iPhone. Em português.",
+   "description": "O Zzzentinel escuta no seu iPhone enquanto você dorme, reconhece os sons que classifica como ronco, a fala durante o sono e o que não sabe nomear, e entrega um relatório matinal honesto. Criado por um médico. Compra única, sem assinatura, sem conta. Não é um dispositivo médico.",
    "inLanguage": "pt-BR",
    "isPartOf": {
     "@id": "https://dzanino.github.io/Zzzentinel/#web"
@@ -115,8 +116,8 @@
    "author": {
     "@id": "https://dzanino.github.io/Zzzentinel/#autor"
    },
-   "description": "Night listening app for iPhone and Apple Watch: recognises snoring, sleep talking, coughing and other sounds, builds a morning timeline, and guards the phone. On device, no account, no ads. Wellness app, not a medical device.",
-   "featureList": "Overnight sound recognition; morning timeline and night map; indicative breathing pauses (not a medical device); own Core ML sound model trained on the phone; phone guard with siren and PIN; Apple Watch app; nine languages; no server, no account, no analytics",
+   "description": "Private snore and sleep sound recorder for iPhone: recognises sounds it classifies as snoring, plus sleep talking, coughing and other sounds, on the phone, and builds a morning timeline. Includes a guard that deters people from touching the phone (not theft protection), controllable from Apple Watch. One-time purchase, no subscription, no account, no ads. Not a medical device.",
+   "featureList": "Overnight sound recognition on the phone; morning timeline and night map; optional experimental detection of quiet gaps in breathing sounds (not a medical device, not a diagnosis, no apnea screening); breathing rate estimate from microphone loudness; Summary for your doctor (PDF and recordings); ZIP and plain-text export; own Core ML sound model trained on the phone; phone guard with siren and PIN (a deterrent, not theft protection); Apple Watch app for the guard; nine languages; no server, no account, no analytics in the app",
    "offers": {
     "@type": "Offer",
     "price": "29.99",
@@ -152,14 +153,19 @@
 <div class="hero">
   <img src="../icon.png?v=20261016" alt="Zzzentinel">
   <h1>Zzzentinel</h1>
-  <p class="tag">A sentinela dos seus Zzz</p>
-  <p class="lede">
-    Ligue antes de dormir e o seu iPhone escuta em silêncio, reconhece e grava o que acontece durante a noite.
-    De manhã você recebe um relatório honesto e, quando ele não tem certeza de algo, pergunta a você.
-    E se você não quer que ninguém mexa no seu celular, ele também cuida disso.
-  </p>
+  <p class="tag">Gravador privado de ronco e sons da noite para iPhone</p>
+  <p class="lede">Antes de dormir, toque em “Iniciar a noite” e o iPhone escuta em silêncio, reconhece e grava o que acontece à noite. De manhã você recebe um relatório honesto e, quando ele não tem certeza de algo, pergunta a você. E quando você não quer que ninguém mexa no seu celular, o guarda intimida quem tentar.</p>
+  <p class="lede">Compra única, sem assinatura, sem conta, sem anúncios. Criado por MUDr. Ján Šikuta, um médico que diz com clareza o que um microfone não consegue medir.</p>
   <div class="cta">
-    <a class="btn" href="https://apps.apple.com/app/id6804132664">Baixar na App Store</a>
+    <a class="btn" href="https://apps.apple.com/app/id6804132664">Ver na App Store</a>
+  </div>
+</div>
+
+<div class="wrap shotswrap">
+  <div class="shots">
+    <img src="../img/shots/pt-BR-1.jpg" width="540" height="1174" loading="lazy" alt="Relatório da manhã com o mapa da noite">
+    <img src="../img/shots/pt-BR-2.jpg" width="540" height="1174" loading="lazy" alt="Linha do tempo da noite com clipes para ouvir">
+    <img src="../img/shots/pt-BR-3.jpg" width="540" height="1174" loading="lazy" alt="Lista de noites com a tendência de sete noites">
   </div>
 </div>
 
@@ -170,73 +176,73 @@
     <div class="feat">
       <div class="ico">🌙</div>
       <h3>Vigília noturna</h3>
-      <p>Escuta a noite toda, mesmo com a tela bloqueada. “Escurecer tela” deixa na sua mesa de cabeceira só um relógio discreto. Antes de começar, você vê o que está de plantão (microfone, respiração, Saúde, guarda) e o app avisa quando o iPhone não está no carregador.</p>
+      <p>Toque em <em>Iniciar a noite</em> e ele escuta a noite toda, mesmo com a tela bloqueada. A tela escurece sozinha um minuto depois do último toque (dá para desativar) e “Escurecer a tela” deixa só um relógio discreto na sua mesa de cabeceira. A noite é salva a cada minuto. Um podcast ou ruído branco de outro app não a interrompe mais, mas o microfone também ouve esse áudio. Uma ligação interrompe a gravação: o app salva o que tem e avisa você. Antes de começar, você vê o que está de plantão (microfone, silêncios, Saúde, guarda), e o app avisa se o celular não estiver no carregador.</p>
     </div>
 
     <div class="feat">
       <div class="ico">👂</div>
       <h3>Reconhece sons</h3>
-      <p>O ronco e a intensidade dele, a fala durante o sono, tosse, espirros, animais, chuva… E o que ele não sabe nomear, registra com honestidade como “som indefinido”.</p>
+      <p>Os sons que classifica como ronco e a intensidade deles, fala durante o sono, tosse, espirros, animais, chuva… Tudo no seu celular. E o que não sabe nomear, ele registra com honestidade como “som indefinido”. Com duas pessoas no quarto, ele não distingue quem está roncando.</p>
     </div>
 
     <div class="feat">
       <div class="ico">☀️</div>
       <h3>Relatório matinal</h3>
-      <p>Uma linha do tempo da sua noite em episódios, reprodução contínua que você percorre com o dedo, um resumo em linguagem simples no tom que você escolher e a transcrição do que você falou dormindo.</p>
+      <p>Uma linha do tempo da sua noite em episódios, reprodução contínua que você avança com o dedo e um resumo em linguagem simples, no tom que você escolher. A fala durante o sono é transcrita quando você pede. O relatório também diz por quanto tempo o microfone ficou interrompido ou quando a gravação parou inesperadamente.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🗺️</div>
-      <h3>A noite num relance</h3>
-      <p>Quatro números no topo (duração, ronco, pausas ou respiração, sono) e um mapa da noite: uma faixa para cada som, de quando você adormece até a manhã. A lista de noites mostra a tendência das últimas sete noites em relação às anteriores.</p>
+      <h3>A noite em resumo</h3>
+      <p>Quatro números no topo (duração, ronco, silêncios ou respiração, sono ou número de eventos) e um mapa da noite: uma faixa para cada som, do início da noite até de manhã. A lista de noites mostra a tendência das últimas sete noites em comparação com as anteriores.</p>
     </div>
 
     <div class="feat">
       <div class="ico">✅</div>
       <h3>Para confirmar</h3>
-      <p>Um som que o app ouviu pela primeira vez, ou do qual não tem certeza, é oferecido para você ouvir. Um toque confirma, um toque corrige, e cada resposta deixa a noite seguinte mais precisa.</p>
+      <p>Um som que o app ouviu pela primeira vez, ou do qual não tem certeza, é oferecido para você ouvir. Um toque confirma, um toque corrige, e cada resposta ensina algo ao app para as próximas noites.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🎓</div>
-      <h3>Ensine os seus sons</h3>
-      <p>Dê nome a um som que ele não conhecia e, depois de algumas amostras, treine o seu próprio modelo Core ML direto no celular, sem computador.</p>
+      <h3>Ensine seus sons a ele</h3>
+      <p>Dê nome a um som que ele não conhecia e, depois de algumas amostras, treine o seu próprio modelo Core ML: direto no celular, sem computador.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🫁</div>
-      <h3>Pausas na respiração</h3>
-      <p>Aponta silêncios mais longos na respiração audível (mesmo quando ela é suave, não só entre roncos) e guarda um clipe curto de cada um: as respirações de antes, o silêncio e a respiração de depois. Apenas indicativo; não é um dispositivo médico.</p>
+      <h3>Silêncios na respiração</h3>
+      <p>Desativados por padrão e experimentais: quem ativa é você. O app então conta silêncios de 10 a 60 segundos nos seus sons de respiração (você pode baixar o limite para até 6 s) e guarda um clipe curto de cada um: as respirações antes, o silêncio, a respiração depois. O relatório diz quando a detecção estava desligada e nunca afirma que a sua respiração estava bem. O app só ouve sons: um silêncio pode ser só uma respiração suave que o celular não captou, e nenhum resultado descarta nada. Não é um dispositivo médico, não é diagnóstico nem triagem de apneia.</p>
     </div>
 
     <div class="feat">
       <div class="ico">📈</div>
       <h3>Frequência respiratória</h3>
-      <p>A partir do volume do microfone, estima quantas vezes por minuto você respira quando a respiração é audível e, no relatório matinal, desenha a curva da noite com as pausas marcadas. Se você quiser, acrescenta também as fases do sono e a frequência respiratória que o seu relógio registrou no Apple Saúde.</p>
+      <p>Sempre ativa, só números: pelo volume do microfone, ele estima quantas respirações por minuto você faz enquanto a respiração é audível e desenha a curva da noite no relatório matinal. Não é uma medição médica. Se você quiser, ele acrescenta os estágios do sono e a frequência respiratória do relógio no Apple Saúde: opcional, desativado por padrão, só leitura.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🩺</div>
-      <h3>Resumo para o médico</h3>
-      <p>Um PDF da noite redigido com rigor, com as gravações em torno das pausas mais longas e uma seção honesta sobre o que um microfone não consegue medir. Material para uma conversa, não um diagnóstico.</p>
+      <h3>Resumo para o seu médico</h3>
+      <p>Um PDF da noite com gravações em torno dos silêncios mais longos e uma seção honesta sobre o que um microfone não consegue medir. Algo para mostrar ao seu médico, não um produto clínico nem um diagnóstico. Você também pode exportar um ZIP de uma noite ou de todas as noites e uma transcrição em texto simples.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🛡️</div>
       <h3>Guard Extra Plus</h3>
-      <p>Ative a guarda e qualquer movimento do celular, ou um barulho alto perto dele, sem o seu PIN dispara uma sirene e flashes. Ideal contra os brincalhões numa viagem.</p>
+      <p>Ative o guarda e um movimento ou som ao redor do celular, sem o seu PIN, dispara uma sirene alta e luzes piscando. Ele intimida, mas não protege contra roubo: os botões de volume ou desligar o celular o silenciam. Enquanto está ativo, o microfone só mede o nível de som e nada é gravado. A sirene para sozinha depois de 5 minutos.</p>
     </div>
 
     <div class="feat">
       <div class="ico">⌚️</div>
-      <h3>O Apple Watch como chave</h3>
-      <p>Ative a guarda pelo pulso ou com a Siri, no modo anônimo: a tela do celular continua apagada. Uma complicação no mostrador; para desativar, sempre é preciso o PIN.</p>
+      <h3>Apple Watch como chave</h3>
+      <p>Ative o guarda pelo pulso ou com a Siri, no modo anônimo: a tela do celular continua apagada. Isso só funciona quando o iOS deixa o Zzzentinel usar o microfone; caso contrário, o relógio ou a Siri pedem para você abrir o app. Uma complicação no mostrador; para desativar, o PIN é sempre necessário. O relógio controla só o guarda, não a noite.</p>
     </div>
 
     <div class="feat">
       <div class="ico">🔒</div>
       <h3>Privacidade em primeiro lugar</h3>
-      <p>Sem servidor, sem conta, sem anúncios, sem análises. As gravações, a análise e o seu modelo ficam no seu celular.</p>
+      <p>Sem servidor, sem conta, sem anúncios, sem análises nem rastreamento no app. As gravações, a análise e o seu modelo ficam no seu iPhone, e o desenvolvedor não recebe nada. As noites não estão nos backups: para mantê-las, exporte um ZIP. Se um idioma não puder ser transcrito no iPhone, o app pergunta antes de enviar esse único clipe à Apple.</p>
     </div>
 
   </div>
@@ -245,7 +251,7 @@
     <img class="badge" src="../breathune-icon.png?v=20261016" alt="Breathune">
     <div>
       <h3>Do mesmo autor: Breathune</h3>
-      <p>O Zzzentinel diz que você ronca. O Breathune oferece um <strong>treino de 8 semanas para os músculos envolvidos no ronco</strong> (cerca de 9 minutos por dia), que pode ajudar a reduzir o ronco, o <strong>Night Guard</strong> avisa você com delicadeza durante a noite pelo Apple Watch para mudar de posição e, além disso, há exercícios de respiração para a calma e o sono. O Breathune também mostra em cada noite a frequência respiratória e o sono do Apple Saúde, e os dois apps trocam as noites entre si: só resumos curtos, nunca som.</p>
+      <p>O Zzzentinel mostra quando ouviu ronco. O Breathune oferece um <strong>treino de 8 semanas para os músculos envolvidos no ronco</strong> (cerca de 9 minutos por dia) que pode ajudar a reduzir o ronco, o <strong>Night Guard</strong> avisa você com delicadeza à noite pelo Apple Watch para mudar de posição, e há exercícios de respiração para a calma e o sono. Com os dois apps no seu iPhone, o Zzzentinel deixa para o Breathune um resumo curto das noites concluídas e lê as suas sessões de respiração da noite, a pontuação da noite e a frequência cardíaca. Sem áudio e sem fala.</p>
       <div class="links">
         <a class="btn small" href="https://apps.apple.com/app/id6782549502">Breathune na App Store</a>
         <a class="btn ghost small" href="https://breathune.eu/pt/">Site do Breathune</a>
@@ -253,10 +259,13 @@
     </div>
   </div>
 
+  <div class="pros">
+    <h3>Para especialistas em sono e pesquisadores</h3>
+    <p>O Zzzentinel ainda não foi avaliado em nenhum estudo clínico ou independente, por isso não afirmamos nada sobre sua precisão. Se você trabalha com medicina do sono, otorrinolaringologia ou pesquisa em acústica e gostaria de comparar o quanto ele reconhece ronco e outros sons noturnos, ou pode orientar sobre a regulamentação de dispositivos médicos, escreva para: <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>. É um convite para testar o app, não uma afirmação de que ele possa diagnosticar algo.</p>
+  </div>
+
   <div class="note">
-    <strong>Atenção:</strong> as gravações noturnas e a análise delas podem surpreender e até inquietar; use-as
-    com cuidado e bom senso. O alarme da guarda é ensurdecedor à noite. O Zzzentinel não é um dispositivo médico
-    e não substitui um diagnóstico médico.
+    <strong>Atenção:</strong> as gravações noturnas e a análise delas podem ser surpreendentes e até perturbadoras, então use com cuidado. Se outra pessoa dorme no quarto, avise-a antes, porque o Zzzentinel também pode gravar a voz dela. O alarme do guarda é ensurdecedor à noite. O Zzzentinel não é um dispositivo médico e não substitui o diagnóstico médico.
   </div>
 
   <div class="links">
@@ -267,8 +276,8 @@
 </div>
 
 <footer>
-  <p>Zzzentinel · iPhone &amp; Apple Watch · eslovaco, tcheco, inglês, alemão, francês, italiano, polonês, espanhol e português (Brasil)</p>
-  <p><span data-fz>©</span> 2026 Ján Šikuta · <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank">ORCID</a></p>
+  <p>Zzzentinel · iPhone (iOS 17+) &amp; Apple Watch (watchOS 10+) · eslovaco, tcheco, inglês, alemão, francês, italiano, polonês, espanhol e português (Brasil)</p>
+  <p><span data-fz>©</span> 2026 MUDr. Ján Šikuta, médico · <a href="https://orcid.org/0000-0002-4690-0317" rel="me noopener" target="_blank">ORCID</a></p>
 </footer>
 
 <script src="../lang.js"></script>

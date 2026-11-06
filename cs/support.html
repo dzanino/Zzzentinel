@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zzzentinel: Podpora</title>
-<meta name="description" content="Podpora a časté otázky k Zzzentinelu: nahrávání na pozadí, baterie, vlastní zvuky, pauzy v dýchání, souhrn pro lékaře, Apple Watch, PIN a data.">
+<meta name="description" content="Podpora a časté otázky k Zzzentinelu: nahrávání se zamčenou obrazovkou, telefonáty, místo v telefonu, vlastní zvuky, tiché úseky v dýchání, souhrn pro lékaře, Apple Watch, PIN a data.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Zzzentinel: Podpora">
-<meta property="og:description" content="Kontakt a časté otázky k aplikaci Zzzentinel.">
+<meta property="og:description" content="Podpora a časté otázky k Zzzentinelu: nahrávání se zamčenou obrazovkou, telefonáty, místo v telefonu, vlastní zvuky, tiché úseky v dýchání, souhrn pro lékaře, Apple Watch, PIN a data.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,6 +35,167 @@
 <link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/support.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
 <!--HREFLANG:end-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "cs",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Nahrává aplikace i se zamčenou obrazovkou?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ano. Když klepneš na Začít noc, nahrávání běží i na pozadí a se zamčeným telefonem. Displej se sám ztlumí minutu po posledním dotyku (v Nastavení to lze vypnout) a tlačítko Ztlumit displej to udělá hned: obrazovka téměř zhasne a zůstanou jen tlumené hodiny. Telefon na noc doporučujeme připojit k nabíječce, aplikace tě upozorní, když v ní není. Noc se ukládá každou minutu. Zapomenutá noc skončí sama po 16 hodinách a při 3 procentech baterie bez nabíječky se řádně dokončí."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Co se stane, když noc přeruší telefonát?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Telefonát nahrávání přeruší. Aplikace uloží, co má, po hovoru zkusí pokračovat a dá ti vědět, pokud přestala poslouchat. Ranní report řekne, jak dlouho byl mikrofon přerušený nebo kdy se nahrávání nečekaně zastavilo. Zvuk z jiných aplikací, například podcast nebo bílý šum, noc už nepřeruší, mikrofon ho ale slyší také."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kolik baterie a místa to spotřebuje?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Analýza běží úsporně a ukládají se jen klipy zachycených zvuků, ne celá noc. Klipy zaberou zhruba 30 MB na hodinu nahraného zvuku, takže běžná noc zabere od pár MB do asi 100 MB a při stálém hluku, například z ventilátoru, i víc. Volitelný limit Uchovávat noci v Nastavení (7, 30 nebo 90 dní, nebo navždy) odstraňuje starší noci a nejdřív se tě zeptá. Dokud je aplikace na pozadí nebo je displej ztlumený, přestane překreslovat ukazatele, což šetří energii. S připojenou nabíječkou na spotřebě baterie skoro nezáleží."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Je tam předplatné?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ne. Zzzentinel je jednorázový nákup v App Store: bez předplatného, bez nákupů v aplikaci, bez reklam a bez účtu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Proč mám v záznamu „neurčený zvuk“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Telefon zachytil hlasitý zvuk, který klasifikátor nedokázal pojmenovat. Přehraj si klip, klepni na Pojmenovat zvuk a zadej název. Zhruba po pěti vzorcích si v Nastavení → Trénink mých zvuků natrénuješ vlastní model my_night.mlmodel přímo v telefonu a příště aplikace zvuk pozná jménem."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Trénink modelu mi nefunguje.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Model potřebuje aspoň dvě třídy zvuků. Pokud máš zatím jen jeden vlastní zvuk, aplikace si druhou třídu („ostatní“) sestaví automaticky z klipů jiných událostí, takže nejdřív nahraj aspoň jednu noc s několika zachycenými zvuky. Pro spolehlivý výsledek nasbírej asi pět vzorků na každý zvuk."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jsou „tiché úseky v dýchání“ diagnóza spánkové apnoe?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ne. Hledání je ve výchozím stavu vypnuté a experimentální: zapneš ho v Nastavení → Tiché úseky v dýchání (experimentální). Počítá ticho dlouhé 10 až 60 sekund ve zvucích dýchání a práh můžeš snížit až na 6 sekund. Report řekne, když bylo hledání vypnuté, a nikdy netvrdí, že jsi dýchal v pořádku. Aplikace slyší jen zvuk: mikrofon neměří proudění vzduchu ani okysličení, tichý úsek může být jen tiché dýchání, které telefon nezachytil, a žádný výsledek nic nevylučuje. Není to zdravotnický prostředek, diagnóza ani screening apnoe. Pokud tě něco znepokojuje, promluv si s lékařem bez ohledu na to, co report ukáže. Dechová frekvence odhadovaná z hlasitosti je vždy zapnutá, jen jako čísla."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Co je „Souhrn pro lékaře“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "V ukončené noci otevři Export → Souhrn pro lékaře. Aplikace vytvoří PDF (chrápání, slyšitelné dýchání, seznam tichých úseků, pokud bylo hledání zapnuté, a sekce „Metoda a omezení“) a přidá nahrávky okolí tří nejdelších tichých úseků. Aplikace sama nic z toho neposílá, soubory sdílíš ty. Je to podklad, který můžeš ukázat lékaři, ne klinický produkt ani diagnóza. Stejné menu exportuje celou noc jako ZIP nebo přepis jako prostý text a v Nastavení můžeš exportovat všechny noci."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Byl Zzzentinel ověřen ve studii?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ne. Zatím ho neověřila žádná nezávislá studie, proto o jeho přesnosti nic netvrdíme. Odborníci, kteří by ho chtěli porovnat, mohou napsat na admin@breathune.eu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Co je sekce „K potvrzení“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Zvuky, které aplikace slyšela poprvé nebo si jimi není jistá, ti v ranním reportu nabídne k poslechu. Sedí ji naučí, že se trefila; Opravit jí dá správný název a nový tréninkový vzorek. Na každý zvuk se ptá nejvýše dvakrát za noc a po třech potvrzeních mu už věří. Návrh se nikdy sám nezmění ve fakt."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jak ovládám strážce z Apple Watch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aplikace pro hodinky se nainstaluje automaticky spolu s tou v telefonu. Na hodinkách klepneš na Aktivovat: strážce se zapne inkognito, displej telefonu zůstane zhasnutý. Vypneš ho PIN klávesnicí přímo na hodinkách. Vypnutí vždy vyžaduje PIN a po 5 špatných pokusech počkáš 30 sekund. Aktivace na dálku funguje jen tehdy, když iOS dovolí Zzzentinelu použít mikrofon; jinak ti hodinky nebo Siri řeknou, abys otevřel aplikaci. Pokud je telefon mimo dosah, příkaz počká a strážce se zapne, pokud se zařízení spojí přibližně do deseti minut. Stejně funguje Siri („Aktivuj Zzzentinel“), widget Zkratky i Klepnutí na zadní stranu. Hodinky ovládají jen strážce, ne noc."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jak přenesu své zvuky do jiného telefonu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "V Nastavení → Trénink mých zvuků → Přenos vzorků klepni na Exportovat všechny vzorky (.zip) a ulož je (Soubory, AirDrop, iCloud). V druhém zařízení zip rozbal a přes Importovat vzorky ze Souborů vyber nahrávky vždy jednoho zvuku a zadej jeho název. Natrénovaný model přeneseš přes Exportovat my_night.mlmodel a Importovat model (.mlmodel). Nahrávky a natrénované modely najdeš i v aplikaci Soubory → Na mém iPhonu → Zzzentinel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Přenesou se moje noci do nového iPhonu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ne. Noční nahrávky, tréninkové vzorky, natrénované modely a souhrny sdílené s Breathune nejsou v zálohách do iCloudu ani do počítače; běžná nastavení v nich být můžou. Pokud si chceš noci nechat, před přechodem je exportuj do ZIP: Nastavení → Exportovat všechny noci (.zip) nebo jednu noc přes její menu Export. ZIP je tvůj archiv, aplikace totiž noci ze ZIP importovat neumí."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Zapomněl jsem PIN strážce. Co teď?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aplikaci nikdy nepřeinstalovávej: smazaly by se tím všechny tvoje noci, protože nejsou v žádné záloze. Aplikaci úplně zavři v přepínači aplikací (potáhni ji nahoru), znovu ji otevři a jdi na Strážce → Změnit PIN. Nic se neztratí."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Proč strážce potřebuje mikrofon a co slyší?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aktivovaný strážce sleduje pohyb telefonu i hladinu zvuku kolem něj, proto potřebuje mikrofon po celou dobu, kdy je aktivní. Měří se jen hladina zvuku a nic se nenahrává. Ve sdíleném pokoji nebo na koleji zapni v Nastavení Alarm spustí jen velmi hlasité zvuky."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ochrání strážce telefon před krádeží?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ne. Odrazuje, ale není to ochrana před krádeží. Pohyb nebo zvuk kolem telefonu bez PINu spustí hlasitou sirénu a blikání, ale tlačítka hlasitosti nebo vypnutí telefonu ho umlčí."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Alarm bliká. Jsem citlivý na blikající světlo.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Obrazovka i svítilna blikají méně než třikrát za sekundu, tedy pod hranicí, kterou odborná doporučení označují za rizikovou. Pokud máš v systému zapnuté Omezit pohyb, blikání se vynechá automaticky. Vypnout ho lze i ručně v Nastavení → Guard Extra Plus → Blikání při alarmu; siréna zůstane funkční."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Alarm není slyšet dost nahlas.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Před aktivací strážce zvyš hlasitost, aplikace tě upozorní, když je nízká. Siréna hraje vždy přes reproduktor, ne přes sluchátka, i při ztlumeném přepínači zvonění. Sama utichne po 5 minutách a tlačítka hlasitosti ji umlčí."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kde jsou moje data a jak je smažu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "V tvém iPhonu a vývojář nedostává nic. Noc smažeš potažením doleva v seznamu Moje noci, zvuk v Tréninku mých zvuků; aplikace se nejdřív zeptá a smazanou noc už nelze obnovit. Limit Uchovávat noci po potvrzení odstraňuje starší noci. Odinstalováním Zzzentinelu se odstraní jeho data, jen společná složka se souhrny zůstane v telefonu, dokud neodstraníš i Breathune. Nahrávky lze otevřít i v aplikaci Soubory, a to každým, kdo umí odemknout tvůj iPhone: PIN strážce je nechrání."
+   }
+  }
+ ]
+}
+</script>
 <link rel="me" href="https://orcid.org/0000-0002-4690-0317">
 </head>
 <body>
@@ -72,12 +233,22 @@
 
     <details>
       <summary>Nahrává aplikace i se zamčenou obrazovkou?</summary>
-      <p>Ano. Po spuštění nočního hlídání běží nahrávání i na pozadí a se zamčeným telefonem. Chceš-li mít displej zhasnutý, ale aplikaci po ruce, použij tlačítko <em>Ztlumit displej</em>: obrazovka téměř zhasne a zůstanou jen tlumené hodiny. Telefon na noc doporučujeme připojit k nabíječce.</p>
+      <p>Ano. Když klepneš na <em>Začít noc</em>, nahrávání běží i na pozadí a se zamčeným telefonem. Displej se sám ztlumí minutu po posledním dotyku (v Nastavení to lze vypnout) a tlačítko <em>Ztlumit displej</em> to udělá hned: obrazovka téměř zhasne a zůstanou jen tlumené hodiny. Telefon na noc doporučujeme připojit k nabíječce, aplikace tě upozorní, když v ní není. Noc se ukládá každou minutu. Zapomenutá noc skončí sama po 16 hodinách a při 3 procentech baterie bez nabíječky se řádně dokončí.</p>
+    </details>
+
+    <details>
+      <summary>Co se stane, když noc přeruší telefonát?</summary>
+      <p>Telefonát nahrávání přeruší. Aplikace uloží, co má, po hovoru zkusí pokračovat a dá ti vědět, pokud přestala poslouchat. Ranní report řekne, jak dlouho byl mikrofon přerušený nebo kdy se nahrávání nečekaně zastavilo. Zvuk z jiných aplikací, například podcast nebo bílý šum, noc už nepřeruší, mikrofon ho ale slyší také.</p>
     </details>
 
     <details>
       <summary>Kolik baterie a místa to spotřebuje?</summary>
-      <p>Analýza běží úsporně a ukládají se jen krátké klipy událostí, ne celá noc: běžná noc zabere jednotky MB. Dokud je aplikace na pozadí nebo je displej ztlumený, přestane překreslovat ukazatele, což dál šetří energii. S připojenou nabíječkou je spotřeba baterie nepodstatná.</p>
+      <p>Analýza běží úsporně a ukládají se jen klipy zachycených zvuků, ne celá noc. Klipy zaberou zhruba 30 MB na hodinu nahraného zvuku, takže běžná noc zabere od pár MB do asi 100 MB a při stálém hluku, například z ventilátoru, i víc. Volitelný limit <em>Uchovávat noci</em> v Nastavení (7, 30 nebo 90 dní, nebo navždy) odstraňuje starší noci a nejdřív se tě zeptá. Dokud je aplikace na pozadí nebo je displej ztlumený, přestane překreslovat ukazatele, což šetří energii. S připojenou nabíječkou na spotřebě baterie skoro nezáleží.</p>
+    </details>
+
+    <details>
+      <summary>Je tam předplatné?</summary>
+      <p>Ne. Zzzentinel je jednorázový nákup v App Store: bez předplatného, bez nákupů v aplikaci, bez reklam a bez účtu.</p>
     </details>
 
     <details>
@@ -87,62 +258,72 @@
 
     <details>
       <summary>Trénink modelu mi nefunguje.</summary>
-      <p>Trénink vyžaduje skutečný iPhone: v simulátoru není framework Create&nbsp;ML dostupný a aplikace zobrazí upozornění. Potřebuješ také aspoň dvě třídy zvuků; pokud máš zatím jen jednu, aplikace si druhou („ostatní“) sestaví automaticky z klipů jiných událostí, takže nejdřív nahraj aspoň jednu noc.</p>
+      <p>Model potřebuje aspoň dvě třídy zvuků. Pokud máš zatím jen jeden vlastní zvuk, aplikace si druhou třídu („ostatní“) sestaví automaticky z klipů jiných událostí, takže nejdřív nahraj aspoň jednu noc s několika zachycenými zvuky. Pro spolehlivý výsledek nasbírej asi pět vzorků na každý zvuk.</p>
     </details>
 
     <details>
-      <summary>Jsou „pauzy v dýchání“ diagnóza spánkové apnoe?</summary>
-      <p>Ne. Aplikace hledá delší ticho mezi úseky slyšitelného dýchání: mikrofon neměří proudění vzduchu ani okysličení, takže nerozliší tiché dýchání od zástavy dechu. Je to orientační heuristika a Zzzentinel není zdravotnický prostředek. Pokud se pauzy opakují, zmiň je svému lékaři: pomůže ti v tom Souhrn pro lékaře.</p>
+      <summary>Jsou „tiché úseky v dýchání“ diagnóza spánkové apnoe?</summary>
+      <p>Ne. Hledání je ve výchozím stavu vypnuté a experimentální: zapneš ho v <em>Nastavení → Tiché úseky v dýchání (experimentální)</em>. Počítá ticho dlouhé 10 až 60 sekund ve zvucích dýchání a práh můžeš snížit až na 6 sekund. Report řekne, když bylo hledání vypnuté, a nikdy netvrdí, že jsi dýchal v pořádku. Aplikace slyší jen zvuk: mikrofon neměří proudění vzduchu ani okysličení, tichý úsek může být jen tiché dýchání, které telefon nezachytil, a žádný výsledek nic nevylučuje. Není to zdravotnický prostředek, diagnóza ani screening apnoe. Pokud tě něco znepokojuje, promluv si s lékařem bez ohledu na to, co report ukáže. Dechová frekvence odhadovaná z hlasitosti je vždy zapnutá, jen jako čísla.</p>
     </details>
 
     <details>
       <summary>Co je „Souhrn pro lékaře“?</summary>
-      <p>V detailu ukončené noci → Sdílet → Souhrn pro lékaře vznikne PDF s odborně formulovaným přehledem (chrápání, slyšitelné dýchání, seznam pauz, sekce „Metoda a omezení“) a nahrávky okolí tří nejdelších pauz. Nic se neodesílá · soubory sdílíš sám. Není to diagnóza; je to podklad pro rozhovor s lékařem.</p>
+      <p>V ukončené noci otevři <em>Export → Souhrn pro lékaře</em>. Aplikace vytvoří PDF (chrápání, slyšitelné dýchání, seznam tichých úseků, pokud bylo hledání zapnuté, a sekce „Metoda a omezení“) a přidá nahrávky okolí tří nejdelších tichých úseků. Aplikace sama nic z toho neposílá, soubory sdílíš ty. Je to podklad, který můžeš ukázat lékaři, ne klinický produkt ani diagnóza. Stejné menu exportuje celou noc jako ZIP nebo přepis jako prostý text a v Nastavení můžeš exportovat všechny noci.</p>
+    </details>
+
+    <details>
+      <summary>Byl Zzzentinel ověřen ve studii?</summary>
+      <p>Ne. Zatím ho neověřila žádná nezávislá studie, proto o jeho přesnosti nic netvrdíme. Odborníci, kteří by ho chtěli porovnat, mohou napsat na <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
     </details>
 
     <details>
       <summary>Co je sekce „K potvrzení“?</summary>
-      <p>Zvuky, které aplikace slyšela poprvé nebo si jimi není jistá, ti v ranním reportu nabídne k poslechu. <em>Sedí</em> ji naučí, že se trefila; <em>Opravit</em> jí dá správný název a nový tréninkový vzorek. Na každý zvuk se ptá nejvýše dvakrát za noc a po třech potvrzeních mu už věří. Návrh se nikdy sám nezmění ve fakt. Automatické návrhy zvuků, které vestavěný rozpoznávač nezná, vypneš v Nastavení → Návrhy zvuků.</p>
+      <p>Zvuky, které aplikace slyšela poprvé nebo si jimi není jistá, ti v ranním reportu nabídne k poslechu. <em>Sedí</em> ji naučí, že se trefila; <em>Opravit</em> jí dá správný název a nový tréninkový vzorek. Na každý zvuk se ptá nejvýše dvakrát za noc a po třech potvrzeních mu už věří. Návrh se nikdy sám nezmění ve fakt.</p>
     </details>
 
     <details>
       <summary>Jak ovládám strážce z Apple Watch?</summary>
-      <p>Aplikace pro hodinky se nainstaluje automaticky spolu s tou v telefonu. Na hodinkách klepneš na <em>Aktivovat</em>: strážce se zapne inkognito, displej telefonu zůstane zhasnutý. Vypnutí probíhá přes PIN klávesnici přímo na hodinkách. Pokud je telefon mimo dosah, příkaz k aktivaci se zařadí do fronty a provede se, jakmile se zařízení spojí. Stejně funguje Siri („Arm Zzzentinel“), widget Zkratek i klepnutí na zadní stranu telefonu (Nastavení → Zpřístupnění → Dotyk → Klepnutí na zadní stranu).</p>
+      <p>Aplikace pro hodinky se nainstaluje automaticky spolu s tou v telefonu. Na hodinkách klepneš na <em>Aktivovat</em>: strážce se zapne inkognito, displej telefonu zůstane zhasnutý. Vypneš ho PIN klávesnicí přímo na hodinkách. Vypnutí vždy vyžaduje PIN a po 5 špatných pokusech počkáš 30 sekund. Aktivace na dálku funguje jen tehdy, když iOS dovolí Zzzentinelu použít mikrofon; jinak ti hodinky nebo Siri řeknou, abys otevřel aplikaci. Pokud je telefon mimo dosah, příkaz počká a strážce se zapne, pokud se zařízení spojí přibližně do deseti minut. Stejně funguje Siri („Aktivuj Zzzentinel“), widget Zkratky i Klepnutí na zadní stranu. Hodinky ovládají jen strážce, ne noc.</p>
     </details>
 
     <details>
-      <summary>Jak přenesu své zvuky do jiného telefonu nebo z jiné aplikace?</summary>
-      <p>V <em>Nastavení → Trénink mých zvuků → Přenos vzorků</em> klepni na <em>Exportovat všechny vzorky (.zip)</em> a ulož je (Soubory, AirDrop, iCloud). V druhém zařízení zip rozbal a přes <em>Importovat vzorky ze Souborů</em> vyber nahrávky vždy jednoho zvuku a zadej jeho název. Natrénovaný model přeneseš tlačítkem <em>Exportovat my_night.mlmodel</em> a v cílové aplikaci přes <em>Importovat model (.mlmodel)</em>. Všechna data aplikace najdeš i přímo v aplikaci Soubory → <em>Na mém iPhonu → Zzzentinel</em>, odkud si je můžeš zkopírovat či zálohovat.</p>
+      <summary>Jak přenesu své zvuky do jiného telefonu?</summary>
+      <p>V <em>Nastavení → Trénink mých zvuků → Přenos vzorků</em> klepni na <em>Exportovat všechny vzorky (.zip)</em> a ulož je (Soubory, AirDrop, iCloud). V druhém zařízení zip rozbal a přes <em>Importovat vzorky ze Souborů</em> vyber nahrávky vždy jednoho zvuku a zadej jeho název. Natrénovaný model přeneseš přes <em>Exportovat my_night.mlmodel</em> a <em>Importovat model (.mlmodel)</em>. Nahrávky a natrénované modely najdeš i v aplikaci Soubory → <em>Na mém iPhonu → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>Přenáším data ze starší verze s jiným názvem.</summary>
-      <p>iOS považuje přejmenovanou aplikaci za samostatnou, takže data automaticky nepřevezme. Ve staré aplikaci použij její exportní tlačítka (model, případně jednotlivé nahrávky přes sdílení), ulož je do Souborů a v Zzzentinelu je naimportuj. Starou aplikaci odinstaluj až poté, co si ověříš, že import proběhl: odinstalováním se její data nenávratně odstraní.</p>
+      <summary>Přenesou se moje noci do nového iPhonu?</summary>
+      <p>Ne. Noční nahrávky, tréninkové vzorky, natrénované modely a souhrny sdílené s Breathune nejsou v zálohách do iCloudu ani do počítače; běžná nastavení v nich být můžou. Pokud si chceš noci nechat, před přechodem je exportuj do ZIP: <em>Nastavení → Exportovat všechny noci (.zip)</em> nebo jednu noc přes její menu <em>Export</em>. ZIP je tvůj archiv, aplikace totiž noci ze ZIP importovat neumí.</p>
     </details>
 
     <details>
       <summary>Zapomněl jsem PIN strážce. Co teď?</summary>
-      <p>Pokud je strážce vypnutý, PIN změníš v záložce <em>Strážce → Změnit PIN</em>. Pokud je aktivní a PIN jsi zapomněl úplně, jedinou cestou je přeinstalování aplikace: noční záznamy se přitom ze zařízení odstraní, proto si je předem exportuj.</p>
+      <p>Aplikaci nikdy nepřeinstalovávej: smazaly by se tím všechny tvoje noci, protože nejsou v žádné záloze. Aplikaci úplně zavři v přepínači aplikací (potáhni ji nahoru), znovu ji otevři a jdi na <em>Strážce → Změnit PIN</em>. Nic se neztratí.</p>
     </details>
 
     <details>
       <summary>Proč strážce potřebuje mikrofon a co slyší?</summary>
-      <p>Aktivovaný strážce sleduje pohyb telefonu <em>i</em> hlasitost zvuku kolem něj: někdo se k telefonu často nakloní nebo na něj promluví dřív, než s ním pohne. Nic se přitom nenahrává, měří se jen okamžitá hladina zvuku. Jsi-li ve sdíleném pokoji nebo na koleji, v Nastavení vypni <em>Spustit alarm i při zvuku</em>: alarm pak spustí jen pohyb.</p>
+      <p>Aktivovaný strážce sleduje pohyb telefonu <em>i</em> hladinu zvuku kolem něj, proto potřebuje mikrofon po celou dobu, kdy je aktivní. Měří se jen hladina zvuku a nic se nenahrává. Ve sdíleném pokoji nebo na koleji zapni v Nastavení <em>Alarm spustí jen velmi hlasité zvuky</em>.</p>
+    </details>
+
+    <details>
+      <summary>Ochrání strážce telefon před krádeží?</summary>
+      <p>Ne. Odrazuje, ale není to ochrana před krádeží. Pohyb nebo zvuk kolem telefonu bez PINu spustí hlasitou sirénu a blikání, ale tlačítka hlasitosti nebo vypnutí telefonu ho umlčí.</p>
     </details>
 
     <details>
       <summary>Alarm bliká. Jsem citlivý na blikající světlo.</summary>
-      <p>Obrazovka bliká 2× za sekundu a svítilna 2,5×: obojí pod hranicí, kterou odborná doporučení označují za rizikovou. Pokud máš v systému zapnuté <em>Omezit pohyb</em>, blikání se vynechá automaticky. Vypnout ho lze i ručně v Nastavení → Guard Extra Plus → <em>Blikání při alarmu</em>; siréna zůstane funkční.</p>
+      <p>Obrazovka i svítilna blikají méně než třikrát za sekundu, tedy pod hranicí, kterou odborná doporučení označují za rizikovou. Pokud máš v systému zapnuté <em>Omezit pohyb</em>, blikání se vynechá automaticky. Vypnout ho lze i ručně v <em>Nastavení → Guard Extra Plus → Blikání při alarmu</em>; siréna zůstane funkční.</p>
     </details>
 
     <details>
       <summary>Alarm není slyšet dost nahlas.</summary>
-      <p>Před aktivací strážce vytoč hlasitost médií na maximum a vypni režim Nerušit. Alarm hraje přes reproduktor i při ztlumeném přepínači zvonění.</p>
+      <p>Před aktivací strážce zvyš hlasitost, aplikace tě upozorní, když je nízká. Siréna hraje vždy přes reproduktor, ne přes sluchátka, i při ztlumeném přepínači zvonění. Sama utichne po 5 minutách a tlačítka hlasitosti ji umlčí.</p>
     </details>
 
     <details>
       <summary>Kde jsou moje data a jak je smažu?</summary>
-      <p>Všechno je uloženo jen v telefonu. Jednotlivé noci smažeš potažením doleva v seznamu <em>Moje noci</em>, natrénované zvuky v <em>Tréninku mých zvuků</em>. Odinstalováním aplikace se odstraní všechno.</p>
+      <p>V tvém iPhonu a vývojář nedostává nic. Noc smažeš potažením doleva v seznamu <em>Moje noci</em>, zvuk v <em>Tréninku mých zvuků</em>; aplikace se nejdřív zeptá a smazanou noc už nelze obnovit. Limit <em>Uchovávat noci</em> po potvrzení odstraňuje starší noci. Odinstalováním Zzzentinelu se odstraní jeho data, jen společná složka se souhrny zůstane v telefonu, dokud neodstraníš i Breathune. Nahrávky lze otevřít i v aplikaci Soubory, a to každým, kdo umí odemknout tvůj iPhone: PIN strážce je nechrání.</p>
     </details>
   </div>
 </div>
