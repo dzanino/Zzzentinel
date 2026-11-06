@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Support: Zzzentinel</title>
-<meta name="description" content="Zzzentinel Support und FAQ: Aufnahme im Hintergrund, Akku, eigene Geräusche, Atempausen, Zusammenfassung für Ärzte, Apple Watch, PIN und Daten.">
+<meta name="description" content="Zzzentinel Support und FAQ: Aufnahme bei gesperrtem Bildschirm, Anrufe, Speicher, eigene Geräusche, stille Phasen beim Atmen, Zusammenfassung für den Arzt, Apple Watch, PIN und Daten.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Support: Zzzentinel">
-<meta property="og:description" content="Zzzentinel Support und FAQ: Aufnahme im Hintergrund, Akku, eigene Geräusche, Atempausen, Zusammenfassung für Ärzte, Apple Watch, PIN und Daten.">
+<meta property="og:description" content="Zzzentinel Support und FAQ: Aufnahme bei gesperrtem Bildschirm, Anrufe, Speicher, eigene Geräusche, stille Phasen beim Atmen, Zusammenfassung für den Arzt, Apple Watch, PIN und Daten.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,6 +35,167 @@
 <link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/support.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
 <!--HREFLANG:end-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "de",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Nimmt die App auch bei gesperrtem Bildschirm auf?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ja. Sobald du auf Nacht starten getippt hast, geht die Aufnahme im Hintergrund und bei gesperrtem Telefon weiter. Der Bildschirm dunkelt eine Minute nach der letzten Berührung von selbst ab (das lässt sich in den Einstellungen ausschalten), und Bildschirm abdunkeln macht das sofort: Er ist dann fast schwarz und zeigt nur eine schwach leuchtende Uhr. Wir empfehlen, das Telefon über Nacht zu laden, die App warnt dich, wenn es nicht am Ladegerät hängt. Die Nacht wird jede Minute gespeichert. Eine vergessene Nacht endet nach 16 Stunden von selbst, und bei 3 Prozent Akku ohne Ladegerät wird sie ordentlich abgeschlossen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Was passiert, wenn ein Anruf die Nacht unterbricht?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ein Anruf unterbricht die Aufnahme. Die App speichert, was sie hat, versucht nach dem Gespräch weiterzumachen und sagt dir Bescheid, wenn sie nicht mehr zuhört. Der Morgenbericht nennt, wie lange das Mikrofon unterbrochen war oder wann die Aufnahme unerwartet endete. Ton aus anderen Apps, etwa ein Podcast oder weißes Rauschen, unterbricht die Nacht nicht mehr, das Mikrofon hört ihn aber mit."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wie viel Akku und Speicher braucht sie?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Die Analyse ist genügsam, und gespeichert werden nur Clips erkannter Geräusche, nicht die ganze Nacht. Clips brauchen etwa 30 MB pro Stunde aufgenommenen Tons, eine typische Nacht also von ein paar MB bis etwa 100 MB, bei gleichmäßigem Lärm wie einem Ventilator auch mehr. Das optionale Limit Nächte behalten in den Einstellungen (7, 30 oder 90 Tage oder für immer) entfernt ältere Nächte und fragt vorher nach. Solange die App im Hintergrund ist oder der Bildschirm abgedunkelt ist, zeichnet sie die Anzeigen nicht mehr neu, was Strom spart. Am Ladegerät spielt der Akkuverbrauch kaum eine Rolle."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gibt es ein Abo?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Zzzentinel ist ein Einmalkauf im App Store: kein Abo, keine In-App-Käufe, keine Werbung und kein Konto."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Was ist ein „unbestimmtes Geräusch“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ein lautes Geräusch, das der Klassifikator nicht benennen konnte. Spiel den Clip ab, tippe auf Geräusch benennen und gib ihm einen Namen. Nach etwa fünf Beispielen kannst du unter Einstellungen → Mein Geräuschtraining dein persönliches Modell my_night.mlmodel trainieren, direkt auf dem Telefon, und beim nächsten Mal erkennt die App das Geräusch mit Namen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Das Training funktioniert bei mir nicht.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ein Modell braucht mindestens zwei Geräuschklassen. Hast du erst ein eigenes Geräusch, erstellt die App eine Klasse „Sonstiges“ automatisch aus anderen aufgenommenen Clips. Nimm also zuerst mindestens eine Nacht mit ein paar erkannten Geräuschen auf. Für verlässliche Ergebnisse sammle etwa fünf Beispiele pro Geräusch."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Sind „stille Phasen beim Atmen“ eine Schlafapnoe-Diagnose?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Die Erkennung ist standardmäßig aus und experimentell: Du schaltest sie unter Einstellungen → Stille Phasen beim Atmen (experimentell) ein. Sie zählt Stille von 10 bis 60 Sekunden in deinen Atemgeräuschen, und die Schwelle kannst du bis auf 6 Sekunden senken. Der Bericht sagt, wenn die Erkennung aus war, und behauptet nie, deine Atmung sei in Ordnung gewesen. Die App hört nur Geräusche: Ein Mikrofon misst weder Luftstrom noch Sauerstoff, eine stille Phase kann einfach leises Atmen sein, das das Telefon nicht erfasst hat, und kein Ergebnis schließt etwas aus. Sie ist kein Medizinprodukt, keine Diagnose und kein Apnoe-Screening. Wenn dich etwas beunruhigt, sprich mit einer Ärztin oder einem Arzt, ganz gleich, was der Bericht zeigt. Die aus der Lautstärke geschätzte Atemfrequenz ist immer an, nur als Zahlen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Was ist die „Zusammenfassung für den Arzt“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Öffne in einer abgeschlossenen Nacht Export → Zusammenfassung für den Arzt. Die App erstellt eine PDF-Datei (Schnarchen, hörbare Atmung, die Liste der stillen Phasen, wenn die Erkennung an war, und ein Abschnitt „Methode und Einschränkungen“) und fügt Aufnahmen rund um die drei längsten stillen Phasen hinzu. Von sich aus sendet die App nichts davon: Du teilst die Dateien selbst. Es ist etwas, das du deiner Ärztin oder deinem Arzt zeigen kannst, kein klinisches Produkt und keine Diagnose. Im selben Menü exportierst du die ganze Nacht als ZIP oder ein Protokoll als reinen Text, und in den Einstellungen alle Nächte."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wurde Zzzentinel in einer Studie geprüft?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Bisher hat keine unabhängige Studie es geprüft, daher machen wir keine Aussage zu seiner Genauigkeit. Fachleute, die es vergleichen möchten, können an admin@breathune.eu schreiben."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Was ist „Zu bestätigen“?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Geräusche, die die App zum ersten Mal gehört hat oder bei denen sie unsicher ist, bietet sie dir im Morgenbericht zum Anhören an. Stimmt zeigt ihr, dass sie richtig lag; Korrigieren gibt ihr den richtigen Namen und ein neues Trainingsbeispiel. Sie fragt pro Geräusch höchstens zweimal pro Nacht und vertraut ihm nach drei Bestätigungen. Ein Vorschlag wird nie von allein zur Tatsache."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wie steuere ich den Wächter von der Apple Watch aus?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Die Watch-App wird automatisch zusammen mit der iPhone-App installiert. Tippe auf der Uhr auf Aktivieren, und der Wächter wird unauffällig scharf, der Bildschirm des Telefons bleibt dunkel. Deaktiviert wird mit dem PIN-Feld auf der Uhr. Zum Deaktivieren ist immer die PIN nötig, und nach 5 falschen Versuchen wartest du 30 Sekunden. Das Aktivieren aus der Ferne klappt nur, wenn iOS Zzzentinel das Mikrofon nutzen lässt; sonst sagen dir die Uhr oder Siri, dass du die App öffnen sollst. Ist das Telefon außer Reichweite, wartet der Befehl und der Wächter wird aktiv, wenn sich die Geräte innerhalb von etwa zehn Minuten wieder verbinden. Genauso funktionieren Siri („Aktiviere Zzzentinel“), ein Kurzbefehle-Widget und „Auf Rückseite tippen“. Die Uhr steuert nur den Wächter, nicht die Nacht."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wie übertrage ich meine Geräusche auf ein anderes Telefon?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tippe unter Einstellungen → Mein Geräuschtraining → Beispiele übertragen auf Alle Beispiele exportieren (.zip) und speichere die Datei (Dateien, AirDrop, iCloud). Entpacke sie auf dem anderen Gerät und wähle mit Beispiele aus Dateien importieren jeweils die Aufnahmen eines Geräuschs aus und gib ihm seinen Namen. Ein trainiertes Modell überträgst du mit my_night.mlmodel exportieren und Modell importieren (.mlmodel). Aufnahmen und trainierte Modelle findest du auch in Dateien → Auf meinem iPhone → Zzzentinel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Kommen meine Nächte mit auf ein neues iPhone?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Nachtaufnahmen, Trainingsbeispiele, trainierte Modelle und die mit Breathune geteilten Zusammenfassungen sind von iCloud- und Computer-Backups ausgeschlossen; normale Einstellungen können enthalten sein. Wenn du deine Nächte behalten willst, exportiere sie vor dem Wechsel als ZIP: Einstellungen → Alle Nächte exportieren (.zip) oder eine einzelne Nacht über ihr Menü Export. Das ZIP ist dein Archiv, denn die App kann Nächte nicht aus einem ZIP importieren."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ich habe die PIN des Wächters vergessen.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Installiere die App auf keinen Fall neu: Das würde alle deine Nächte löschen, denn sie sind in keinem Backup. Beende Zzzentinel im App-Umschalter ganz (nach oben wischen), öffne die App wieder und gehe zu Wächter → PIN ändern. Es geht nichts verloren."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Warum braucht der Wächter das Mikrofon, und was hört er?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ein aktiver Wächter achtet auf Bewegung und auf den Geräuschpegel rund um das Telefon, deshalb braucht er das Mikrofon die ganze Zeit, in der er aktiv ist. Gemessen wird nur der Geräuschpegel, es wird nichts aufgenommen. In einem Mehrbettzimmer oder im Wohnheim schaltest du in den Einstellungen Nur sehr laute Geräusche lösen den Alarm aus ein."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Schützt der Wächter mein Telefon vor Diebstahl?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nein. Er schreckt ab, ist aber kein Diebstahlschutz. Bewegung oder Geräusche rund um das Telefon lösen ohne deine PIN eine laute Sirene und Blinken aus, doch die Lautstärketasten oder das Ausschalten bringen ihn zum Schweigen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Der Alarm blinkt, und ich reagiere empfindlich auf Lichtblitze.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bildschirm und Taschenlampe blinken beide weniger als dreimal pro Sekunde, also unterhalb der Schwelle, die Fachempfehlungen als riskant einstufen. Ist „Bewegung reduzieren“ eingeschaltet, entfällt das Blinken automatisch; du kannst es auch unter Einstellungen → Guard Extra Plus → Blinken beim Alarm abschalten. Die Sirene funktioniert weiterhin."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Der Alarm ist nicht laut genug.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Stell vor dem Aktivieren des Wächters die Lautstärke hoch, die App warnt dich, wenn sie niedrig ist. Die Sirene läuft immer über den Lautsprecher, nicht über Kopfhörer, auch wenn der Klingel-/Stumm-Schalter auf lautlos steht. Sie verstummt nach 5 Minuten von selbst, und die Lautstärketasten bringen sie zum Schweigen."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Wo sind meine Daten, und wie lösche ich sie?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Auf deinem iPhone, und der Entwickler erhält nichts. Eine Nacht löschst du, indem du in Meine Nächte nach links wischst, ein Geräusch in Mein Geräuschtraining; die App fragt vorher nach, und eine gelöschte Nacht lässt sich nicht wiederherstellen. Das Limit Nächte behalten entfernt ältere Nächte nach einer Bestätigung. Beim Löschen von Zzzentinel werden seine Daten entfernt, nur der gemeinsame Ordner mit den Zusammenfassungen bleibt auf dem Telefon, bis auch Breathune entfernt wird. Aufnahmen lassen sich auch in der Dateien-App öffnen, von allen, die dein iPhone entsperren können: Die PIN des Wächters schützt sie nicht."
+   }
+  }
+ ]
+}
+</script>
 <link rel="me" href="https://orcid.org/0000-0002-4690-0317">
 </head>
 <body>
@@ -72,77 +233,97 @@
 
     <details>
       <summary>Nimmt die App auch bei gesperrtem Bildschirm auf?</summary>
-      <p>Ja. Sobald die Nachtwache läuft, geht die Aufnahme im Hintergrund und bei gesperrtem Telefon weiter. Mit <em>Bildschirm abdunkeln</em> bleibt die App geöffnet, der Bildschirm ist fast schwarz und zeigt nur eine schwach leuchtende Uhr. Wir empfehlen, das Telefon über Nacht zu laden.</p>
+      <p>Ja. Sobald du auf <em>Nacht starten</em> getippt hast, geht die Aufnahme im Hintergrund und bei gesperrtem Telefon weiter. Der Bildschirm dunkelt eine Minute nach der letzten Berührung von selbst ab (das lässt sich in den Einstellungen ausschalten), und <em>Bildschirm abdunkeln</em> macht das sofort: Er ist dann fast schwarz und zeigt nur eine schwach leuchtende Uhr. Wir empfehlen, das Telefon über Nacht zu laden, die App warnt dich, wenn es nicht am Ladegerät hängt. Die Nacht wird jede Minute gespeichert. Eine vergessene Nacht endet nach 16 Stunden von selbst, und bei 3 Prozent Akku ohne Ladegerät wird sie ordentlich abgeschlossen.</p>
+    </details>
+
+    <details>
+      <summary>Was passiert, wenn ein Anruf die Nacht unterbricht?</summary>
+      <p>Ein Anruf unterbricht die Aufnahme. Die App speichert, was sie hat, versucht nach dem Gespräch weiterzumachen und sagt dir Bescheid, wenn sie nicht mehr zuhört. Der Morgenbericht nennt, wie lange das Mikrofon unterbrochen war oder wann die Aufnahme unerwartet endete. Ton aus anderen Apps, etwa ein Podcast oder weißes Rauschen, unterbricht die Nacht nicht mehr, das Mikrofon hört ihn aber mit.</p>
     </details>
 
     <details>
       <summary>Wie viel Akku und Speicher braucht sie?</summary>
-      <p>Die Analyse ist genügsam, und gespeichert werden nur kurze Clips der Ereignisse, nicht die ganze Nacht: eine typische Nacht braucht ein paar MB. Solange die App im Hintergrund ist oder der Bildschirm abgedunkelt ist, zeichnet sie die Anzeigen nicht mehr neu, was zusätzlich Strom spart.</p>
+      <p>Die Analyse ist genügsam, und gespeichert werden nur Clips erkannter Geräusche, nicht die ganze Nacht. Clips brauchen etwa 30 MB pro Stunde aufgenommenen Tons, eine typische Nacht also von ein paar MB bis etwa 100 MB, bei gleichmäßigem Lärm wie einem Ventilator auch mehr. Das optionale Limit <em>Nächte behalten</em> in den Einstellungen (7, 30 oder 90 Tage oder für immer) entfernt ältere Nächte und fragt vorher nach. Solange die App im Hintergrund ist oder der Bildschirm abgedunkelt ist, zeichnet sie die Anzeigen nicht mehr neu, was Strom spart. Am Ladegerät spielt der Akkuverbrauch kaum eine Rolle.</p>
+    </details>
+
+    <details>
+      <summary>Gibt es ein Abo?</summary>
+      <p>Nein. Zzzentinel ist ein Einmalkauf im App Store: kein Abo, keine In-App-Käufe, keine Werbung und kein Konto.</p>
     </details>
 
     <details>
       <summary>Was ist ein „unbestimmtes Geräusch“?</summary>
-      <p>Ein lautes Geräusch, das der Klassifikator nicht benennen konnte. Spiel den Clip ab, tippe auf <em>Geräusch benennen</em> und gib ihm einen Namen. Nach etwa fünf Beispielen kannst du in den Einstellungen dein persönliches Modell <code>my_night.mlmodel</code> trainieren, direkt auf dem Telefon.</p>
+      <p>Ein lautes Geräusch, das der Klassifikator nicht benennen konnte. Spiel den Clip ab, tippe auf <em>Geräusch benennen</em> und gib ihm einen Namen. Nach etwa fünf Beispielen kannst du unter <em>Einstellungen → Mein Geräuschtraining</em> dein persönliches Modell <code>my_night.mlmodel</code> trainieren, direkt auf dem Telefon, und beim nächsten Mal erkennt die App das Geräusch mit Namen.</p>
     </details>
 
     <details>
       <summary>Das Training funktioniert bei mir nicht.</summary>
-      <p>Das Training braucht ein echtes iPhone: im Simulator ist Create&nbsp;ML nicht verfügbar. Außerdem brauchst du mindestens zwei Geräuschklassen; hast du nur eine, erstellt die App eine Klasse „Sonstiges“ automatisch aus anderen aufgenommenen Clips. Nimm also zuerst mindestens eine Nacht auf.</p>
+      <p>Ein Modell braucht mindestens zwei Geräuschklassen. Hast du erst ein eigenes Geräusch, erstellt die App eine Klasse „Sonstiges“ automatisch aus anderen aufgenommenen Clips. Nimm also zuerst mindestens eine Nacht mit ein paar erkannten Geräuschen auf. Für verlässliche Ergebnisse sammle etwa fünf Beispiele pro Geräusch.</p>
     </details>
 
     <details>
-      <summary>Sind die „Atempausen“ eine Diagnose von Schlafapnoe?</summary>
-      <p>Nein. Die App sucht nach längerer Stille zwischen hörbaren Atemabschnitten: ein Mikrofon misst weder Luftstrom noch Sauerstoff und kann ruhiges Atmen daher nicht von einem Atemstillstand unterscheiden. Es ist eine orientierende Heuristik, und Zzzentinel ist kein Medizinprodukt. Wenn die Pausen wiederkehren, sprich mit deiner Ärztin oder deinem Arzt darüber, die Zusammenfassung für Ärzte hilft dabei.</p>
+      <summary>Sind „stille Phasen beim Atmen“ eine Schlafapnoe-Diagnose?</summary>
+      <p>Nein. Die Erkennung ist standardmäßig aus und experimentell: Du schaltest sie unter <em>Einstellungen → Stille Phasen beim Atmen (experimentell)</em> ein. Sie zählt Stille von 10 bis 60 Sekunden in deinen Atemgeräuschen, und die Schwelle kannst du bis auf 6 Sekunden senken. Der Bericht sagt, wenn die Erkennung aus war, und behauptet nie, deine Atmung sei in Ordnung gewesen. Die App hört nur Geräusche: Ein Mikrofon misst weder Luftstrom noch Sauerstoff, eine stille Phase kann einfach leises Atmen sein, das das Telefon nicht erfasst hat, und kein Ergebnis schließt etwas aus. Sie ist kein Medizinprodukt, keine Diagnose und kein Apnoe-Screening. Wenn dich etwas beunruhigt, sprich mit einer Ärztin oder einem Arzt, ganz gleich, was der Bericht zeigt. Die aus der Lautstärke geschätzte Atemfrequenz ist immer an, nur als Zahlen.</p>
     </details>
 
     <details>
-      <summary>Was ist die „Zusammenfassung für Ärzte“?</summary>
-      <p>In einer abgeschlossenen Nacht → Teilen → Zusammenfassung für Ärzte erstellt die App eine PDF-Datei mit einem fachlich formulierten Überblick (Schnarchen, hörbare Atmung, Liste der Pausen, ein Abschnitt „Methode und Einschränkungen“) sowie Aufnahmen rund um die drei längsten Pausen. Nichts wird hochgeladen: du teilst die Dateien selbst. Es ist keine Diagnose, sondern eine Grundlage für ein Gespräch mit deiner Ärztin oder deinem Arzt.</p>
+      <summary>Was ist die „Zusammenfassung für den Arzt“?</summary>
+      <p>Öffne in einer abgeschlossenen Nacht <em>Export → Zusammenfassung für den Arzt</em>. Die App erstellt eine PDF-Datei (Schnarchen, hörbare Atmung, die Liste der stillen Phasen, wenn die Erkennung an war, und ein Abschnitt „Methode und Einschränkungen“) und fügt Aufnahmen rund um die drei längsten stillen Phasen hinzu. Von sich aus sendet die App nichts davon: Du teilst die Dateien selbst. Es ist etwas, das du deiner Ärztin oder deinem Arzt zeigen kannst, kein klinisches Produkt und keine Diagnose. Im selben Menü exportierst du die ganze Nacht als ZIP oder ein Protokoll als reinen Text, und in den Einstellungen alle Nächte.</p>
+    </details>
+
+    <details>
+      <summary>Wurde Zzzentinel in einer Studie geprüft?</summary>
+      <p>Nein. Bisher hat keine unabhängige Studie es geprüft, daher machen wir keine Aussage zu seiner Genauigkeit. Fachleute, die es vergleichen möchten, können an <a href="mailto:admin@breathune.eu">admin@breathune.eu</a> schreiben.</p>
     </details>
 
     <details>
       <summary>Was ist „Zu bestätigen“?</summary>
-      <p>Geräusche, die die App zum ersten Mal gehört hat oder bei denen sie unsicher ist, bietet sie dir im Morgenbericht zum Anhören an. <em>Stimmt</em> zeigt ihr, dass sie richtig lag; <em>Korrigieren</em> gibt ihr den richtigen Namen und ein neues Trainingsbeispiel. Sie fragt pro Geräusch höchstens zweimal pro Nacht und vertraut ihm nach drei Bestätigungen. Ein Vorschlag wird nie von allein zur Tatsache. Automatische Vorschläge für Geräusche, für die die eingebaute Erkennung keinen Namen hat, kannst du unter Einstellungen → Geräuschvorschläge ausschalten.</p>
+      <p>Geräusche, die die App zum ersten Mal gehört hat oder bei denen sie unsicher ist, bietet sie dir im Morgenbericht zum Anhören an. <em>Stimmt</em> zeigt ihr, dass sie richtig lag; <em>Korrigieren</em> gibt ihr den richtigen Namen und ein neues Trainingsbeispiel. Sie fragt pro Geräusch höchstens zweimal pro Nacht und vertraut ihm nach drei Bestätigungen. Ein Vorschlag wird nie von allein zur Tatsache.</p>
     </details>
 
     <details>
       <summary>Wie steuere ich den Wächter von der Apple Watch aus?</summary>
-      <p>Die Watch-App wird automatisch zusammen mit der iPhone-App installiert. Tippe auf der Uhr auf <em>Aktivieren</em>, und der Wächter wird unauffällig scharf, der Bildschirm des Telefons bleibt dunkel. Deaktiviert wird mit dem PIN-Feld auf der Uhr. Ist das Telefon außer Reichweite, wird der Befehl zum Aktivieren in eine Warteschlange gestellt und ausgeführt, sobald sich die Geräte wieder verbinden. Genauso funktionieren Siri („Aktiviere Zzzentinel“), ein Kurzbefehle-Widget und „Auf Rückseite tippen“.</p>
+      <p>Die Watch-App wird automatisch zusammen mit der iPhone-App installiert. Tippe auf der Uhr auf <em>Aktivieren</em>, und der Wächter wird unauffällig scharf, der Bildschirm des Telefons bleibt dunkel. Deaktiviert wird mit dem PIN-Feld auf der Uhr. Zum Deaktivieren ist immer die PIN nötig, und nach 5 falschen Versuchen wartest du 30 Sekunden. Das Aktivieren aus der Ferne klappt nur, wenn iOS Zzzentinel das Mikrofon nutzen lässt; sonst sagen dir die Uhr oder Siri, dass du die App öffnen sollst. Ist das Telefon außer Reichweite, wartet der Befehl und der Wächter wird aktiv, wenn sich die Geräte innerhalb von etwa zehn Minuten wieder verbinden. Genauso funktionieren Siri („Aktiviere Zzzentinel“), ein Kurzbefehle-Widget und „Auf Rückseite tippen“. Die Uhr steuert nur den Wächter, nicht die Nacht.</p>
     </details>
 
     <details>
-      <summary>Wie übertrage ich meine Geräusche auf ein anderes Telefon oder aus einer anderen App?</summary>
-      <p>Tippe unter <em>Einstellungen → Mein Geräuschtraining → Beispiele übertragen</em> auf <em>Alle Beispiele exportieren (.zip)</em> und speichere die Datei (Dateien, AirDrop, iCloud). Entpacke sie auf dem anderen Gerät und wähle mit <em>Beispiele aus Dateien importieren</em> jeweils die Aufnahmen eines Geräuschs aus und gib ihm seinen Namen. Ein trainiertes Modell überträgst du mit <em>my_night.mlmodel exportieren</em> und <em>Modell importieren (.mlmodel)</em>. Alle App-Daten findest du auch in Dateien → <em>Auf meinem iPhone → Zzzentinel</em>.</p>
+      <summary>Wie übertrage ich meine Geräusche auf ein anderes Telefon?</summary>
+      <p>Tippe unter <em>Einstellungen → Mein Geräuschtraining → Beispiele übertragen</em> auf <em>Alle Beispiele exportieren (.zip)</em> und speichere die Datei (Dateien, AirDrop, iCloud). Entpacke sie auf dem anderen Gerät und wähle mit <em>Beispiele aus Dateien importieren</em> jeweils die Aufnahmen eines Geräuschs aus und gib ihm seinen Namen. Ein trainiertes Modell überträgst du mit <em>my_night.mlmodel exportieren</em> und <em>Modell importieren (.mlmodel)</em>. Aufnahmen und trainierte Modelle findest du auch in Dateien → <em>Auf meinem iPhone → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>Ich übernehme Daten aus einer älteren Version mit einem anderen Namen.</summary>
-      <p>iOS behandelt eine umbenannte App als eigene App, deshalb werden Daten nicht automatisch übernommen. Nutze in der alten App ihre Export-Schaltflächen (das Modell oder einzelne Aufnahmen über „Teilen“), sichere sie in Dateien und importiere sie in Zzzentinel. Lösche die alte App erst, nachdem du geprüft hast, dass der Import geklappt hat: beim Löschen werden ihre Daten endgültig entfernt.</p>
+      <summary>Kommen meine Nächte mit auf ein neues iPhone?</summary>
+      <p>Nein. Nachtaufnahmen, Trainingsbeispiele, trainierte Modelle und die mit Breathune geteilten Zusammenfassungen sind von iCloud- und Computer-Backups ausgeschlossen; normale Einstellungen können enthalten sein. Wenn du deine Nächte behalten willst, exportiere sie vor dem Wechsel als ZIP: <em>Einstellungen → Alle Nächte exportieren (.zip)</em> oder eine einzelne Nacht über ihr Menü <em>Export</em>. Das ZIP ist dein Archiv, denn die App kann Nächte nicht aus einem ZIP importieren.</p>
     </details>
 
     <details>
       <summary>Ich habe die PIN des Wächters vergessen.</summary>
-      <p>Ist der Wächter aus, änderst du sie unter <em>Wächter → PIN ändern</em>. Ist er aktiv und die PIN ist ganz weg, hilft nur eine Neuinstallation der App: dabei werden die Nachtdaten vom Gerät entfernt, exportiere sie also vorher.</p>
+      <p>Installiere die App auf keinen Fall neu: Das würde alle deine Nächte löschen, denn sie sind in keinem Backup. Beende Zzzentinel im App-Umschalter ganz (nach oben wischen), öffne die App wieder und gehe zu <em>Wächter → PIN ändern</em>. Es geht nichts verloren.</p>
     </details>
 
     <details>
       <summary>Warum braucht der Wächter das Mikrofon, und was hört er?</summary>
-      <p>Ein aktiver Wächter achtet auf Bewegung <em>und</em> verfolgt die Lautstärke rund um das Telefon: oft beugt sich jemand über ein Telefon oder spricht es an, bevor er es bewegt. Es wird nichts aufgenommen; gemessen wird nur der momentane Geräuschpegel. In einem Mehrbettzimmer schaltest du in den Einstellungen <em>Geräusche können den Alarm auslösen</em> aus, dann löst ihn nur noch Bewegung aus.</p>
+      <p>Ein aktiver Wächter achtet auf Bewegung <em>und</em> auf den Geräuschpegel rund um das Telefon, deshalb braucht er das Mikrofon die ganze Zeit, in der er aktiv ist. Gemessen wird nur der Geräuschpegel, es wird nichts aufgenommen. In einem Mehrbettzimmer oder im Wohnheim schaltest du in den Einstellungen <em>Nur sehr laute Geräusche lösen den Alarm aus</em> ein.</p>
+    </details>
+
+    <details>
+      <summary>Schützt der Wächter mein Telefon vor Diebstahl?</summary>
+      <p>Nein. Er schreckt ab, ist aber kein Diebstahlschutz. Bewegung oder Geräusche rund um das Telefon lösen ohne deine PIN eine laute Sirene und Blinken aus, doch die Lautstärketasten oder das Ausschalten bringen ihn zum Schweigen.</p>
     </details>
 
     <details>
       <summary>Der Alarm blinkt, und ich reagiere empfindlich auf Lichtblitze.</summary>
-      <p>Der Bildschirm blinkt zweimal pro Sekunde und die Taschenlampe 2,5-mal: beides unterhalb der Schwelle, die Fachempfehlungen als riskant einstufen. Ist „Bewegung reduzieren“ eingeschaltet, entfällt das Blinken automatisch; du kannst es auch unter Einstellungen → Guard Extra Plus abschalten. Die Sirene funktioniert weiterhin.</p>
+      <p>Bildschirm und Taschenlampe blinken beide weniger als dreimal pro Sekunde, also unterhalb der Schwelle, die Fachempfehlungen als riskant einstufen. Ist „Bewegung reduzieren“ eingeschaltet, entfällt das Blinken automatisch; du kannst es auch unter <em>Einstellungen → Guard Extra Plus → Blinken beim Alarm</em> abschalten. Die Sirene funktioniert weiterhin.</p>
     </details>
 
     <details>
       <summary>Der Alarm ist nicht laut genug.</summary>
-      <p>Dreh vor dem Aktivieren des Wächters die Medienlautstärke ganz auf und schalte „Nicht stören“ aus. Der Alarm läuft über den Lautsprecher, auch wenn der Klingel-/Stumm-Schalter auf lautlos steht.</p>
+      <p>Stell vor dem Aktivieren des Wächters die Lautstärke hoch, die App warnt dich, wenn sie niedrig ist. Die Sirene läuft immer über den Lautsprecher, nicht über Kopfhörer, auch wenn der Klingel-/Stumm-Schalter auf lautlos steht. Sie verstummt nach 5 Minuten von selbst, und die Lautstärketasten bringen sie zum Schweigen.</p>
     </details>
 
     <details>
       <summary>Wo sind meine Daten, und wie lösche ich sie?</summary>
-      <p>Alles wird nur auf dem Telefon gespeichert. Eine Nacht löschst du, indem du in <em>Meine Nächte</em> nach links wischst, trainierte Geräusche in <em>Mein Geräuschtraining</em>. Beim Löschen der App wird alles entfernt.</p>
+      <p>Auf deinem iPhone, und der Entwickler erhält nichts. Eine Nacht löschst du, indem du in <em>Meine Nächte</em> nach links wischst, ein Geräusch in <em>Mein Geräuschtraining</em>; die App fragt vorher nach, und eine gelöschte Nacht lässt sich nicht wiederherstellen. Das Limit <em>Nächte behalten</em> entfernt ältere Nächte nach einer Bestätigung. Beim Löschen von Zzzentinel werden seine Daten entfernt, nur der gemeinsame Ordner mit den Zusammenfassungen bleibt auf dem Telefon, bis auch Breathune entfernt wird. Aufnahmen lassen sich auch in der Dateien-App öffnen, von allen, die dein iPhone entsperren können: Die PIN des Wächters schützt sie nicht.</p>
     </details>
   </div>
 </div>

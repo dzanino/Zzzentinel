@@ -15,4 +15,5 @@ LLMs-full: https://dzanino.github.io/Zzzentinel/llms-full.txt
 LLMs-sk: https://dzanino.github.io/Zzzentinel/llms-sk.txt
 Sitemap: https://dzanino.github.io/Zzzentinel/sitemap.xml
 
-# Zzzentinel is a wellness app, not a medical device; it does not diagnose or treat any condition.
+# Zzzentinel is a wellness app, not a medical device; it does not diagnose or treat any condition, and it does not detect, screen for or rule out sleep apnea.
+# The app has no server, no account and no analytics; recordings stay on the iPhone. This website has an anonymous visit counter (see privacy.html).

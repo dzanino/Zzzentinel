@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zzzentinel: Ochrana soukromí</title>
-<meta name="description" content="Zásady ochrany soukromí aplikace Zzzentinel: žádný server, žádné účty, žádná analytika: všechno zůstává v tvém zařízení.">
+<meta name="description" content="Zásady ochrany soukromí aplikace Zzzentinel: aplikace nemá server, účty ani analytiku, nahrávky vznikají a zůstávají v tvém iPhonu. Tento web má anonymní počítadlo návštěv.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Zzzentinel: Ochrana soukromí">
-<meta property="og:description" content="Žádný server, žádné účty, žádná analytika: všechno zůstává v tvém zařízení.">
+<meta property="og:description" content="Zásady ochrany soukromí aplikace Zzzentinel: aplikace nemá server, účty ani analytiku, nahrávky vznikají a zůstávají v tvém iPhonu. Tento web má anonymní počítadlo návštěv.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -58,97 +58,68 @@
   <div class="page-head">
     <img src="../icon.png?v=20261016" alt="Zzzentinel">
     <h1>Ochrana soukromí</h1>
-    <div class="sub">Platné od 16.&nbsp;října&nbsp;2026</div>
+    <div class="sub">Platné od 6.&nbsp;listopadu&nbsp;2026</div>
   </div>
 
   <div class="card tldr" lang="cs">
     <h2>Zásady ochrany soukromí</h2>
-    <p><strong>Stručně: všechno zůstává ve tvém zařízení.</strong>
-    Zzzentinel nemá server, uživatelské účty, reklamy ani analytiku. Vývojář
-    neshromažďuje, nepřenáší ani nezpracovává žádné údaje o uživatelích.</p>
+    <p><strong>Stručně: nahrávky a analýzy vznikají a zůstávají v tvém iPhonu a vývojář nedostává nic.</strong> Zzzentinel nemá server, uživatelské účty, reklamy, analytiku ani sledování v aplikaci. Z telefonu něco odejde, jen když to sám sdílíš nebo souhlasíš s odesláním jednoho klipu Applu k přepisu (vysvětlení níže).</p>
+
+    <h3>Kdo je odpovědný</h3>
+    <p>Zzzentinel vytvořil MUDr. Ján Šikuta, lékař. Kontakt: <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
 
     <h3>Co aplikace zpracovává</h3>
     <ul>
-      <li><strong>Zvukové nahrávky a analýzy</strong>: vznikají jen během nočního
-        hlídání, které ručně spustíš, a ukládají se výhradně lokálně do
-        úložiště aplikace ve tvém zařízení.</li>
-      <li><strong>Rozpoznávání zvuků a trénink vlastního modelu</strong>
-        (Core&nbsp;ML / Create&nbsp;ML) probíhá celé přímo v zařízení. Tvůj model
-        <code>my_night.mlmodel</code> nikam neodchází.</li>
-      <li><strong>Pohybové senzory</strong> (CoreMotion) se používají jen během
-        aktivního režimu strážce k detekci pohybu telefonu; naměřené hodnoty se
-        nikam neukládají.</li>
-      <li><strong>Mikrofon v režimu strážce</strong>: dokud je strážce aktivní,
-        telefon sleduje hlasitost zvuku ve svém okolí, aby zachytil i to, když
-        se někdo k telefonu nakloní nebo na něj promluví. <strong>Nic se přitom
-        nenahrává</strong>: měří se jen okamžitá hladina zvuku, která se nikam
-        neukládá ani neodesílá. Spouštění alarmu zvukem lze v Nastavení
-        vypnout.</li>
-      <li><strong>PIN strážce</strong> se ukládá pouze jako kryptografický otisk
-        (SHA-256 se solí) lokálně v zařízení. Je nezávislý na kódu pro
-        odemknutí telefonu.</li>
-      <li><strong>Upozornění na pauzy v dýchání</strong> se počítají lokálně
-        z časování dechových zvuků v již zaznamenaných událostech. Nejde o zdravotní údaje a nikam se
-        neodesílají.</li>
+      <li><strong>Zvukové nahrávky a analýzy</strong>: vznikají jen během noci, kterou sám spustíš tlačítkem <em>Začít noc</em>, a zůstávají v úložišti aplikace ve tvém iPhonu.</li>
+      <li><strong>Rozpoznávání zvuků a trénink vlastního modelu</strong> (Core&nbsp;ML / Create&nbsp;ML) probíhají celé v iPhonu. Tvůj model <code>my_night.mlmodel</code> tam zůstává, dokud ho sám neexportuješ.</li>
+      <li><strong>Dechová frekvence</strong>: během noci ji aplikace odhaduje v iPhonu z hlasitosti mikrofonu. Tento odhad je vždy zapnutý a ukládá jen čísla a časy.</li>
+      <li><strong>Tiché úseky v dýchání</strong>: hledání je ve výchozím stavu vypnuté. Pokud ho zapneš, iPhone je vypočítá z časování dechových zvuků a ke každému uloží u dané noci krátký klip.</li>
+      <li><strong>Pohybové senzory</strong> (CoreMotion) se čtou jen během aktivního strážce, aby zachytily pohyb telefonu; naměřené hodnoty se nikam neukládají.</li>
+      <li><strong>Mikrofon v režimu strážce</strong>: strážce ho potřebuje po celou dobu, kdy je aktivní. Měří se jen okamžitá hladina zvuku. <strong>Nic se nenahrává</strong>, neukládá ani neodesílá. Možnost v Nastavení zařídí, že alarm spustí jen velmi hlasité zvuky.</li>
+      <li><strong>PIN strážce</strong> se ukládá jen jako otisk (SHA-256 se solí) v Keychainu, jen v tomto zařízení, a není v zálohách. Je nezávislý na kódu pro odemknutí telefonu.</li>
     </ul>
 
+    <h3>Přepis řeči</h3>
+    <p>Přepis mluvení ze spaní běží jen tehdy, když o něj požádáš, a běží v iPhonu. Pokud tvůj jazyk nemá podporu přímo v zařízení, aplikace se nejdřív zeptá na ten jeden klip. Jen pokud souhlasíš, zpracuje tento klip rozpoznávání řeči od Applu na serverech Applu podle podmínek Applu. Nic jiného z telefonu takto neodejde.</p>
+
+    <h3>Apple Zdraví</h3>
+    <p>Čtení z Apple Zdraví je volitelné a ve výchozím stavu vypnuté. Pokud v Nastavení zapneš „Spánek a dech ze Zdraví“, Zzzentinel pro noci, které sledoval, přečte fáze spánku a dechovou frekvenci. Údaje jen čte: ukládá je u dané noci v iPhonu, do Zdraví nikdy nic nezapisuje a Breathune je nepředává. Čtení můžeš kdykoli vypnout v Nastavení aplikace nebo v nastavení Zdraví.</p>
+
     <h3>Apple Watch, Siri a Zkratky</h3>
-    <p>Pokud používáš doprovodnou aplikaci pro Apple&nbsp;Watch, mezi hodinkami a
-    tvým iPhonem se vyměňuje výhradně stav strážce (zapnutý/vypnutý) a PIN, který
-    na hodinkách zadáš při vypínání. Přenos zajišťuje šifrované lokální
-    spojení Apple (WatchConnectivity) mezi tvými vlastními zařízeními -
-    nevede přes žádný náš server a PIN se na hodinkách neukládá. Stejně tak příkazy
-    přes Siri a aplikaci Zkratky se provádějí jen lokálně v zařízení.</p>
+    <p>Pokud používáš aplikaci pro Apple&nbsp;Watch, mezi hodinkami a iPhonem se vyměňuje jen stav strážce (zapnutý nebo vypnutý) a PIN, který na hodinkách zadáš při vypínání. Přenos zajišťuje šifrované lokální spojení Apple (WatchConnectivity) mezi tvými vlastními zařízeními, nikdy nevede přes náš server a PIN se na hodinkách neukládá. Příkazy ze Siri a Zkratek aplikace provádí v zařízení.</p>
 
     <h3>Propojení s aplikací Breathune</h3>
-    <p>Pokud máš ve stejném iPhonu nainstalovanou také aplikaci Breathune (od
-    stejného autora), obě aplikace si přes společnou složku v zařízení (App
-    Group) vyměňují krátké souhrny nocí: čas začátku a konce, úseky chrápání
-    (čas, trvání, hlasitost), počty ostatních událostí, dechovou frekvenci a
-    celkový čas spánku. Z Breathune
-    Zzzentinel čte dokončená dechová cvičení (název, čas, délka), jeho skóre
-    noci a průměrný tep, pokud jsi jeho měření zapnul. Obě si oznamují také to, že
-    právě sledují noc, aby si nebraly mikrofon. Nahrávky, přepisy řeči ani nic
-    jiného se nesdílí a nic z toho neopouští zařízení.</p>
+    <p>Platí to jen tehdy, když je ve stejném iPhonu nainstalovaná i Breathune (od stejného autora); pokud není, nic se nesdílí. Propojení používá společnou složku v zařízení (App Group). Zzzentinel tam ukládá krátký souhrn dokončených nocí: začátek a konec, časy a úrovně chrápání, počty kategorií zvuků, odhad dechové frekvence z mikrofonu a to, jakou část noci byl dech slyšet. Žádný zvuk a žádná řeč. Opačným směrem Zzzentinel čte z Breathune večerní dechová cvičení, skóre noci a tep. Obě aplikace si oznamují také to, že právě sledují noc, aby si nebraly mikrofon. Nic z toho přes toto propojení neopouští telefon.</p>
 
-    <h3>Dechová frekvence a Apple Zdraví</h3>
-    <p>Během nočního hlídání Zzzentinel odhaduje dechovou frekvenci přímo
-    v zařízení z hlasitosti mikrofonu; ukládají se jen čísla a časy, nikdy zvuk.
-    Pokud v Nastavení zapneš „Spánek a dech ze Zdraví“, Zzzentinel načte fáze
-    spánku a dechovou frekvenci, které tvoje hodinky zaznamenaly v aplikaci Zdraví,
-    pro noci, které hlídal. Pouze je čte, ukládá je k dané noci ve tvém zařízení
-    a nikam je neodesílá; do Zdraví nic nezapisuje. Čtení můžeš kdykoli vypnout
-    v Nastavení aplikace nebo v nastavení Zdraví.</p>
+    <h3>Co zůstává v iPhonu a jak dlouho</h3>
+    <p>Noci, tréninkové vzorky a natrénované modely zůstávají v iPhonu, dokud je nesmažeš. Pro noci je tu i volitelný limit <em>Uchovávat noci</em> (7, 30 nebo 90 dní, nebo navždy, což je výchozí). Aplikace se před mazáním zeptá a smazanou noc už nelze obnovit.</p>
 
-    <h3>Přepis řeči</h3>
-    <p>Přepis mluvení ze spaní používá framework Apple Speech a spouští se výlučně
-    na tvoji žádost. Pokud je dostupné rozpoznávání přímo v zařízení,
-    zpracování proběhne lokálně; v opačném případě může být daný zvukový klip
-    zpracován servery společnosti Apple podle jejích podmínek.</p>
+    <h3>Zálohy</h3>
+    <p>Noční nahrávky, tréninkové vzorky, natrénované modely a souhrny sdílené s Breathune nejsou v zálohách do iCloudu ani do počítače. Běžná nastavení v záloze zařízení být můžou. Po přechodu na nový iPhone se tedy noci nepřenesou. Pokud si je chceš nechat, exportuj je do ZIP v Nastavení nebo v menu Export u dané noci. Aplikace noci ze ZIP importovat neumí.</p>
 
-    <h3>Sdílení údajů</h3>
-    <p>Žádné údaje neopouštějí zařízení, pokud je sám neexportuješ přes
-    systémové sdílení: například přepis noci, jednotlivou či slepenou nahrávku,
-    archiv celé noci (.zip s nahrávkami, přepisem a tabulkou událostí
-    <code>events.csv</code> včetně tvých potvrzení), „Souhrn pro lékaře“ (PDF
-    s nahrávkami okolí nejdelších pauz v dýchání) nebo natrénovaný model.
-    Tehdy o cíli rozhoduješ ty. Odinstalováním aplikace se všechna její data ze
-    zařízení odstraní.</p>
+    <h3>Aplikace Soubory</h3>
+    <p>Nahrávky lze otevřít i v aplikaci Soubory, a to každým, kdo umí odemknout tvůj iPhone. <strong>PIN strážce je nechrání.</strong></p>
 
-    <h3>Děti a citlivý obsah</h3>
-    <p>Aplikace neshromažďuje žádné údaje, a tudíž nezpracovává ani údaje dětí.
-    Upozorňujeme, že noční nahrávky mohou zachytit citlivý obsah včetně hlasů
-    dalších osob v místnosti: s exporty proto nakládej uvážlivě a respektuj
-    soukromí ostatních.</p>
+    <h3>Sdílení a export</h3>
+    <p>Kromě výše popsaného přepisu údaje opouštějí iPhone, jen když je sám exportuješ přes systémové sdílení: například přepis jako prostý text, jednotlivou či slepenou nahrávku, ZIP jedné noci nebo všech nocí (nahrávky, přepis a tabulka <code>events.csv</code> včetně tvých potvrzení), „Souhrn pro lékaře“ (PDF s nahrávkami okolí nejdelších tichých úseků) nebo natrénovaný model. O cíli pak rozhoduješ ty.</p>
+
+    <h3>Odinstalování</h3>
+    <p>Odinstalováním Zzzentinelu se jeho data z iPhonu odstraní, jen společná složka se souhrny zůstane v telefonu, dokud neodstraníš i Breathune. Souborů, které jsi předtím exportoval, se to netýká.</p>
+
+    <h3>Tvoje práva</h3>
+    <p>Vývojář nemá žádné nahrávky, takže přístup k údajům a jejich smazání probíhají ve tvém telefonu: exportuj, co chceš, smaž noci nebo odinstaluj aplikaci. Pokud napíšeš na podporu, vidím tvou e-mailovou adresu a zprávu a uchovávám je jen tak dlouho, jak je potřeba k odpovědi. Můžeš se na ně zeptat nebo požádat o jejich smazání na <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>. Stížnost můžeš podat také úřadu pro ochranu osobních údajů.</p>
+
+    <h3>Tento web</h3>
+    <p>Web má anonymní počítadlo návštěv. Je jen na webu, v aplikaci nic takového není. Nepoužívá cookies ani identifikátory: když návštěva začne, prohlížeč požádá počítací službu <code>abacus.jasoncameron.dev</code>, aby připočítala jednu návštěvu k dennímu a celkovému počtu. Tato služba vidí běžný webový požadavek včetně tvé IP adresy, jako každý webový server. Samotný web běží na GitHub Pages, které také vidí běžné webové požadavky. Prohlížeč si pamatuje tvou volbu jazyka a to, že tato návštěva už byla započítána, jen ve vlastním úložišti ve tvém zařízení.</p>
+
+    <h3>Další osoby v pokoji a děti</h3>
+    <p>Pokud s tebou v pokoji spí někdo další, nejdřív mu to řekni. Zzzentinel může nahrát i jeho hlas a nerozezná, kdo chrápe. Noční nahrávky mohou zachytit citlivý obsah, s exporty proto nakládej uvážlivě a respektuj soukromí ostatních. Vývojář z aplikace nedostává žádné údaje, tedy ani údaje dětí.</p>
 
     <h3>Zdravotní informace</h3>
-    <p>Zzzentinel <strong>není zdravotnický prostředek</strong>. Upozornění na
-    „pauzy v dýchání“ jsou orientační heuristika, ne diagnóza, a nenahrazují
-    lékařské vyšetření.</p>
+    <p>Zzzentinel <strong>není zdravotnický prostředek</strong>. Hledání tichých úseků v dýchání je experimentální: aplikace slyší jen zvuk, tichý úsek může být jen tiché dýchání, které telefon nezachytil, a žádný výsledek nic nevylučuje. Není to diagnóza ani screening apnoe a nenahrazuje to lékařské vyšetření.</p>
 
     <h3>Změny těchto zásad</h3>
-    <p>Případné změny zveřejníme na této stránce spolu s novým datem
-    platnosti.</p>
+    <p>Případné změny zveřejníme na této stránce spolu s novým datem platnosti.</p>
   </div>
 
 </div>

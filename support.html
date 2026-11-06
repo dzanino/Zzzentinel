@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zzzentinel: Support / Podpora</title>
-<meta name="description" content="Zzzentinel support and FAQ: background recording, battery, your own sounds, breathing pauses, clinician summary, Apple Watch, PIN and data. Podpora a časté otázky.">
+<meta name="description" content="Zzzentinel support and FAQ: recording with the screen locked, phone calls, storage, your own sounds, quiet gaps in breathing sounds, Summary for your doctor, Apple Watch, PIN and data. Podpora a časté otázky.">
 <link rel="apple-touch-icon" href="favicon.png?v=20261016">
 <link rel="icon" href="favicon.png?v=20261016">
 <link rel="stylesheet" href="style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Zzzentinel: Support / Podpora">
-<meta property="og:description" content="Zzzentinel support and FAQ: background recording, battery, your own sounds, breathing pauses, clinician summary, Apple Watch, PIN and data. Podpora a časté otázky.">
+<meta property="og:description" content="Zzzentinel support and FAQ: recording with the screen locked, phone calls, storage, your own sounds, quiet gaps in breathing sounds, Summary for your doctor, Apple Watch, PIN and data. Podpora a časté otázky.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -34,6 +34,329 @@
 <link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/support.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
 <!--HREFLANG:end-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "FAQPage",
+   "inLanguage": "sk",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Nahráva aplikácia aj so zamknutou obrazovkou?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Áno. Keď ťukneš na Začať noc, nahrávanie beží aj na pozadí a so zamknutým telefónom. Displej sa sám stmaví minútu po poslednom dotyku (v Nastaveniach sa to dá vypnúť) a tlačidlo Stmaviť displej to urobí hneď: obrazovka takmer zhasne a ostanú len tlmené hodiny. Telefón odporúčame na noc zapojiť do nabíjačky, appka ťa upozorní, keď v nej nie je. Noc sa ukladá každú minútu. Zabudnutá noc sa sama skončí po 16 hodinách a pri 3 percentách batérie bez nabíjačky sa riadne dokončí."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Čo sa stane, keď noc preruší telefonát?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Telefonát nahrávanie preruší. Appka uloží, čo má, po hovore skúsi pokračovať a dá ti vedieť, ak prestala počúvať. Ranný report povie, ako dlho bol mikrofón prerušený alebo kedy sa nahrávanie nečakane zastavilo. Zvuk z iných appiek, napríklad podcast alebo biely šum, noc už nepreruší, mikrofón ho však počuje tiež."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Koľko batérie a miesta to spotrebuje?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Analýza beží úsporne a ukladajú sa len klipy zachytených zvukov, nie celá noc. Klipy zaberú zhruba 30 MB na hodinu nahratého zvuku, takže bežná noc zaberie od pár MB do asi 100 MB a pri stálom hluku, napríklad z ventilátora, aj viac. Voliteľný limit Uchovávať noci v Nastaveniach (7, 30 alebo 90 dní, alebo navždy) odstraňuje staršie noci a najprv sa ťa opýta. Kým je appka na pozadí alebo je displej stmavený, prestane prekresľovať ukazovatele, čo šetrí energiu. So zapojenou nabíjačkou na spotrebe batérie takmer nezáleží."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Je tam predplatné?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nie. Zzzentinel je jednorazový nákup v App Store: bez predplatného, bez nákupov v appke, bez reklám a bez účtu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Prečo mám v zázname „nedefinovaný zvuk“?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Telefón zachytil hlasný zvuk, ktorý klasifikátor nevedel pomenovať. Prehraj si klip, klepni na Nadefinovať zvuk a pomenuj ho. Po zhruba piatich vzorkách si v Nastavenia → Tréning mojich zvukov natrénuješ vlastný model my_night.mlmodel priamo v telefóne a nabudúce appka zvuk rozpozná menom."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tréning modelu mi nefunguje.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Model potrebuje aspoň dve triedy zvukov. Ak máš zatiaľ len jeden vlastný zvuk, appka si druhú triedu („ostatné“) zostaví automaticky z klipov iných udalostí, takže najprv nahraj aspoň jednu noc s pár zachytenými zvukmi. Pre spoľahlivý výsledok zozbieraj asi päť vzoriek na každý zvuk."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sú „tiché úseky v dýchaní“ diagnóza spánkového apnoe?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nie. Hľadanie je predvolene vypnuté a experimentálne: zapneš ho v Nastavenia → Tiché úseky v dýchaní (experimentálne). Počíta ticho dlhé 10 až 60 sekúnd vo zvukoch dýchania a prah môžeš znížiť až na 6 sekúnd. Report povie, keď bolo hľadanie vypnuté, a nikdy netvrdí, že si dýchal v poriadku. Appka počuje len zvuk: mikrofón nemeria prietok vzduchu ani okysličenie, tichý úsek môže byť len tiché dýchanie, ktoré telefón nezachytil, a žiadny výsledok nič nevylučuje. Nie je to zdravotnícka pomôcka, diagnóza ani skríning apnoe. Ak ťa niečo znepokojuje, porozprávaj sa s lekárom bez ohľadu na to, čo report ukáže. Dychová frekvencia odhadovaná z hlasitosti je vždy zapnutá, len ako čísla."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Čo je „Súhrn pre lekára“?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "V ukončenej noci otvor Export → Súhrn pre lekára. Appka vytvorí PDF (chrápanie, počuteľné dýchanie, zoznam tichých úsekov, ak bolo hľadanie zapnuté, a sekcia „Metóda a obmedzenia“) a pridá nahrávky okolia troch najdlhších tichých úsekov. Appka sama nič z toho neposiela, súbory zdieľaš ty. Je to podklad, ktorý môžeš ukázať lekárovi, nie klinický produkt ani diagnóza. To isté menu exportuje celú noc ako ZIP alebo prepis ako obyčajný text a v Nastaveniach môžeš exportovať všetky noci."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bol Zzzentinel overený v štúdii?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nie. Zatiaľ ho neoverila žiadna nezávislá štúdia, preto o jeho presnosti nič netvrdíme. Odborníci, ktorí by ho chceli porovnať, môžu napísať na admin@breathune.eu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Čo je sekcia „Na potvrdenie“?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Zvuky, ktoré appka počula prvýkrát alebo si nimi nie je istá, ti v rannom reporte ponúkne na vypočutie. Sedí ju naučí, že sa trafila; Opraviť jej dá správny názov a novú tréningovú vzorku. Na každý zvuk sa pýta najviac dvakrát za noc a po troch potvrdeniach mu už verí. Návrh sa nikdy sám nezmení na fakt."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ako ovládam strážcu z Apple Watch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aplikácia pre hodinky sa nainštaluje automaticky spolu s tou v telefóne. Na hodinkách klepneš na Aktivovať: strážca sa zapne inkognito, displej telefónu zostane zhasnutý. Vypneš ho PIN klávesnicou priamo na hodinkách. Vypnutie vždy vyžaduje PIN a po 5 nesprávnych pokusoch počkáš 30 sekúnd. Aktivácia na diaľku funguje len vtedy, keď iOS dovolí Zzzentinelu použiť mikrofón; inak ti hodinky alebo Siri povedia, aby si otvoril appku. Ak je telefón mimo dosahu, príkaz počká a strážca sa zapne, ak sa zariadenia spoja približne do desiatich minút. Rovnako funguje Siri („Aktivuj Zzzentinel“), widget Skratky aj Zadné poklepanie. Hodinky ovládajú len strážcu, nie noc."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ako prenesiem svoje zvuky do iného telefónu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "V Nastavenia → Tréning mojich zvukov → Prenos vzoriek klepni na Exportovať všetky vzorky (.zip) a ulož si ich (Súbory, AirDrop, iCloud). V druhom zariadení zip rozbaľ a cez Importovať vzorky zo Súborov vyber nahrávky jedného zvuku naraz a zadaj jeho názov. Natrénovaný model prenesieš cez Exportovať my_night.mlmodel a Importovať model (.mlmodel). Nahrávky a natrénované modely nájdeš aj v aplikácii Súbory → V mojom iPhone → Zzzentinel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Prenesú sa moje noci do nového iPhonu?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nie. Nočné nahrávky, tréningové vzorky, natrénované modely a súhrny zdieľané s Breathune nie sú v zálohách do iCloudu ani do počítača; bežné nastavenia v nich byť môžu. Ak si chceš noci nechať, pred prechodom ich exportuj do ZIP: Nastavenia → Exportovať všetky noci (.zip) alebo jednu noc cez jej menu Export. ZIP je tvoj archív, appka totiž noci zo ZIP importovať nevie."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Zabudol som PIN strážcu. Čo teraz?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Appku nikdy nepreinštalúvaj: vymazali by sa tým všetky tvoje noci, lebo nie sú v žiadnej zálohe. Appku úplne zavri v prepínači aplikácií (potiahni ju nahor), znova ju otvor a choď na Strážca → Zmeniť PIN. Nič sa nestratí."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Prečo strážca potrebuje mikrofón a čo počuje?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Aktivovaný strážca sleduje pohyb telefónu aj hladinu zvuku okolo neho, preto potrebuje mikrofón po celý čas, keď je aktívny. Meria sa len hladina zvuku a nič sa nenahráva. V spoločnej izbe alebo na internáte zapni v Nastaveniach Alarm spustia len veľmi hlasné zvuky."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ochráni strážca telefón pred krádežou?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nie. Odrádza, ale nie je to ochrana pred krádežou. Pohyb alebo zvuk okolo telefónu bez PIN-u spustí hlasnú sirénu a blikanie, ale tlačidlá hlasitosti alebo vypnutie telefónu ho umlčia."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Alarm bliká. Mám citlivosť na blikajúce svetlo.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Obrazovka aj blesk blikajú menej ako trikrát za sekundu, teda pod hranicou, ktorú odborné odporúčania označujú za rizikovú. Ak máš v systéme zapnuté Obmedziť pohyb, blikanie sa vynechá automaticky. Vypnúť sa dá aj ručne v Nastavenia → Guard Extra Plus → Blikanie pri alarme; siréna zostane funkčná."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Alarm nie je počuť dosť nahlas.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pred aktiváciou strážcu zvýš hlasitosť, appka ťa upozorní, keď je nízka. Siréna hrá vždy cez reproduktor, nie cez slúchadlá, aj pri stlmenom prepínači zvonenia. Sama stíchne po 5 minútach a tlačidlá hlasitosti ju umlčia."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kde sú moje dáta a ako ich vymažem?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "V tvojom iPhone a vývojár nedostáva nič. Noc vymažeš potiahnutím doľava v zozname Moje noci, zvuk v Tréningu mojich zvukov; appka sa najprv opýta a vymazanú noc už nemožno obnoviť. Limit Uchovávať noci po potvrdení odstraňuje staršie noci. Odinštalovaním Zzzentinelu sa odstránia jeho dáta, len spoločný priečinok so súhrnmi ostane v telefóne, kým neodstrániš aj Breathune. Nahrávky sa dajú otvoriť aj v aplikácii Súbory, a to každým, kto vie odomknúť tvoj iPhone: PIN strážcu ich nechráni."
+     }
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Does it record with the screen locked?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. After you tap Start the night, recording continues in the background and with the phone locked. The screen dims by itself a minute after the last touch (you can turn this off in Settings), and Dim screen does it straight away, leaving an almost black display with only a dim clock. We recommend charging the phone overnight, and the app warns you if it is not on a charger. The night is saved every minute. A forgotten night ends by itself after 16 hours, and at 3 percent battery while unplugged it finishes properly."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What happens if a call interrupts the night?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A phone call does interrupt recording. The app saves what it has, tries to continue after the call and notifies you if it stopped listening. The morning report says how long the microphone was interrupted, or when recording stopped unexpectedly. Audio from other apps, such as a podcast or white noise, no longer interrupts the night, but the microphone then hears that audio too."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How much battery and storage does it use?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Analysis is lightweight, and only clips of detected sounds are stored, not the whole night. Clips use roughly 30 MB per hour of recorded sound, so a typical night takes from a few MB up to about 100 MB, and steady noise such as a fan takes more. The optional Keep nights limit in Settings (7, 30 or 90 days, or forever) removes older nights, and it asks for confirmation first. While the app is in the background or dimmed, it stops redrawing meters to save power. On a charger, battery use hardly matters."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is there a subscription?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Zzzentinel is a one-time purchase on the App Store: no subscription, no in-app purchases, no ads and no account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is an “undefined sound”?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A loud sound the classifier couldn't name. Play the clip, tap Define sound and name it. After about five samples you can train your personal my_night.mlmodel in Settings → My sound training, right on the phone, and next time the app recognises the sound by name."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Training doesn't work for me.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "A model needs at least two sound classes. With only one of your own sounds, the app builds an “other” class automatically from other recorded clips, so record at least one night with a few detected sounds first. Collect about five samples per sound for reliable results."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Are “quiet gaps in breathing sounds” a sleep apnea diagnosis?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Detection is off by default and experimental: you turn it on in Settings → Quiet gaps in breathing (experimental). It counts silences of 10 to 60 seconds in your breathing sounds, and you can lower the threshold to 6 seconds. The report states when detection was off and never claims your breathing was fine. The app only hears sound: a microphone measures neither airflow nor oxygen, a gap may simply be quiet breathing the phone did not catch, and no finding rules anything out. It is not a medical device, not a diagnosis and no apnea screening. If something worries you, talk to a doctor whatever the report says. The breathing rate estimated from loudness is always on, as numbers only."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the “Summary for your doctor”?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In a finished night, open Export → Summary for your doctor. The app writes a PDF (snoring, audible breathing, the list of gaps if detection was on, and a “Method and limitations” section) and adds recordings around the three longest gaps. The app sends none of this by itself: you share the files. It is a document to show a doctor, not a clinical product and not a diagnosis. The same menu exports the whole night as a ZIP or a plain-text transcript, and Settings can export all nights."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Has Zzzentinel been tested in a study?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. No independent study has tested it yet, so we make no claim about its accuracy. Specialists who would like to compare it can write to admin@breathune.eu."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is “To confirm”?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sounds the app heard for the first time, or isn't sure about, are offered for a listen in the morning report. That's right teaches it that it was right; Fix gives it the proper name and a new training sample. It asks about each sound at most twice a night and trusts it after three confirmations. A suggestion never turns into a fact on its own."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I control the guard from Apple Watch?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The watch app installs automatically alongside the iPhone app. Tap Arm on the watch and the guard arms incognito: the phone's screen stays dark. Disarm with the PIN pad on the watch. Disarming always needs the PIN, and after 5 wrong tries you wait 30 seconds. Remote arming works only when iOS lets Zzzentinel use the microphone; otherwise the watch or Siri tells you to open the app. If the phone is out of range, the command waits and arms the guard if the devices reconnect within about ten minutes. Siri (“Arm Zzzentinel”), a Shortcuts widget and Back Tap work the same way. The watch controls the guard only, not the night."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I move my sounds to another phone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "In Settings → My sound training → Transfer samples tap Export all samples (.zip) and save it (Files, AirDrop, iCloud). On the other device unzip it and use Import samples from Files, one sound at a time, giving each its name. A trained model moves via Export my_night.mlmodel and Import model (.mlmodel). Recordings and trained models can also be reached in Files → On My iPhone → Zzzentinel."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Do my nights come along to a new iPhone?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Night recordings, training samples, trained models and the summaries shared with Breathune are excluded from iCloud and computer backups; ordinary settings may be included. To keep your nights, export them as a ZIP before you switch: Settings → Export all nights (.zip), or one night from its Export menu. The ZIP is your archive, because the app has no ZIP import for nights."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "I forgot my guard PIN.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Never reinstall the app: that would delete all your nights, since they are in no backup. Force-quit Zzzentinel from the app switcher (swipe it up), open it again and go to Guard → Change PIN. Nothing is lost."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does the guard need the microphone, and what does it hear?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An armed guard watches for movement and listens to the level of sound around the phone, so it needs the microphone the whole time it is armed. Only the sound level is measured and nothing is recorded. In a shared room or dorm, turn on Only very loud sounds trigger the alarm in Settings."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does the guard protect my phone from theft?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. It is a deterrent, not theft protection. Movement or sound around the phone, without your PIN, sets off a loud siren and flashing, but the volume buttons or switching the phone off silence it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "The alarm flashes and I'm sensitive to flashing light.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The screen and the flashlight both flash fewer than three times a second, below the threshold guidance considers risky. Flashing is skipped automatically when Reduce Motion is on, and can be turned off in Settings → Guard Extra Plus → Flashing during the alarm. The siren still works."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "The alarm isn't loud enough.",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Before arming the guard, turn the volume up; the app warns you when it is low. The siren always plays through the speaker, not headphones, even with the ring/silent switch muted. It stops by itself after 5 minutes, and the volume buttons silence it."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Where is my data and how do I delete it?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "On your iPhone, and the developer receives nothing. Swipe left to delete a night in My nights or a sound in My sound training; the app asks for confirmation, and a deleted night cannot be restored. The Keep nights limit removes older nights after a confirmation. Uninstalling Zzzentinel removes its data, except that the shared summary folder stays on the phone until Breathune is removed as well. Recordings can also be opened in the Files app by anyone who can unlock your iPhone: the guard's PIN does not protect them."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 <link rel="me" href="https://orcid.org/0000-0002-4690-0317">
 </head>
 <body>
@@ -72,136 +395,97 @@
 
     <details>
       <summary>Nahráva aplikácia aj so zamknutou obrazovkou?</summary>
-      <p>Áno. Po spustení nočnej stráže beží nahrávanie aj na pozadí a so
-      zamknutým telefónom. Ak chceš mať displej zhasnutý, ale appku po ruke,
-      použi tlačidlo <em>Stmaviť displej</em>: obrazovka takmer zhasne a ostanú
-      len tlmené hodiny. Telefón odporúčame na noc zapojiť do nabíjačky.</p>
+      <p>Áno. Keď ťukneš na <em>Začať noc</em>, nahrávanie beží aj na pozadí a so zamknutým telefónom. Displej sa sám stmaví minútu po poslednom dotyku (v Nastaveniach sa to dá vypnúť) a tlačidlo <em>Stmaviť displej</em> to urobí hneď: obrazovka takmer zhasne a ostanú len tlmené hodiny. Telefón odporúčame na noc zapojiť do nabíjačky, appka ťa upozorní, keď v nej nie je. Noc sa ukladá každú minútu. Zabudnutá noc sa sama skončí po 16 hodinách a pri 3 percentách batérie bez nabíjačky sa riadne dokončí.</p>
+    </details>
+
+    <details>
+      <summary>Čo sa stane, keď noc preruší telefonát?</summary>
+      <p>Telefonát nahrávanie preruší. Appka uloží, čo má, po hovore skúsi pokračovať a dá ti vedieť, ak prestala počúvať. Ranný report povie, ako dlho bol mikrofón prerušený alebo kedy sa nahrávanie nečakane zastavilo. Zvuk z iných appiek, napríklad podcast alebo biely šum, noc už nepreruší, mikrofón ho však počuje tiež.</p>
     </details>
 
     <details>
       <summary>Koľko batérie a miesta to spotrebuje?</summary>
-      <p>Analýza beží úsporne a ukladajú sa len krátke klipy udalostí, nie celá
-      noc: bežná noc zaberie jednotky MB. Kým je appka na pozadí alebo je displej
-      stmavený, prestane prekresľovať ukazovatele, čo ďalej šetrí energiu.
-      So zapojenou nabíjačkou je spotreba batérie irelevantná.</p>
+      <p>Analýza beží úsporne a ukladajú sa len klipy zachytených zvukov, nie celá noc. Klipy zaberú zhruba 30 MB na hodinu nahratého zvuku, takže bežná noc zaberie od pár MB do asi 100 MB a pri stálom hluku, napríklad z ventilátora, aj viac. Voliteľný limit <em>Uchovávať noci</em> v Nastaveniach (7, 30 alebo 90 dní, alebo navždy) odstraňuje staršie noci a najprv sa ťa opýta. Kým je appka na pozadí alebo je displej stmavený, prestane prekresľovať ukazovatele, čo šetrí energiu. So zapojenou nabíjačkou na spotrebe batérie takmer nezáleží.</p>
+    </details>
+
+    <details>
+      <summary>Je tam predplatné?</summary>
+      <p>Nie. Zzzentinel je jednorazový nákup v App Store: bez predplatného, bez nákupov v appke, bez reklám a bez účtu.</p>
     </details>
 
     <details>
       <summary>Prečo mám v zázname „nedefinovaný zvuk“?</summary>
-      <p>Telefón zachytil hlasný zvuk, ktorý klasifikátor nevedel pomenovať.
-      Prehraj si klip, klepni na <em>Nadefinovať zvuk</em> a pomenuj ho. Po
-      zhruba piatich vzorkách si v <em>Nastavenia → Tréning mojich zvukov</em>
-      natrénuješ vlastný model <code>my_night.mlmodel</code> priamo v telefóne
-      a nabudúce appka zvuk rozpozná menom.</p>
+      <p>Telefón zachytil hlasný zvuk, ktorý klasifikátor nevedel pomenovať. Prehraj si klip, klepni na <em>Nadefinovať zvuk</em> a pomenuj ho. Po zhruba piatich vzorkách si v <em>Nastavenia → Tréning mojich zvukov</em> natrénuješ vlastný model <code>my_night.mlmodel</code> priamo v telefóne a nabudúce appka zvuk rozpozná menom.</p>
     </details>
 
     <details>
       <summary>Tréning modelu mi nefunguje.</summary>
-      <p>Tréning vyžaduje skutočný iPhone: v simulátore nie je framework
-      Create&nbsp;ML dostupný a appka zobrazí upozornenie. Potrebuješ tiež aspoň
-      dve triedy zvukov; ak máš zatiaľ len jednu, appka si druhú („ostatné“)
-      zostaví automaticky z klipov iných udalostí, takže najprv nahraj aspoň
-      jednu noc.</p>
+      <p>Model potrebuje aspoň dve triedy zvukov. Ak máš zatiaľ len jeden vlastný zvuk, appka si druhú triedu („ostatné“) zostaví automaticky z klipov iných udalostí, takže najprv nahraj aspoň jednu noc s pár zachytenými zvukmi. Pre spoľahlivý výsledok zozbieraj asi päť vzoriek na každý zvuk.</p>
     </details>
 
     <details>
-      <summary>Sú „pauzy v dýchaní“ diagnóza spánkového apnoe?</summary>
-      <p>Nie. Appka hľadá dlhšie ticho medzi úsekmi počuteľného dýchania: mikrofón
-      nemeria prietok vzduchu ani okysličenie, takže nerozlíši tiché dýchanie od
-      zástavy dychu. Je to orientačná heuristika a Zzzentinel nie je zdravotnícka
-      pomôcka. Ak sa pauzy opakujú, spomeň ich svojmu lekárovi: pomôže ti v tom
-      Súhrn pre lekára.</p>
+      <summary>Sú „tiché úseky v dýchaní“ diagnóza spánkového apnoe?</summary>
+      <p>Nie. Hľadanie je predvolene vypnuté a experimentálne: zapneš ho v <em>Nastavenia → Tiché úseky v dýchaní (experimentálne)</em>. Počíta ticho dlhé 10 až 60 sekúnd vo zvukoch dýchania a prah môžeš znížiť až na 6 sekúnd. Report povie, keď bolo hľadanie vypnuté, a nikdy netvrdí, že si dýchal v poriadku. Appka počuje len zvuk: mikrofón nemeria prietok vzduchu ani okysličenie, tichý úsek môže byť len tiché dýchanie, ktoré telefón nezachytil, a žiadny výsledok nič nevylučuje. Nie je to zdravotnícka pomôcka, diagnóza ani skríning apnoe. Ak ťa niečo znepokojuje, porozprávaj sa s lekárom bez ohľadu na to, čo report ukáže. Dychová frekvencia odhadovaná z hlasitosti je vždy zapnutá, len ako čísla.</p>
     </details>
 
     <details>
       <summary>Čo je „Súhrn pre lekára“?</summary>
-      <p>V detaile ukončenej noci → Zdieľať → Súhrn pre lekára vznikne PDF
-      s odborne formulovaným prehľadom (chrápanie, počuteľné dýchanie, zoznam páuz,
-      sekcia „Metóda a obmedzenia“) a nahrávky okolia troch najdlhších páuz.
-      Nič sa neodosiela · súbory zdieľaš sám. Nie je to diagnóza; je to podklad
-      na rozhovor s lekárom.</p>
+      <p>V ukončenej noci otvor <em>Export → Súhrn pre lekára</em>. Appka vytvorí PDF (chrápanie, počuteľné dýchanie, zoznam tichých úsekov, ak bolo hľadanie zapnuté, a sekcia „Metóda a obmedzenia“) a pridá nahrávky okolia troch najdlhších tichých úsekov. Appka sama nič z toho neposiela, súbory zdieľaš ty. Je to podklad, ktorý môžeš ukázať lekárovi, nie klinický produkt ani diagnóza. To isté menu exportuje celú noc ako ZIP alebo prepis ako obyčajný text a v Nastaveniach môžeš exportovať všetky noci.</p>
+    </details>
+
+    <details>
+      <summary>Bol Zzzentinel overený v štúdii?</summary>
+      <p>Nie. Zatiaľ ho neoverila žiadna nezávislá štúdia, preto o jeho presnosti nič netvrdíme. Odborníci, ktorí by ho chceli porovnať, môžu napísať na <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
     </details>
 
     <details>
       <summary>Čo je sekcia „Na potvrdenie“?</summary>
-      <p>Zvuky, ktoré appka počula prvýkrát, alebo si nimi nie je istá, ti v rannom
-      reporte ponúkne na vypočutie. <em>Sedí</em> ju naučí, že sa trafila;
-      <em>Opraviť</em> jej dá správny názov a novú tréningovú vzorku. Na každý zvuk
-      sa pýta najviac dvakrát za noc a po troch potvrdeniach mu už verí. Návrh sa
-      nikdy sám nezmení na fakt. Automatické návrhy zvukov, ktoré vstavaný
-      rozpoznávač nepozná, vypneš v Nastavenia → Návrhy zvukov.</p>
+      <p>Zvuky, ktoré appka počula prvýkrát alebo si nimi nie je istá, ti v rannom reporte ponúkne na vypočutie. <em>Sedí</em> ju naučí, že sa trafila; <em>Opraviť</em> jej dá správny názov a novú tréningovú vzorku. Na každý zvuk sa pýta najviac dvakrát za noc a po troch potvrdeniach mu už verí. Návrh sa nikdy sám nezmení na fakt.</p>
     </details>
 
     <details>
       <summary>Ako ovládam strážcu z Apple Watch?</summary>
-      <p>Aplikácia pre hodinky sa nainštaluje automaticky spolu s tou v telefóne.
-      Na hodinkách klepneš na <em>Aktivovať</em>: strážca sa zapne inkognito,
-      displej telefónu zostane zhasnutý. Vypnutie prebieha cez PIN klávesnicu
-      priamo na hodinkách. Ak je telefón mimo dosahu, príkaz na aktiváciu sa
-      zaradí do fronty a vykoná sa, keď sa zariadenia spoja. Rovnako funguje Siri
-      („Arm Zzzentinel“), widget Skratky aj zadné poklepanie na telefón
-      (Nastavenia → Prístupnosť → Dotyk → Klepnutie na zadnú stranu).</p>
+      <p>Aplikácia pre hodinky sa nainštaluje automaticky spolu s tou v telefóne. Na hodinkách klepneš na <em>Aktivovať</em>: strážca sa zapne inkognito, displej telefónu zostane zhasnutý. Vypneš ho PIN klávesnicou priamo na hodinkách. Vypnutie vždy vyžaduje PIN a po 5 nesprávnych pokusoch počkáš 30 sekúnd. Aktivácia na diaľku funguje len vtedy, keď iOS dovolí Zzzentinelu použiť mikrofón; inak ti hodinky alebo Siri povedia, aby si otvoril appku. Ak je telefón mimo dosahu, príkaz počká a strážca sa zapne, ak sa zariadenia spoja približne do desiatich minút. Rovnako funguje Siri („Aktivuj Zzzentinel“), widget Skratky aj Zadné poklepanie. Hodinky ovládajú len strážcu, nie noc.</p>
     </details>
 
     <details>
-      <summary>Ako prenesiem svoje zvuky do iného telefónu alebo z inej appky?</summary>
-      <p>V <em>Nastavenia → Tréning mojich zvukov → Prenos vzoriek</em> klepni na
-      <em>Exportovať všetky vzorky (.zip)</em> a ulož si ich (Súbory, AirDrop,
-      iCloud). V druhom zariadení zip rozbaľ a cez <em>Importovať vzorky zo
-      Súborov</em> vyber nahrávky jedného zvuku naraz a zadaj jeho názov.
-      Natrénovaný model prenesieš tlačidlom <em>Exportovať my_night.mlmodel</em>
-      a v cieľovej appke cez <em>Importovať model (.mlmodel)</em>. Všetky dáta
-      appky nájdeš aj priamo v aplikácii Súbory → <em>V mojom iPhone →
-      Zzzentinel</em>, odkiaľ si ich vieš skopírovať či zálohovať.</p>
+      <summary>Ako prenesiem svoje zvuky do iného telefónu?</summary>
+      <p>V <em>Nastavenia → Tréning mojich zvukov → Prenos vzoriek</em> klepni na <em>Exportovať všetky vzorky (.zip)</em> a ulož si ich (Súbory, AirDrop, iCloud). V druhom zariadení zip rozbaľ a cez <em>Importovať vzorky zo Súborov</em> vyber nahrávky jedného zvuku naraz a zadaj jeho názov. Natrénovaný model prenesieš cez <em>Exportovať my_night.mlmodel</em> a <em>Importovať model (.mlmodel)</em>. Nahrávky a natrénované modely nájdeš aj v aplikácii Súbory → <em>V mojom iPhone → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>Prenášam dáta zo staršej verzie s iným názvom.</summary>
-      <p>iOS považuje premenovanú aplikáciu za samostatnú, takže si dáta
-      neprevezme automaticky. V starej aplikácii použi jej exportné tlačidlá
-      (model, prípadne jednotlivé nahrávky cez zdieľanie), ulož ich do Súborov
-      a v Zzzentineli ich naimportuj. Starú aplikáciu odinštaluj až potom, čo si
-      overíš, že import prebehol: odinštalovaním sa jej dáta nenávratne
-      odstránia.</p>
+      <summary>Prenesú sa moje noci do nového iPhonu?</summary>
+      <p>Nie. Nočné nahrávky, tréningové vzorky, natrénované modely a súhrny zdieľané s Breathune nie sú v zálohách do iCloudu ani do počítača; bežné nastavenia v nich byť môžu. Ak si chceš noci nechať, pred prechodom ich exportuj do ZIP: <em>Nastavenia → Exportovať všetky noci (.zip)</em> alebo jednu noc cez jej menu <em>Export</em>. ZIP je tvoj archív, appka totiž noci zo ZIP importovať nevie.</p>
     </details>
 
     <details>
       <summary>Zabudol som PIN strážcu. Čo teraz?</summary>
-      <p>Ak je strážca vypnutý, PIN zmeníš v záložke <em>Strážca → Zmeniť PIN</em>.
-      Ak je aktívny a PIN si zabudol úplne, jedinou cestou je preinštalovanie
-      aplikácie: nočné záznamy sa pritom zo zariadenia odstránia, preto si ich
-      exportuj vopred.</p>
+      <p>Appku nikdy nepreinštalúvaj: vymazali by sa tým všetky tvoje noci, lebo nie sú v žiadnej zálohe. Appku úplne zavri v prepínači aplikácií (potiahni ju nahor), znova ju otvor a choď na <em>Strážca → Zmeniť PIN</em>. Nič sa nestratí.</p>
     </details>
 
     <details>
       <summary>Prečo strážca potrebuje mikrofón a čo počuje?</summary>
-      <p>Aktivovaný strážca sleduje pohyb telefónu <em>aj</em> hlasitosť zvuku
-      okolo neho: niekto sa k telefónu často prihne alebo naň prehovorí skôr,
-      než ním pohne. Nič sa pritom nenahráva, meria sa len okamžitá hladina
-      zvuku. Ak si v spoločnej izbe alebo na internáte, v Nastaveniach vypni
-      <em>Spustiť alarm aj pri zvuku</em>: alarm potom spustí len pohyb.</p>
+      <p>Aktivovaný strážca sleduje pohyb telefónu <em>aj</em> hladinu zvuku okolo neho, preto potrebuje mikrofón po celý čas, keď je aktívny. Meria sa len hladina zvuku a nič sa nenahráva. V spoločnej izbe alebo na internáte zapni v Nastaveniach <em>Alarm spustia len veľmi hlasné zvuky</em>.</p>
+    </details>
+
+    <details>
+      <summary>Ochráni strážca telefón pred krádežou?</summary>
+      <p>Nie. Odrádza, ale nie je to ochrana pred krádežou. Pohyb alebo zvuk okolo telefónu bez PIN-u spustí hlasnú sirénu a blikanie, ale tlačidlá hlasitosti alebo vypnutie telefónu ho umlčia.</p>
     </details>
 
     <details>
       <summary>Alarm bliká. Mám citlivosť na blikajúce svetlo.</summary>
-      <p>Obrazovka bliká 2× za sekundu a blesk 2,5×: obe pod hranicou, ktorú
-      odborné odporúčania označujú za rizikovú. Ak máš v systéme zapnuté
-      <em>Obmedziť pohyb</em>, blikanie sa vynechá automaticky. Vypnúť sa dá aj
-      ručne v Nastavenia → Guard Extra Plus → <em>Blikanie pri alarme</em>;
-      siréna zostane funkčná.</p>
+      <p>Obrazovka aj blesk blikajú menej ako trikrát za sekundu, teda pod hranicou, ktorú odborné odporúčania označujú za rizikovú. Ak máš v systéme zapnuté <em>Obmedziť pohyb</em>, blikanie sa vynechá automaticky. Vypnúť sa dá aj ručne v <em>Nastavenia → Guard Extra Plus → Blikanie pri alarme</em>; siréna zostane funkčná.</p>
     </details>
 
     <details>
       <summary>Alarm nie je počuť dosť nahlas.</summary>
-      <p>Pred aktiváciou strážcu vytoč hlasitosť médií na maximum a vypni režim
-      Nerušiť. Alarm hrá cez reproduktor aj pri stlmenom prepínači zvonenia.</p>
+      <p>Pred aktiváciou strážcu zvýš hlasitosť, appka ťa upozorní, keď je nízka. Siréna hrá vždy cez reproduktor, nie cez slúchadlá, aj pri stlmenom prepínači zvonenia. Sama stíchne po 5 minútach a tlačidlá hlasitosti ju umlčia.</p>
     </details>
 
     <details>
       <summary>Kde sú moje dáta a ako ich vymažem?</summary>
-      <p>Všetko je uložené len v telefóne. Jednotlivé noci vymažeš potiahnutím
-      doľava v zozname <em>Moje noci</em>, natrénované zvuky v <em>Tréningu
-      mojich zvukov</em>. Odinštalovaním aplikácie sa odstráni všetko.</p>
+      <p>V tvojom iPhone a vývojár nedostáva nič. Noc vymažeš potiahnutím doľava v zozname <em>Moje noci</em>, zvuk v <em>Tréningu mojich zvukov</em>; appka sa najprv opýta a vymazanú noc už nemožno obnoviť. Limit <em>Uchovávať noci</em> po potvrdení odstraňuje staršie noci. Odinštalovaním Zzzentinelu sa odstránia jeho dáta, len spoločný priečinok so súhrnmi ostane v telefóne, kým neodstrániš aj Breathune. Nahrávky sa dajú otvoriť aj v aplikácii Súbory, a to každým, kto vie odomknúť tvoj iPhone: PIN strážcu ich nechráni.</p>
     </details>
   </div>
 
@@ -210,128 +494,97 @@
 
     <details>
       <summary>Does it record with the screen locked?</summary>
-      <p>Yes. Once the night watch is running, recording continues in the
-      background and with the phone locked. Use <em>Dim screen</em> to keep the
-      app open with an almost-black display showing only a dim clock. We
-      recommend charging the phone overnight.</p>
+      <p>Yes. After you tap <em>Start the night</em>, recording continues in the background and with the phone locked. The screen dims by itself a minute after the last touch (you can turn this off in Settings), and <em>Dim screen</em> does it straight away, leaving an almost black display with only a dim clock. We recommend charging the phone overnight, and the app warns you if it is not on a charger. The night is saved every minute. A forgotten night ends by itself after 16 hours, and at 3 percent battery while unplugged it finishes properly.</p>
+    </details>
+
+    <details>
+      <summary>What happens if a call interrupts the night?</summary>
+      <p>A phone call does interrupt recording. The app saves what it has, tries to continue after the call and notifies you if it stopped listening. The morning report says how long the microphone was interrupted, or when recording stopped unexpectedly. Audio from other apps, such as a podcast or white noise, no longer interrupts the night, but the microphone then hears that audio too.</p>
     </details>
 
     <details>
       <summary>How much battery and storage does it use?</summary>
-      <p>Analysis is lightweight and only short event clips are stored, not the
-      whole night, a typical night takes a few MB. While the app is in the
-      background or dimmed, it stops redrawing meters to save more power.</p>
+      <p>Analysis is lightweight, and only clips of detected sounds are stored, not the whole night. Clips use roughly 30 MB per hour of recorded sound, so a typical night takes from a few MB up to about 100 MB, and steady noise such as a fan takes more. The optional <em>Keep nights</em> limit in Settings (7, 30 or 90 days, or forever) removes older nights, and it asks for confirmation first. While the app is in the background or dimmed, it stops redrawing meters to save power. On a charger, battery use hardly matters.</p>
     </details>
 
     <details>
-      <summary>What is an "undefined sound"?</summary>
-      <p>A loud sound the classifier couldn't name. Play the clip, tap
-      <em>Define sound</em> and name it. After about five samples you can train
-      your personal <code>my_night.mlmodel</code> in Settings, right on the
-      phone.</p>
+      <summary>Is there a subscription?</summary>
+      <p>No. Zzzentinel is a one-time purchase on the App Store: no subscription, no in-app purchases, no ads and no account.</p>
+    </details>
+
+    <details>
+      <summary>What is an “undefined sound”?</summary>
+      <p>A loud sound the classifier couldn't name. Play the clip, tap <em>Define sound</em> and name it. After about five samples you can train your personal <code>my_night.mlmodel</code> in <em>Settings → My sound training</em>, right on the phone, and next time the app recognises the sound by name.</p>
     </details>
 
     <details>
       <summary>Training doesn't work for me.</summary>
-      <p>Training requires a real iPhone: Create&nbsp;ML is unavailable in the
-      Simulator. You also need at least two sound classes; with only one, the app
-      builds an "other" class automatically from other recorded clips, so record
-      at least one night first.</p>
+      <p>A model needs at least two sound classes. With only one of your own sounds, the app builds an “other” class automatically from other recorded clips, so record at least one night with a few detected sounds first. Collect about five samples per sound for reliable results.</p>
     </details>
 
     <details>
-      <summary>Are "breathing pauses" a sleep-apnoea diagnosis?</summary>
-      <p>No. The app looks for longer silences between stretches of audible
-      breathing, a microphone measures neither airflow nor oxygen, so it cannot
-      tell quiet breathing from a stop in breathing. It's an indicative heuristic
-      and Zzzentinel is not a medical device. If pauses recur, mention them to your
-      doctor: the Clinician summary helps with that.</p>
+      <summary>Are “quiet gaps in breathing sounds” a sleep apnea diagnosis?</summary>
+      <p>No. Detection is off by default and experimental: you turn it on in <em>Settings → Quiet gaps in breathing (experimental)</em>. It counts silences of 10 to 60 seconds in your breathing sounds, and you can lower the threshold to 6 seconds. The report states when detection was off and never claims your breathing was fine. The app only hears sound: a microphone measures neither airflow nor oxygen, a gap may simply be quiet breathing the phone did not catch, and no finding rules anything out. It is not a medical device, not a diagnosis and no apnea screening. If something worries you, talk to a doctor whatever the report says. The breathing rate estimated from loudness is always on, as numbers only.</p>
     </details>
 
     <details>
-      <summary>What is the “Clinician summary”?</summary>
-      <p>In a finished night → Share → Clinician summary the app writes a PDF with
-      a professionally-worded overview (snoring, audible breathing, list of pauses,
-      a “Method and limitations” section) plus recordings surrounding the three
-      longest pauses. Nothing is uploaded: you share the files yourself. It is
-      not a diagnosis; it is material for a conversation with your doctor.</p>
+      <summary>What is the “Summary for your doctor”?</summary>
+      <p>In a finished night, open <em>Export → Summary for your doctor</em>. The app writes a PDF (snoring, audible breathing, the list of gaps if detection was on, and a “Method and limitations” section) and adds recordings around the three longest gaps. The app sends none of this by itself: you share the files. It is a document to show a doctor, not a clinical product and not a diagnosis. The same menu exports the whole night as a ZIP or a plain-text transcript, and Settings can export all nights.</p>
+    </details>
+
+    <details>
+      <summary>Has Zzzentinel been tested in a study?</summary>
+      <p>No. No independent study has tested it yet, so we make no claim about its accuracy. Specialists who would like to compare it can write to <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
     </details>
 
     <details>
       <summary>What is “To confirm”?</summary>
-      <p>Sounds the app heard for the first time, or isn't sure about, are offered
-      for a listen in the morning report. <em>That's right</em> teaches it that it
-      was right; <em>Fix</em> gives it the proper name and a new training sample.
-      It asks about each sound at most twice a night and trusts it after three
-      confirmations. A suggestion never turns into a fact on its own. Automatic
-      suggestions for sounds the built-in recognizer has no name for can be turned
-      off under Settings → Sound suggestions.</p>
+      <p>Sounds the app heard for the first time, or isn't sure about, are offered for a listen in the morning report. <em>That's right</em> teaches it that it was right; <em>Fix</em> gives it the proper name and a new training sample. It asks about each sound at most twice a night and trusts it after three confirmations. A suggestion never turns into a fact on its own.</p>
     </details>
 
     <details>
       <summary>How do I control the guard from Apple Watch?</summary>
-      <p>The watch app installs automatically alongside the iPhone app. Tap
-      <em>Arm</em> on the watch and the guard arms incognito: the phone's screen
-      stays dark. Disarm with the PIN pad on the watch. If the phone is out of
-      range, the arm command is queued and runs once the devices reconnect. Siri
-      ("Arm Zzzentinel"), a Shortcuts widget and Back Tap work the same way.</p>
+      <p>The watch app installs automatically alongside the iPhone app. Tap <em>Arm</em> on the watch and the guard arms incognito: the phone's screen stays dark. Disarm with the PIN pad on the watch. Disarming always needs the PIN, and after 5 wrong tries you wait 30 seconds. Remote arming works only when iOS lets Zzzentinel use the microphone; otherwise the watch or Siri tells you to open the app. If the phone is out of range, the command waits and arms the guard if the devices reconnect within about ten minutes. Siri (“Arm Zzzentinel”), a Shortcuts widget and Back Tap work the same way. The watch controls the guard only, not the night.</p>
     </details>
 
     <details>
-      <summary>How do I move my sounds to another phone or from another app?</summary>
-      <p>In <em>Settings → My sound training → Transfer samples</em> tap
-      <em>Export all samples (.zip)</em> and save it (Files, AirDrop, iCloud). On
-      the other device unzip it and use <em>Import samples from Files</em>, one
-      sound at a time, giving each its name. A trained model moves via
-      <em>Export my_night.mlmodel</em> and <em>Import model (.mlmodel)</em>. All
-      app data is also reachable in Files → <em>On My iPhone → Zzzentinel</em>.</p>
+      <summary>How do I move my sounds to another phone?</summary>
+      <p>In <em>Settings → My sound training → Transfer samples</em> tap <em>Export all samples (.zip)</em> and save it (Files, AirDrop, iCloud). On the other device unzip it and use <em>Import samples from Files</em>, one sound at a time, giving each its name. A trained model moves via <em>Export my_night.mlmodel</em> and <em>Import model (.mlmodel)</em>. Recordings and trained models can also be reached in Files → <em>On My iPhone → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>I'm moving data from an older version with a different name.</summary>
-      <p>iOS treats a renamed app as a separate one, so data doesn't carry over
-      automatically. In the old app use its export buttons (the model, or single
-      recordings via Share), save them to Files and import them in Zzzentinel.
-      Uninstall the old app only after checking the import worked, uninstalling
-      removes its data for good.</p>
+      <summary>Do my nights come along to a new iPhone?</summary>
+      <p>No. Night recordings, training samples, trained models and the summaries shared with Breathune are excluded from iCloud and computer backups; ordinary settings may be included. To keep your nights, export them as a ZIP before you switch: <em>Settings → Export all nights (.zip)</em>, or one night from its <em>Export</em> menu. The ZIP is your archive, because the app has no ZIP import for nights.</p>
     </details>
 
     <details>
       <summary>I forgot my guard PIN.</summary>
-      <p>If the guard is off, change it in <em>Guard → Change PIN</em>. If it's
-      armed and the PIN is lost, reinstalling the app is the only way: night data
-      on the device is removed, so export first.</p>
+      <p>Never reinstall the app: that would delete all your nights, since they are in no backup. Force-quit Zzzentinel from the app switcher (swipe it up), open it again and go to <em>Guard → Change PIN</em>. Nothing is lost.</p>
     </details>
 
     <details>
       <summary>Why does the guard need the microphone, and what does it hear?</summary>
-      <p>An armed guard watches for movement <em>and</em> follows the loudness of
-      sound around the phone: people often lean over a phone or talk to it
-      before they move it. Nothing is recorded; only the momentary sound level is
-      measured. In a shared room, turn off <em>Sound can trigger the alarm</em>
-      in Settings and only movement will set it off.</p>
+      <p>An armed guard watches for movement <em>and</em> listens to the level of sound around the phone, so it needs the microphone the whole time it is armed. Only the sound level is measured and nothing is recorded. In a shared room or dorm, turn on <em>Only very loud sounds trigger the alarm</em> in Settings.</p>
+    </details>
+
+    <details>
+      <summary>Does the guard protect my phone from theft?</summary>
+      <p>No. It is a deterrent, not theft protection. Movement or sound around the phone, without your PIN, sets off a loud siren and flashing, but the volume buttons or switching the phone off silence it.</p>
     </details>
 
     <details>
       <summary>The alarm flashes and I'm sensitive to flashing light.</summary>
-      <p>The screen flashes twice a second and the flashlight 2.5 times: both
-      below the threshold guidance considers risky. Flashing is skipped
-      automatically when Reduce Motion is on, and can be turned off in
-      Settings → Guard Extra Plus. The siren still works.</p>
+      <p>The screen and the flashlight both flash fewer than three times a second, below the threshold guidance considers risky. Flashing is skipped automatically when Reduce Motion is on, and can be turned off in <em>Settings → Guard Extra Plus → Flashing during the alarm</em>. The siren still works.</p>
     </details>
 
     <details>
       <summary>The alarm isn't loud enough.</summary>
-      <p>Before arming the guard, turn media volume all the way up and switch off
-      Do Not Disturb. The alarm plays through the speaker even with the ring/silent
-      switch muted.</p>
+      <p>Before arming the guard, turn the volume up; the app warns you when it is low. The siren always plays through the speaker, not headphones, even with the ring/silent switch muted. It stops by itself after 5 minutes, and the volume buttons silence it.</p>
     </details>
 
     <details>
       <summary>Where is my data and how do I delete it?</summary>
-      <p>Everything is stored on the phone only. Swipe left to delete a night in
-      <em>My nights</em>, or a sound in <em>My sound training</em>. Uninstalling
-      the app removes everything.</p>
+      <p>On your iPhone, and the developer receives nothing. Swipe left to delete a night in <em>My nights</em> or a sound in <em>My sound training</em>; the app asks for confirmation, and a deleted night cannot be restored. The <em>Keep nights</em> limit removes older nights after a confirmation. Uninstalling Zzzentinel removes its data, except that the shared summary folder stays on the phone until Breathune is removed as well. Recordings can also be opened in the Files app by anyone who can unlock your iPhone: the guard's PIN does not protect them.</p>
     </details>
   </div>
 </div>

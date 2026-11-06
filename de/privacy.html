@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Datenschutzerklärung: Zzzentinel</title>
-<meta name="description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät: kein Server, kein Konto, keine Werbung, keine Analyse.">
+<meta name="description" content="Datenschutzerklärung von Zzzentinel: Die App hat keinen Server, kein Konto und keine Analyse, Aufnahmen entstehen und bleiben auf deinem iPhone. Diese Website hat einen anonymen Besuchszähler.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Datenschutzerklärung: Zzzentinel">
-<meta property="og:description" content="Datenschutzerklärung von Zzzentinel: Alles bleibt auf deinem Gerät: kein Server, kein Konto, keine Werbung, keine Analyse.">
+<meta property="og:description" content="Datenschutzerklärung von Zzzentinel: Die App hat keinen Server, kein Konto und keine Analyse, Aufnahmen entstehen und bleiben auf deinem iPhone. Diese Website hat einen anonymen Besuchszähler.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -58,88 +58,68 @@
   <div class="page-head">
     <img src="../icon.png?v=20261016" alt="Zzzentinel">
     <h1>Datenschutzerklärung</h1>
-    <div class="sub">Gültig ab 16.&nbsp;Oktober&nbsp;2026</div>
+    <div class="sub">Gültig ab 6.&nbsp;November&nbsp;2026</div>
   </div>
 
   <div class="card tldr" lang="de">
     <h2>Datenschutzerklärung</h2>
-    <p><strong>Kurzfassung: Alles bleibt auf deinem Gerät.</strong>
-    Zzzentinel hat keinen Server, keine Benutzerkonten, keine Werbung und keine Analyse. Der Entwickler
-    erhebt, überträgt und verarbeitet keinerlei Nutzerdaten.</p>
+    <p><strong>Kurzfassung: Aufnahmen und Analysen entstehen und bleiben auf deinem iPhone, und der Entwickler erhält nichts.</strong> Zzzentinel hat keinen Server, keine Benutzerkonten, keine Werbung, keine Analyse und kein Tracking in der App. Etwas verlässt das Telefon nur, wenn du es selbst teilst oder zustimmst, einen Clip zur Transkription an Apple zu senden (Erklärung weiter unten).</p>
+
+    <h3>Wer verantwortlich ist</h3>
+    <p>Zzzentinel stammt von MUDr. Ján Šikuta, einem Arzt. Kontakt: <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
 
     <h3>Was die App verarbeitet</h3>
     <ul>
-      <li><strong>Audioaufnahmen und Analysen</strong>: entstehen nur während einer Nachtwache, die du manuell
-        startest, und werden ausschließlich lokal im Speicher der App auf deinem Gerät abgelegt.</li>
-      <li><strong>Geräuscherkennung und das Training deines persönlichen Modells</strong>
-        (Core&nbsp;ML / Create&nbsp;ML) laufen vollständig auf dem Gerät. Dein Modell
-        <code>my_night.mlmodel</code> verlässt das Telefon nie.</li>
-      <li><strong>Bewegungssensoren</strong> (CoreMotion) werden nur ausgelesen, solange der Wächter aktiv ist,
-        um Bewegungen des Telefons zu erkennen; die Messwerte werden nirgends gespeichert.</li>
-      <li><strong>Das Mikrofon im Wächtermodus</strong>: solange der Wächter aktiv ist, verfolgt das Telefon die
-        Lautstärke der Geräusche in seiner Umgebung, damit auch erkannt wird, wenn sich jemand über das Telefon
-        beugt oder es anspricht. <strong>Dabei wird nichts aufgenommen</strong>: Gemessen wird nur der
-        momentane Geräuschpegel, der weder gespeichert noch übertragen wird. Das Auslösen durch Geräusche lässt
-        sich in den Einstellungen ausschalten.</li>
-      <li><strong>Die PIN des Wächters</strong> wird nur als kryptografischer Hash (SHA-256 mit Salt) lokal auf
-        dem Gerät gespeichert. Sie ist unabhängig vom Code zum Entsperren deines Telefons.</li>
-      <li><strong>Hinweise auf Atempausen</strong> werden lokal aus dem Zeitverlauf der Atemgeräusche in bereits
-        aufgezeichneten Ereignissen berechnet. Es sind keine Gesundheitsdaten, und sie werden nirgends
-        übertragen.</li>
+      <li><strong>Audioaufnahmen und Analysen</strong>: entstehen nur während einer Nacht, die du selbst mit <em>Nacht starten</em> beginnst, und bleiben im Speicher der App auf deinem iPhone.</li>
+      <li><strong>Geräuscherkennung und das Training deines eigenen Modells</strong> (Core&nbsp;ML / Create&nbsp;ML) laufen vollständig auf dem iPhone. Dein <code>my_night.mlmodel</code> bleibt dort, solange du es nicht exportierst.</li>
+      <li><strong>Atemfrequenz</strong>: Während der Nacht schätzt die App sie auf dem iPhone aus der Lautstärke am Mikrofon. Diese Schätzung ist immer an und speichert nur Zahlen und Zeitpunkte.</li>
+      <li><strong>Stille Phasen beim Atmen</strong>: Die Erkennung ist standardmäßig aus. Schaltest du sie ein, berechnet das iPhone sie aus dem Zeitverlauf der Atemgeräusche und speichert zu jeder Phase einen kurzen Clip bei dieser Nacht.</li>
+      <li><strong>Bewegungssensoren</strong> (CoreMotion) werden nur ausgelesen, solange der Wächter aktiv ist, um Bewegungen des Telefons zu erkennen; die Messwerte werden nirgends gespeichert.</li>
+      <li><strong>Das Mikrofon im Wächtermodus</strong>: Der Wächter braucht es die ganze Zeit, in der er aktiv ist. Gemessen wird nur der momentane Geräuschpegel. <strong>Es wird nichts aufgenommen</strong>, gespeichert oder gesendet. Mit einer Option in den Einstellungen lösen nur sehr laute Geräusche den Alarm aus.</li>
+      <li><strong>Die PIN des Wächters</strong> wird nur als Hash (SHA-256 mit Salt) im Schlüsselbund gespeichert, nur auf diesem Gerät, und ist nicht in Backups. Sie ist unabhängig vom Code zum Entsperren deines Telefons.</li>
     </ul>
 
+    <h3>Sprachtranskription</h3>
+    <p>Die Transkription des Sprechens im Schlaf läuft nur, wenn du sie anforderst, und sie läuft auf dem iPhone. Hat deine Sprache keine Unterstützung auf dem Gerät, fragt die App zuerst nach diesem einen Clip. Nur wenn du zustimmst, verarbeitet Apples Spracherkennung diesen Clip auf Apples Servern nach Apples Bedingungen. Sonst verlässt auf diesem Weg nichts dein Telefon.</p>
+
+    <h3>Apple Health</h3>
+    <p>Das Lesen aus Apple Health ist optional und standardmäßig aus. Schaltest du in den Einstellungen „Schlaf und Atmung aus Health“ ein, liest Zzzentinel Schlafphasen und Atemfrequenz für die Nächte, die es überwacht hat. Es liest sie nur: Sie werden bei dieser Nacht auf deinem iPhone gespeichert, in Health wird nie etwas geschrieben, und sie werden nicht an Breathune weitergegeben. Du kannst das Lesen jederzeit in den Einstellungen der App oder in den Health-Einstellungen ausschalten.</p>
+
     <h3>Apple Watch, Siri und Kurzbefehle</h3>
-    <p>Wenn du die begleitende Apple&nbsp;Watch-App nutzt, werden zwischen Uhr und iPhone ausschließlich der Status
-    des Wächters (aktiv/inaktiv) und die PIN ausgetauscht, die du beim Deaktivieren auf der Uhr eingibst. Die
-    Übertragung läuft über die verschlüsselte lokale Verbindung von Apple (WatchConnectivity) zwischen deinen
-    eigenen Geräten (nie über einen Server von uns) und die PIN wird nicht auf der Uhr gespeichert. Auch
-    Befehle über Siri und die Kurzbefehle-App werden nur lokal auf dem Gerät ausgeführt.</p>
+    <p>Wenn du die Apple&nbsp;Watch-App nutzt, werden zwischen Uhr und iPhone nur der Status des Wächters (aktiv oder inaktiv) und die PIN ausgetauscht, die du beim Deaktivieren auf der Uhr eingibst. Die Übertragung läuft über die verschlüsselte lokale Verbindung von Apple (WatchConnectivity) zwischen deinen eigenen Geräten, nie über einen Server von uns, und die PIN wird nicht auf der Uhr gespeichert. Befehle von Siri und Kurzbefehlen führt die App auf dem Gerät aus.</p>
 
     <h3>Verbindung mit der App Breathune</h3>
-    <p>Ist auf demselben iPhone auch Breathune (vom selben Autor) installiert, tauschen die beiden Apps über einen
-    gemeinsamen Ordner auf dem Gerät (eine App Group) kurze Zusammenfassungen der Nächte aus: Beginn und Ende,
-    Schnarchabschnitte (Zeitpunkt, Dauer, Lautstärke), die Anzahl weiterer Ereignisse, die Atemfrequenz und die
-    Gesamtschlafzeit. Von Breathune liest
-    Zzzentinel abgeschlossene Atemübungen (Name, Zeitpunkt, Länge), dessen Nacht-Score und die
-    durchschnittliche Herzfrequenz, wenn du diese Messung eingeschaltet hast. Beide Apps melden sich außerdem
-    gegenseitig, wenn sie gerade eine Nacht überwachen, damit sie nicht um das Mikrofon konkurrieren.
-    Aufnahmen, Sprachtranskripte oder sonstige Inhalte werden nicht geteilt, und nichts davon verlässt das
-    Gerät.</p>
+    <p>Das gilt nur, wenn Breathune (vom selben Autor) auf demselben iPhone installiert ist; sonst wird nichts geteilt. Die Verbindung nutzt einen gemeinsamen Ordner auf dem Gerät (eine App Group). Zzzentinel legt dort eine kurze Zusammenfassung abgeschlossener Nächte ab: Beginn und Ende, Zeitpunkte und Pegel des Schnarchens, die Anzahl der Geräuschkategorien, die vom Mikrofon geschätzte Atemfrequenz und wie viel der Nacht die Atmung hörbar war. Kein Ton und keine Sprache. In der anderen Richtung liest Zzzentinel die abendlichen Atemübungen, den Nacht-Score und die Herzfrequenz aus Breathune. Beide Apps melden sich außerdem, wenn sie gerade eine Nacht überwachen, damit sie nicht um das Mikrofon konkurrieren. Nichts davon verlässt über diese Verbindung das Telefon.</p>
 
-    <h3>Atemfrequenz und Apple Health</h3>
-    <p>Während einer Nachtwache schätzt Zzzentinel die Atemfrequenz auf dem Gerät aus der Lautstärke am
-    Mikrofon; gespeichert werden nur Zahlen und Zeitpunkte, nie Ton. Wenn du in den Einstellungen „Schlaf und
-    Atmung aus Health“ einschaltest, liest Zzzentinel die Schlafphasen und die Atemfrequenz, die deine Uhr in
-    der Health-App aufgezeichnet hat, für die Nächte, die es überwacht hat. Es liest sie nur, speichert sie zur
-    jeweiligen Nacht auf deinem Gerät und sendet sie nirgendwohin; in Health schreibt es nichts. Du kannst das
-    Lesen jederzeit in den Einstellungen der App oder in den Health-Einstellungen ausschalten.</p>
+    <h3>Was auf deinem iPhone bleibt, und wie lange</h3>
+    <p>Nächte, Trainingsbeispiele und trainierte Modelle bleiben auf deinem iPhone, bis du sie löschst. Für Nächte gibt es zusätzlich das optionale Limit <em>Nächte behalten</em> (7, 30 oder 90 Tage oder für immer, das ist die Voreinstellung). Die App fragt vor dem Löschen nach, und eine gelöschte Nacht lässt sich nicht wiederherstellen.</p>
 
-    <h3>Sprachtranskription</h3>
-    <p>Die Transkription des Sprechens im Schlaf nutzt das Speech-Framework von Apple und wird nur auf deine
-    ausdrückliche Anforderung hin ausgeführt. Ist die Erkennung auf dem Gerät verfügbar, erfolgt die
-    Verarbeitung lokal; andernfalls kann der ausgewählte Audioclip nach den Bedingungen von Apple auf Apples
-    Servern verarbeitet werden.</p>
+    <h3>Backups</h3>
+    <p>Nachtaufnahmen, Trainingsbeispiele, trainierte Modelle und die mit Breathune geteilten Zusammenfassungen sind von iCloud- und Computer-Backups ausgeschlossen. Normale Einstellungen können im Geräte-Backup enthalten sein. Beim Wechsel auf ein neues iPhone kommen deine Nächte also nicht mit. Um sie zu behalten, nutze den ZIP-Export in den Einstellungen oder im Menü Export einer Nacht. Die App kann Nächte nicht aus einem ZIP importieren.</p>
 
-    <h3>Weitergabe von Daten</h3>
-    <p>Keine Daten verlassen das Gerät, es sei denn, du exportierst sie selbst über das Teilen-Menü des Systems -
-    zum Beispiel das Transkript einer Nacht, eine einzelne oder zusammengefügte Aufnahme, das Archiv einer
-    ganzen Nacht (.zip mit Aufnahmen, Transkript und der Ereignistabelle <code>events.csv</code>
-    einschließlich deiner Bestätigungen), die „Zusammenfassung für Ärzte“ (PDF mit Aufnahmen rund um die
-    längsten Atempausen) oder dein trainiertes Modell. In diesem Fall entscheidest du über das Ziel. Beim
-    Löschen der App werden alle ihre Daten vom Gerät entfernt.</p>
+    <h3>Die Dateien-App</h3>
+    <p>Aufnahmen lassen sich auch in der Dateien-App öffnen, von allen, die dein iPhone entsperren können. <strong>Die PIN des Wächters schützt sie nicht.</strong></p>
 
-    <h3>Kinder und sensible Inhalte</h3>
-    <p>Die App erhebt keine Daten und verarbeitet daher auch keine Daten von Kindern. Bitte beachte, dass
-    nächtliche Aufnahmen sensible Inhalte erfassen können, darunter die Stimmen anderer Personen im Raum -
-    geh mit Exporten deshalb überlegt um und respektiere die Privatsphäre anderer.</p>
+    <h3>Teilen und Export</h3>
+    <p>Abgesehen von der oben beschriebenen Transkription verlassen Daten das iPhone nur, wenn du sie selbst über das Teilen-Menü des Systems exportierst, zum Beispiel ein Protokoll als reinen Text, eine einzelne oder zusammengefügte Aufnahme, das ZIP einer Nacht oder aller Nächte (Aufnahmen, Protokoll und die Tabelle <code>events.csv</code> einschließlich deiner Bestätigungen), die „Zusammenfassung für den Arzt“ (PDF mit Aufnahmen rund um die längsten stillen Phasen) oder dein trainiertes Modell. Über das Ziel entscheidest dann du.</p>
+
+    <h3>Deinstallieren</h3>
+    <p>Beim Löschen von Zzzentinel werden seine Daten vom iPhone entfernt, nur der gemeinsame Ordner mit den Zusammenfassungen bleibt auf dem Telefon, bis auch Breathune entfernt wird. Dateien, die du zuvor exportiert hast, sind nicht betroffen.</p>
+
+    <h3>Deine Rechte</h3>
+    <p>Der Entwickler hat keine Aufnahmen, Auskunft und Löschung finden also auf deinem Telefon statt: Exportiere, was du möchtest, lösche Nächte oder entferne die App. Wenn du dem Support schreibst, sehe ich deine E-Mail-Adresse und deine Nachricht, und ich bewahre sie nur so lange auf, wie es für die Antwort nötig ist. Du kannst unter <a href="mailto:admin@breathune.eu">admin@breathune.eu</a> danach fragen oder ihre Löschung verlangen. Du kannst dich auch bei deiner Datenschutzbehörde beschweren.</p>
+
+    <h3>Diese Website</h3>
+    <p>Die Website hat einen anonymen Besuchszähler. Er existiert nur auf der Website, in der App gibt es nichts dergleichen. Er verwendet keine Cookies und keine Kennungen: Beginnt ein Besuch, bittet dein Browser den Zähldienst <code>abacus.jasoncameron.dev</code>, den Tages- und den Gesamtzähler um eins zu erhöhen. Dieser Dienst sieht eine normale Webanfrage einschließlich deiner IP-Adresse, wie jeder Webserver. Die Website selbst liegt bei GitHub Pages, das ebenfalls normale Webanfragen sieht. Dein Browser merkt sich deine Sprachwahl und dass dieser Besuch schon gezählt wurde, nur in seinem eigenen Speicher auf deinem Gerät.</p>
+
+    <h3>Andere Menschen im Zimmer und Kinder</h3>
+    <p>Wenn noch jemand im Zimmer schläft, sag es dieser Person zuerst. Zzzentinel kann auch ihre Stimme aufnehmen und nicht unterscheiden, wer schnarcht. Nächtliche Aufnahmen können sensible Inhalte erfassen, geh mit Exporten deshalb überlegt um und respektiere die Privatsphäre anderer. Der Entwickler erhält aus der App keine Daten, also auch keine Daten von Kindern.</p>
 
     <h3>Gesundheitsinformationen</h3>
-    <p>Zzzentinel ist <strong>kein Medizinprodukt</strong>. Hinweise auf „Atempausen“ sind eine orientierende
-    Heuristik, keine Diagnose, und ersetzen keine ärztliche Untersuchung.</p>
+    <p>Zzzentinel ist <strong>kein Medizinprodukt</strong>. Die Erkennung stiller Phasen beim Atmen ist experimentell: Die App hört nur Geräusche, eine stille Phase kann einfach leises Atmen sein, das das Telefon nicht erfasst hat, und kein Ergebnis schließt etwas aus. Sie ist keine Diagnose und kein Apnoe-Screening und ersetzt keine ärztliche Untersuchung.</p>
 
     <h3>Änderungen dieser Erklärung</h3>
-    <p>Etwaige Änderungen veröffentlichen wir auf dieser Seite zusammen mit einem neuen Datum des
-    Inkrafttretens.</p>
+    <p>Etwaige Änderungen veröffentlichen wir auf dieser Seite zusammen mit einem neuen Datum des Inkrafttretens.</p>
   </div>
 
 </div>

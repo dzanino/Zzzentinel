@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zzzentinel: Wsparcie</title>
-<meta name="description" content="Wsparcie i FAQ Zzzentinel: nagrywanie w tle, bateria, własne dźwięki, przerwy w oddychaniu, podsumowanie dla lekarza, Apple Watch, PIN i dane.">
+<meta name="description" content="Wsparcie i FAQ Zzzentinel: nagrywanie przy zablokowanym ekranie, rozmowy telefoniczne, miejsce w pamięci, własne dźwięki, ciche odcinki oddechu, podsumowanie dla lekarza, Apple Watch, PIN i dane.">
 <link rel="apple-touch-icon" href="../favicon.png?v=20261016">
 <link rel="icon" href="../favicon.png?v=20261016">
 <link rel="stylesheet" href="../style.css">
@@ -13,7 +13,7 @@
 <meta name="apple-itunes-app" content="app-id=6804132664">
 <meta property="og:site_name" content="Zzzentinel">
 <meta property="og:title" content="Zzzentinel: Wsparcie">
-<meta property="og:description" content="Wsparcie i FAQ Zzzentinel: nagrywanie w tle, bateria, własne dźwięki, przerwy w oddychaniu, podsumowanie dla lekarza, Apple Watch, PIN i dane.">
+<meta property="og:description" content="Wsparcie i FAQ Zzzentinel: nagrywanie przy zablokowanym ekranie, rozmowy telefoniczne, miejsce w pamięci, własne dźwięki, ciche odcinki oddechu, podsumowanie dla lekarza, Apple Watch, PIN i dane.">
 <meta property="og:image" content="https://dzanino.github.io/Zzzentinel/img/og/zzzentinel.png?v=20261020">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -35,6 +35,167 @@
 <link rel="alternate" hreflang="pt-BR" href="https://dzanino.github.io/Zzzentinel/pt/support.html">
 <link rel="alternate" hreflang="x-default" href="https://dzanino.github.io/Zzzentinel/support.html">
 <!--HREFLANG:end-->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "pl",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Czy nagrywa także przy zablokowanym ekranie?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak. Po stuknięciu Rozpocznij noc nagrywanie trwa w tle i przy zablokowanym telefonie. Ekran sam się przyciemnia minutę po ostatnim dotknięciu (można to wyłączyć w Ustawieniach), a Przyciemnij ekran robi to od razu: wyświetlacz jest niemal czarny i widać tylko przyciemniony zegar. Na noc zalecamy podłączyć telefon do ładowarki, a aplikacja ostrzega, gdy nie jest podłączony. Noc zapisuje się co minutę. Zapomniana noc kończy się sama po 16 godzinach, a przy 3 procentach baterii bez ładowarki kończy się prawidłowo."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Co się stanie, gdy rozmowa telefoniczna przerwie noc?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Rozmowa telefoniczna przerywa nagrywanie. Aplikacja zapisuje to, co ma, po rozmowie próbuje wznowić nagrywanie i daje ci znać, jeśli przestała słuchać. Poranny raport mówi, jak długo mikrofon był przerwany albo kiedy nagrywanie niespodziewanie się zatrzymało. Dźwięk z innych aplikacji, na przykład podcast lub biały szum, już nie przerywa nocy, ale mikrofon też go słyszy."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Ile baterii i miejsca to zużywa?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Analiza jest oszczędna, a zapisywane są tylko klipy wychwyconych dźwięków, nie cała noc. Klipy zajmują około 30 MB na godzinę nagranego dźwięku, więc typowa noc zajmuje od kilku MB do około 100 MB, a przy stałym hałasie, na przykład z wentylatora, więcej. Opcjonalny limit Przechowuj noce w Ustawieniach (7, 30 lub 90 dni albo na zawsze) usuwa starsze noce i najpierw prosi o potwierdzenie. Gdy aplikacja działa w tle lub ekran jest przyciemniony, przestaje odświeżać wskaźniki, co oszczędza energię. Na ładowarce zużycie baterii ma niewielkie znaczenie."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy jest subskrypcja?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Zzzentinel to jednorazowy zakup w App Store: bez subskrypcji, bez zakupów w aplikacji, bez reklam i bez konta."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czym jest „nieokreślony dźwięk”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "To głośny dźwięk, którego klasyfikator nie umiał nazwać. Odtwórz klip, stuknij Nazwij dźwięk i nadaj mu nazwę. Po mniej więcej pięciu próbkach w Ustawienia → Trening moich dźwięków wytrenujesz swój model my_night.mlmodel prosto w telefonie, a następnym razem aplikacja rozpozna ten dźwięk po nazwie."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Trening mi nie działa.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Model potrzebuje co najmniej dwóch klas dźwięków. Jeśli masz na razie tylko jeden własny dźwięk, aplikacja sama utworzy klasę „inne” z klipów innych zdarzeń, więc najpierw nagraj co najmniej jedną noc z kilkoma wychwyconymi dźwiękami. Dla wiarygodnych wyników zbierz około pięciu próbek każdego dźwięku."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy „ciche odcinki oddechu” to diagnoza bezdechu sennego?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Wykrywanie jest domyślnie wyłączone i eksperymentalne: włączasz je w Ustawienia → Ciche odcinki oddechu (eksperymentalne). Liczy ciszę trwającą od 10 do 60 sekund w dźwiękach oddechu, a próg możesz obniżyć do 6 sekund. Raport mówi, kiedy wykrywanie było wyłączone, i nigdy nie twierdzi, że oddychałeś prawidłowo. Aplikacja słyszy tylko dźwięk: mikrofon nie mierzy przepływu powietrza ani tlenu, cichy odcinek może być po prostu cichym oddechem, którego telefon nie wychwycił, a żaden wynik niczego nie wyklucza. To nie jest wyrób medyczny, diagnoza ani badanie przesiewowe w kierunku bezdechu. Jeśli coś cię niepokoi, porozmawiaj z lekarzem niezależnie od tego, co pokazuje raport. Częstość oddechu szacowana z głośności jest zawsze włączona, tylko jako liczby."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czym jest „Podsumowanie dla lekarza”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "W zakończonej nocy otwórz Eksport → Podsumowanie dla lekarza. Aplikacja tworzy PDF (chrapanie, słyszalny oddech, lista cichych odcinków, jeśli wykrywanie było włączone, i sekcja „Metoda i ograniczenia”) oraz dodaje nagrania wokół trzech najdłuższych cichych odcinków. Aplikacja sama niczego z tego nie wysyła: pliki udostępniasz ty. To dokument do pokazania lekarzowi, a nie produkt kliniczny ani diagnoza. W tym samym menu wyeksportujesz całą noc jako ZIP lub zapis jako zwykły tekst, a w Ustawieniach wszystkie noce."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy Zzzentinel został oceniony w badaniu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Żadne niezależne badanie jeszcze go nie oceniło, dlatego nie podajemy danych o jego dokładności. Specjaliści, którzy chcieliby go porównać, mogą napisać na admin@breathune.eu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czym jest „Do potwierdzenia”?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Dźwięki, które aplikacja usłyszała po raz pierwszy albo nie jest ich pewna, podsuwa ci do odsłuchania w porannym raporcie. Zgadza się uczy ją, że trafiła; Popraw daje jej właściwą nazwę i nową próbkę treningową. O każdy dźwięk pyta najwyżej dwa razy na noc, a po trzech potwierdzeniach mu ufa. Propozycja nigdy sama nie zmienia się w fakt."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jak sterować strażnikiem z Apple Watch?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Aplikacja na zegarek instaluje się automatycznie razem z aplikacją na iPhone’a. Na zegarku stuknij Włącz: strażnik włączy się incognito, a ekran telefonu pozostanie ciemny. Wyłączasz go klawiaturą PIN-u na zegarku. Wyłączenie zawsze wymaga PIN-u, a po 5 błędnych próbach trzeba poczekać 30 sekund. Zdalne włączenie działa tylko wtedy, gdy iOS pozwala Zzzentinelowi użyć mikrofonu; w przeciwnym razie zegarek lub Siri poprosi o otwarcie aplikacji. Jeśli telefon jest poza zasięgiem, polecenie czeka, a strażnik włączy się, gdy urządzenia połączą się w ciągu mniej więcej dziesięciu minut. Tak samo działają Siri („Uzbrój Zzzentinel”), widżet Skróty i Stuknięcie w tył. Zegarek steruje tylko strażnikiem, nie nocą."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jak przenieść swoje dźwięki na inny telefon?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "W Ustawienia → Trening moich dźwięków → Przenoszenie próbek stuknij Eksportuj wszystkie próbki (.zip) i zapisz plik (Pliki, AirDrop, iCloud). Na drugim urządzeniu rozpakuj archiwum i przez Importuj próbki z Plików wybieraj nagrania jednego dźwięku naraz, podając jego nazwę. Wytrenowany model przeniesiesz przez Eksportuj my_night.mlmodel i Importuj model (.mlmodel). Nagrania i wytrenowane modele znajdziesz też w aplikacji Pliki → Na moim iPhonie → Zzzentinel."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy moje noce przejdą na nowego iPhone’a?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Nocne nagrania, próbki treningowe, wytrenowane modele i podsumowania udostępniane Breathune są wyłączone z kopii zapasowych iCloud i na komputerze; zwykłe ustawienia mogą się w nich znaleźć. Aby zachować noce, wyeksportuj je do ZIP przed przesiadką: Ustawienia → Eksportuj wszystkie noce (.zip) albo jedną noc z jej menu Eksport. ZIP to twoje archiwum, bo aplikacja nie potrafi importować nocy z pliku ZIP."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Zapomniałem PIN-u strażnika.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nigdy nie instaluj aplikacji ponownie: usunęłoby to wszystkie twoje noce, bo nie ma ich w żadnej kopii zapasowej. Zamknij Zzzentinel całkowicie w przełączniku aplikacji (przesuń ją w górę), otwórz ponownie i przejdź do Strażnik → Zmień PIN. Nic nie przepadnie."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Dlaczego strażnik potrzebuje mikrofonu i co słyszy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Włączony strażnik pilnuje ruchu i nasłuchuje poziomu dźwięku wokół telefonu, dlatego potrzebuje mikrofonu przez cały czas, gdy jest włączony. Mierzony jest tylko poziom dźwięku i nic nie jest nagrywane. We wspólnym pokoju lub akademiku włącz w Ustawieniach Alarm włączają tylko bardzo głośne dźwięki."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy strażnik chroni telefon przed kradzieżą?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. To odstrasza, ale nie chroni przed kradzieżą. Ruch lub dźwięk wokół telefonu bez podania PIN-u uruchamia głośną syrenę i miganie, ale przyciski głośności lub wyłączenie telefonu go uciszają."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Alarm miga, a mam wrażliwość na migające światło.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Ekran i latarka migają mniej niż trzy razy na sekundę, czyli poniżej progu, który wytyczne uznają za ryzykowny. Miganie jest pomijane automatycznie, gdy włączone jest „Ogranicz ruch”, i można je wyłączyć w Ustawienia → Guard Extra Plus → Miganie podczas alarmu. Syrena nadal działa."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Alarm nie jest wystarczająco głośny.",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Przed włączeniem strażnika zwiększ głośność, a aplikacja ostrzeże cię, gdy jest niska. Syrena gra zawsze przez głośnik, nie przez słuchawki, nawet przy wyciszonym przełączniku dzwonka. Milknie sama po 5 minutach, a przyciski głośności ją uciszają."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Gdzie są moje dane i jak je usunąć?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Na twoim iPhonie, a twórca aplikacji nic nie otrzymuje. Przesuń w lewo, aby usunąć noc w Moje noce lub dźwięk w Trening moich dźwięków; aplikacja prosi o potwierdzenie, a usuniętej nocy nie da się przywrócić. Limit Przechowuj noce usuwa starsze noce po potwierdzeniu. Odinstalowanie Zzzentinel usuwa jego dane, z wyjątkiem wspólnego folderu z podsumowaniami, który zostaje na telefonie, dopóki nie usuniesz także Breathune. Nagrania można też otworzyć w aplikacji Pliki, każdy, kto potrafi odblokować twojego iPhone’a: PIN strażnika ich nie chroni."
+   }
+  }
+ ]
+}
+</script>
 <link rel="me" href="https://orcid.org/0000-0002-4690-0317">
 </head>
 <body>
@@ -67,82 +228,102 @@
     <a class="btn" href="mailto:admin@breathune.eu?subject=Zzzentinel%20support">admin@breathune.eu</a>
   </div>
 
-  <div class="card">
-    <h2>Najczęstsze pytania</h2>
+  <div class="card" lang="pl">
+    <h2>Częste pytania</h2>
 
     <details>
       <summary>Czy nagrywa także przy zablokowanym ekranie?</summary>
-      <p>Tak. Po włączeniu nocnego czuwania nagrywanie trwa w tle i przy zablokowanym telefonie. Użyj <em>Przyciemnij ekran</em>, aby zostawić aplikację otwartą z niemal czarnym wyświetlaczem, na którym widać tylko przyciemniony zegar. Na noc zalecamy podłączyć telefon do ładowarki.</p>
+      <p>Tak. Po stuknięciu <em>Rozpocznij noc</em> nagrywanie trwa w tle i przy zablokowanym telefonie. Ekran sam się przyciemnia minutę po ostatnim dotknięciu (można to wyłączyć w Ustawieniach), a <em>Przyciemnij ekran</em> robi to od razu: wyświetlacz jest niemal czarny i widać tylko przyciemniony zegar. Na noc zalecamy podłączyć telefon do ładowarki, a aplikacja ostrzega, gdy nie jest podłączony. Noc zapisuje się co minutę. Zapomniana noc kończy się sama po 16 godzinach, a przy 3 procentach baterii bez ładowarki kończy się prawidłowo.</p>
     </details>
 
     <details>
-      <summary>Ile baterii i miejsca to zajmuje?</summary>
-      <p>Analiza jest oszczędna i zapisywane są tylko krótkie nagrania zdarzeń, a nie cała noc: typowa noc zajmuje kilka MB. Gdy aplikacja jest w tle albo ekran jest przyciemniony, przestaje odświeżać wskaźniki, co dodatkowo oszczędza energię.</p>
+      <summary>Co się stanie, gdy rozmowa telefoniczna przerwie noc?</summary>
+      <p>Rozmowa telefoniczna przerywa nagrywanie. Aplikacja zapisuje to, co ma, po rozmowie próbuje wznowić nagrywanie i daje ci znać, jeśli przestała słuchać. Poranny raport mówi, jak długo mikrofon był przerwany albo kiedy nagrywanie niespodziewanie się zatrzymało. Dźwięk z innych aplikacji, na przykład podcast lub biały szum, już nie przerywa nocy, ale mikrofon też go słyszy.</p>
+    </details>
+
+    <details>
+      <summary>Ile baterii i miejsca to zużywa?</summary>
+      <p>Analiza jest oszczędna, a zapisywane są tylko klipy wychwyconych dźwięków, nie cała noc. Klipy zajmują około 30 MB na godzinę nagranego dźwięku, więc typowa noc zajmuje od kilku MB do około 100 MB, a przy stałym hałasie, na przykład z wentylatora, więcej. Opcjonalny limit <em>Przechowuj noce</em> w Ustawieniach (7, 30 lub 90 dni albo na zawsze) usuwa starsze noce i najpierw prosi o potwierdzenie. Gdy aplikacja działa w tle lub ekran jest przyciemniony, przestaje odświeżać wskaźniki, co oszczędza energię. Na ładowarce zużycie baterii ma niewielkie znaczenie.</p>
+    </details>
+
+    <details>
+      <summary>Czy jest subskrypcja?</summary>
+      <p>Nie. Zzzentinel to jednorazowy zakup w App Store: bez subskrypcji, bez zakupów w aplikacji, bez reklam i bez konta.</p>
     </details>
 
     <details>
       <summary>Czym jest „nieokreślony dźwięk”?</summary>
-      <p>To głośny dźwięk, którego klasyfikator nie umiał nazwać. Odtwórz nagranie, stuknij <em>Nazwij dźwięk</em> i nadaj mu nazwę. Po mniej więcej pięciu próbkach w Ustawieniach wytrenujesz swój osobisty <code>my_night.mlmodel</code> · prosto w telefonie.</p>
+      <p>To głośny dźwięk, którego klasyfikator nie umiał nazwać. Odtwórz klip, stuknij <em>Nazwij dźwięk</em> i nadaj mu nazwę. Po mniej więcej pięciu próbkach w <em>Ustawienia → Trening moich dźwięków</em> wytrenujesz swój model <code>my_night.mlmodel</code> prosto w telefonie, a następnym razem aplikacja rozpozna ten dźwięk po nazwie.</p>
     </details>
 
     <details>
-      <summary>Trening nie działa.</summary>
-      <p>Trening wymaga prawdziwego iPhone’a: Create&nbsp;ML nie jest dostępny w Symulatorze. Potrzebujesz też co najmniej dwóch klas dźwięków; przy jednej aplikacja sama zbuduje klasę „inne” z pozostałych nagranych klipów, więc najpierw nagraj przynajmniej jedną noc.</p>
+      <summary>Trening mi nie działa.</summary>
+      <p>Model potrzebuje co najmniej dwóch klas dźwięków. Jeśli masz na razie tylko jeden własny dźwięk, aplikacja sama utworzy klasę „inne” z klipów innych zdarzeń, więc najpierw nagraj co najmniej jedną noc z kilkoma wychwyconymi dźwiękami. Dla wiarygodnych wyników zbierz około pięciu próbek każdego dźwięku.</p>
     </details>
 
     <details>
-      <summary>Czy „przerwy w oddychaniu” to diagnoza bezdechu sennego?</summary>
-      <p>Nie. Aplikacja szuka dłuższej ciszy między odcinkami słyszalnego oddychania: mikrofon nie mierzy ani przepływu powietrza, ani tlenu, więc nie odróżni cichego oddechu od jego zatrzymania. To orientacyjna heurystyka, a Zzzentinel nie jest wyrobem medycznym. Jeśli przerwy się powtarzają, wspomnij o nich lekarzowi: pomoże w tym Podsumowanie dla lekarza.</p>
+      <summary>Czy „ciche odcinki oddechu” to diagnoza bezdechu sennego?</summary>
+      <p>Nie. Wykrywanie jest domyślnie wyłączone i eksperymentalne: włączasz je w <em>Ustawienia → Ciche odcinki oddechu (eksperymentalne)</em>. Liczy ciszę trwającą od 10 do 60 sekund w dźwiękach oddechu, a próg możesz obniżyć do 6 sekund. Raport mówi, kiedy wykrywanie było wyłączone, i nigdy nie twierdzi, że oddychałeś prawidłowo. Aplikacja słyszy tylko dźwięk: mikrofon nie mierzy przepływu powietrza ani tlenu, cichy odcinek może być po prostu cichym oddechem, którego telefon nie wychwycił, a żaden wynik niczego nie wyklucza. To nie jest wyrób medyczny, diagnoza ani badanie przesiewowe w kierunku bezdechu. Jeśli coś cię niepokoi, porozmawiaj z lekarzem niezależnie od tego, co pokazuje raport. Częstość oddechu szacowana z głośności jest zawsze włączona, tylko jako liczby.</p>
     </details>
 
     <details>
       <summary>Czym jest „Podsumowanie dla lekarza”?</summary>
-      <p>W szczegółach zakończonej nocy → Udostępnij → Podsumowanie dla lekarza aplikacja tworzy PDF z fachowo sformułowanym przeglądem (chrapanie, słyszalny oddech, lista przerw, sekcja „Metoda i ograniczenia”) oraz nagrania otaczające trzy najdłuższe przerwy. Nic nie jest wysyłane: to ty decydujesz, komu udostępnisz pliki. To nie jest diagnoza; to materiał do rozmowy z lekarzem.</p>
+      <p>W zakończonej nocy otwórz <em>Eksport → Podsumowanie dla lekarza</em>. Aplikacja tworzy PDF (chrapanie, słyszalny oddech, lista cichych odcinków, jeśli wykrywanie było włączone, i sekcja „Metoda i ograniczenia”) oraz dodaje nagrania wokół trzech najdłuższych cichych odcinków. Aplikacja sama niczego z tego nie wysyła: pliki udostępniasz ty. To dokument do pokazania lekarzowi, a nie produkt kliniczny ani diagnoza. W tym samym menu wyeksportujesz całą noc jako ZIP lub zapis jako zwykły tekst, a w Ustawieniach wszystkie noce.</p>
+    </details>
+
+    <details>
+      <summary>Czy Zzzentinel został oceniony w badaniu?</summary>
+      <p>Nie. Żadne niezależne badanie jeszcze go nie oceniło, dlatego nie podajemy danych o jego dokładności. Specjaliści, którzy chcieliby go porównać, mogą napisać na <a href="mailto:admin@breathune.eu">admin@breathune.eu</a>.</p>
     </details>
 
     <details>
       <summary>Czym jest „Do potwierdzenia”?</summary>
-      <p>Dźwięki, które aplikacja usłyszała po raz pierwszy albo nie jest ich pewna, podsuwa ci do odsłuchania w porannym raporcie. <em>Zgadza się</em> uczy ją, że trafiła; <em>Popraw</em> daje jej właściwą nazwę i nową próbkę treningową. O każdy dźwięk pyta najwyżej dwa razy na noc, a po trzech potwierdzeniach mu ufa. Propozycja nigdy sama nie zmienia się w fakt. Automatyczne sugestie dźwięków, do których wbudowany mechanizm rozpoznawania nie ma nazwy, wyłączysz w Ustawienia → Sugestie dźwięków.</p>
+      <p>Dźwięki, które aplikacja usłyszała po raz pierwszy albo nie jest ich pewna, podsuwa ci do odsłuchania w porannym raporcie. <em>Zgadza się</em> uczy ją, że trafiła; <em>Popraw</em> daje jej właściwą nazwę i nową próbkę treningową. O każdy dźwięk pyta najwyżej dwa razy na noc, a po trzech potwierdzeniach mu ufa. Propozycja nigdy sama nie zmienia się w fakt.</p>
     </details>
 
     <details>
       <summary>Jak sterować strażnikiem z Apple Watch?</summary>
-      <p>Aplikacja na zegarek instaluje się automatycznie razem z aplikacją na iPhone’a. Na zegarku stuknij <em>Włącz</em>: strażnik włączy się incognito, ekran telefonu pozostanie ciemny. Wyłączasz go klawiaturą PIN-u na zegarku. Jeśli telefon jest poza zasięgiem, polecenie włączenia trafia do kolejki i wykona się, gdy urządzenia się połączą. Tak samo działają Siri („Arm Zzzentinel”), widżet Skrótów i Stuknięcie z tyłu.</p>
+      <p>Aplikacja na zegarek instaluje się automatycznie razem z aplikacją na iPhone’a. Na zegarku stuknij <em>Włącz</em>: strażnik włączy się incognito, a ekran telefonu pozostanie ciemny. Wyłączasz go klawiaturą PIN-u na zegarku. Wyłączenie zawsze wymaga PIN-u, a po 5 błędnych próbach trzeba poczekać 30 sekund. Zdalne włączenie działa tylko wtedy, gdy iOS pozwala Zzzentinelowi użyć mikrofonu; w przeciwnym razie zegarek lub Siri poprosi o otwarcie aplikacji. Jeśli telefon jest poza zasięgiem, polecenie czeka, a strażnik włączy się, gdy urządzenia połączą się w ciągu mniej więcej dziesięciu minut. Tak samo działają Siri („Uzbrój Zzzentinel”), widżet Skróty i Stuknięcie w tył. Zegarek steruje tylko strażnikiem, nie nocą.</p>
     </details>
 
     <details>
-      <summary>Jak przenieść swoje dźwięki na inny telefon albo z innej aplikacji?</summary>
-      <p>W <em>Ustawienia → Trening moich dźwięków → Przenoszenie próbek</em> stuknij <em>Eksportuj wszystkie próbki (.zip)</em> i zapisz plik (Pliki, AirDrop, iCloud). Na drugim urządzeniu rozpakuj archiwum i przez <em>Importuj próbki z Plików</em> wybieraj nagrania jednego dźwięku naraz, podając jego nazwę. Wytrenowany model przeniesiesz przez <em>Eksportuj my_night.mlmodel</em> i <em>Importuj model (.mlmodel)</em>. Wszystkie dane aplikacji znajdziesz też w aplikacji Pliki → <em>Na moim iPhonie → Zzzentinel</em>.</p>
+      <summary>Jak przenieść swoje dźwięki na inny telefon?</summary>
+      <p>W <em>Ustawienia → Trening moich dźwięków → Przenoszenie próbek</em> stuknij <em>Eksportuj wszystkie próbki (.zip)</em> i zapisz plik (Pliki, AirDrop, iCloud). Na drugim urządzeniu rozpakuj archiwum i przez <em>Importuj próbki z Plików</em> wybieraj nagrania jednego dźwięku naraz, podając jego nazwę. Wytrenowany model przeniesiesz przez <em>Eksportuj my_night.mlmodel</em> i <em>Importuj model (.mlmodel)</em>. Nagrania i wytrenowane modele znajdziesz też w aplikacji Pliki → <em>Na moim iPhonie → Zzzentinel</em>.</p>
     </details>
 
     <details>
-      <summary>Przenoszę dane ze starszej wersji o innej nazwie.</summary>
-      <p>iOS traktuje aplikację o zmienionej nazwie jak osobną, więc dane nie przenoszą się automatycznie. W starej aplikacji użyj jej przycisków eksportu (model albo pojedyncze nagrania przez Udostępnij), zapisz je w Plikach i zaimportuj w Zzzentinel. Starą aplikację odinstaluj dopiero po sprawdzeniu, że import się udał: odinstalowanie usuwa jej dane bezpowrotnie.</p>
+      <summary>Czy moje noce przejdą na nowego iPhone’a?</summary>
+      <p>Nie. Nocne nagrania, próbki treningowe, wytrenowane modele i podsumowania udostępniane Breathune są wyłączone z kopii zapasowych iCloud i na komputerze; zwykłe ustawienia mogą się w nich znaleźć. Aby zachować noce, wyeksportuj je do ZIP przed przesiadką: <em>Ustawienia → Eksportuj wszystkie noce (.zip)</em> albo jedną noc z jej menu <em>Eksport</em>. ZIP to twoje archiwum, bo aplikacja nie potrafi importować nocy z pliku ZIP.</p>
     </details>
 
     <details>
-      <summary>Nie pamiętam PIN-u strażnika.</summary>
-      <p>Jeśli strażnik jest wyłączony, zmienisz PIN w <em>Strażnik → Zmień PIN</em>. Jeśli jest włączony, a PIN przepadł, jedyną drogą jest ponowna instalacja aplikacji: dane nocy na urządzeniu zostaną wtedy usunięte, więc wcześniej je wyeksportuj.</p>
+      <summary>Zapomniałem PIN-u strażnika.</summary>
+      <p>Nigdy nie instaluj aplikacji ponownie: usunęłoby to wszystkie twoje noce, bo nie ma ich w żadnej kopii zapasowej. Zamknij Zzzentinel całkowicie w przełączniku aplikacji (przesuń ją w górę), otwórz ponownie i przejdź do <em>Strażnik → Zmień PIN</em>. Nic nie przepadnie.</p>
     </details>
 
     <details>
-      <summary>Po co strażnikowi mikrofon i co słyszy?</summary>
-      <p>Włączony strażnik pilnuje ruchu <em>i</em> śledzi głośność dźwięków wokół telefonu: ludzie często pochylają się nad telefonem albo coś do niego mówią, zanim go poruszą. Nic nie jest nagrywane; mierzony jest tylko chwilowy poziom dźwięku. We wspólnym pokoju wyłącz w Ustawieniach <em>Dźwięk też uruchamia alarm</em>, a alarm uruchomi tylko ruch.</p>
+      <summary>Dlaczego strażnik potrzebuje mikrofonu i co słyszy?</summary>
+      <p>Włączony strażnik pilnuje ruchu <em>i</em> nasłuchuje poziomu dźwięku wokół telefonu, dlatego potrzebuje mikrofonu przez cały czas, gdy jest włączony. Mierzony jest tylko poziom dźwięku i nic nie jest nagrywane. We wspólnym pokoju lub akademiku włącz w Ustawieniach <em>Alarm włączają tylko bardzo głośne dźwięki</em>.</p>
+    </details>
+
+    <details>
+      <summary>Czy strażnik chroni telefon przed kradzieżą?</summary>
+      <p>Nie. To odstrasza, ale nie chroni przed kradzieżą. Ruch lub dźwięk wokół telefonu bez podania PIN-u uruchamia głośną syrenę i miganie, ale przyciski głośności lub wyłączenie telefonu go uciszają.</p>
     </details>
 
     <details>
       <summary>Alarm miga, a mam wrażliwość na migające światło.</summary>
-      <p>Ekran miga dwa razy na sekundę, a latarka 2,5 raza: obie wartości są poniżej progu, który wytyczne uznają za ryzykowny. Miganie jest pomijane automatycznie, gdy włączone jest „Ogranicz ruch”, i można je wyłączyć w Ustawienia → Guard Extra Plus. Syrena nadal działa.</p>
+      <p>Ekran i latarka migają mniej niż trzy razy na sekundę, czyli poniżej progu, który wytyczne uznają za ryzykowny. Miganie jest pomijane automatycznie, gdy włączone jest „Ogranicz ruch”, i można je wyłączyć w <em>Ustawienia → Guard Extra Plus → Miganie podczas alarmu</em>. Syrena nadal działa.</p>
     </details>
 
     <details>
       <summary>Alarm nie jest wystarczająco głośny.</summary>
-      <p>Przed włączeniem strażnika ustaw głośność multimediów na maksimum i wyłącz tryb Nie przeszkadzać. Alarm gra przez głośnik nawet przy wyciszonym przełączniku dzwonka.</p>
+      <p>Przed włączeniem strażnika zwiększ głośność, a aplikacja ostrzeże cię, gdy jest niska. Syrena gra zawsze przez głośnik, nie przez słuchawki, nawet przy wyciszonym przełączniku dzwonka. Milknie sama po 5 minutach, a przyciski głośności ją uciszają.</p>
     </details>
 
     <details>
       <summary>Gdzie są moje dane i jak je usunąć?</summary>
-      <p>Wszystko jest zapisane tylko w telefonie. Pojedynczą noc usuniesz, przesuwając w lewo na liście <em>Moje noce</em>, a wytrenowany dźwięk · w <em>Treningu moich dźwięków</em>. Odinstalowanie aplikacji usuwa wszystko.</p>
+      <p>Na twoim iPhonie, a twórca aplikacji nic nie otrzymuje. Przesuń w lewo, aby usunąć noc w <em>Moje noce</em> lub dźwięk w <em>Trening moich dźwięków</em>; aplikacja prosi o potwierdzenie, a usuniętej nocy nie da się przywrócić. Limit <em>Przechowuj noce</em> usuwa starsze noce po potwierdzeniu. Odinstalowanie Zzzentinel usuwa jego dane, z wyjątkiem wspólnego folderu z podsumowaniami, który zostaje na telefonie, dopóki nie usuniesz także Breathune. Nagrania można też otworzyć w aplikacji Pliki, każdy, kto potrafi odblokować twojego iPhone’a: PIN strażnika ich nie chroni.</p>
     </details>
   </div>
 </div>
